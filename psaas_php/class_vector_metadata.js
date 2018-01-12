@@ -1,0 +1,26 @@
+var class_vector_metadata =
+[
+    [ "isValid", "class_vector_metadata.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
+    [ "tryParse", "class_vector_metadata.html#a8737564bdedcc238922ad844285ac485", null ],
+    [ "$areaUnit", "class_vector_metadata.html#ad69aeaaa3fec46512ebde86edb39692c", null ],
+    [ "$err", "class_vector_metadata.html#acfc00bd4a41804552c630950bf61a51f", null ],
+    [ "$fireSize", "class_vector_metadata.html#a7e25a026ebb07dac162ac93c9a635ce9", null ],
+    [ "$igName", "class_vector_metadata.html#a74dfc6dc4c2997a3948d87aa0714f329", null ],
+    [ "$jobName", "class_vector_metadata.html#a08e29daa2225859a1a1eee751f94aff0", null ],
+    [ "$perimActive", "class_vector_metadata.html#a83bd7cf2a731d327cabedcc125483dd2", null ],
+    [ "$perimTotal", "class_vector_metadata.html#ab19ec15bd6e3c750f73f2f674e5a8caf", null ],
+    [ "$perimUnit", "class_vector_metadata.html#a743021c74865ab450384af8f3d2535e4", null ],
+    [ "$scenName", "class_vector_metadata.html#a9e022b56250dff81228465b9f2d7eeed", null ],
+    [ "$simDate", "class_vector_metadata.html#a048cb1f1ccb5f25179f67b6ee56138e1", null ],
+    [ "$version", "class_vector_metadata.html#a5b1f1e4b0c0472b8bea64c708be82e48", null ],
+    [ "DEFAULT_AREAUNIT", "class_vector_metadata.html#a992a685c75941f1bd157b055bb391854", null ],
+    [ "DEFAULT_FIRESIZE", "class_vector_metadata.html#a31b729fde90fb3862424048cec040647", null ],
+    [ "DEFAULT_IGNAME", "class_vector_metadata.html#a0c5ab3a76e493db14491b58018e72d48", null ],
+    [ "DEFAULT_JOBNAME", "class_vector_metadata.html#ac66ab89804bfefc6371803c1a801fe33", null ],
+    [ "DEFAULT_PERIMACTIVE", "class_vector_metadata.html#a1fe955920254a717742ef9ae80664f23", null ],
+    [ "DEFAULT_PERIMTOTAL", "class_vector_metadata.html#a79f926814eccc6237bacf30685a1fa22", null ],
+    [ "DEFAULT_PERIMUNIT", "class_vector_metadata.html#a1d261fff4441c4e1c9242a52a619b4cc", null ],
+    [ "DEFAULT_SCENNAME", "class_vector_metadata.html#a93c10bcf8f10de102803a694553d7fc0", null ],
+    [ "DEFAULT_SIMDATE", "class_vector_metadata.html#a69f76711acd8c56a9ca4c7092014a9b6", null ],
+    [ "DEFAULT_VERSION", "class_vector_metadata.html#a1a92626caeab903e5233f69a815d6d70", null ]
+];
