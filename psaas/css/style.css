@@ -6,7 +6,7 @@ h2 {
     margin-top: 10px;
 }
 
-body {
+html {
     nowhitespace: afterproperty;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
