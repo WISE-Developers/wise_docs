@@ -471,7 +471,7 @@
 					<a name="addburningcondition" class="tsd-anchor"></a>
 					<h3>add<wbr>Burning<wbr>Condition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Burning<wbr>Condition<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, endTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fwiGreater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, wsGreater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, rhLess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.burningconditions.html" class="tsd-signature-type">BurningConditions</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Burning<wbr>Condition<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, endTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fwiGreater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, wsGreater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, rhLess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, isiGreater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.burningconditions.html" class="tsd-signature-type">BurningConditions</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -514,6 +514,12 @@
 									<h5>rhLess: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The maximum relative humidity that will allow burning (as a percent [0-100]).</p>
+									</div>
+								</li>
+								<li>
+									<h5>isiGreater: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The minimum ISI that will allow burning.</p>
 									</div>
 								</li>
 							</ul>
@@ -803,7 +809,7 @@
 					<a name="setfbpoptions" class="tsd-anchor"></a>
 					<h3>set<wbr>Fbp<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Fbp<wbr>Options<span class="tsd-signature-symbol">(</span>terrainEffect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, greenUp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, windEffect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Fbp<wbr>Options<span class="tsd-signature-symbol">(</span>terrainEffect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, windEffect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -819,12 +825,6 @@
 									<h5>terrainEffect: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Use terrain effect.</p>
-									</div>
-								</li>
-								<li>
-									<h5>greenUp: <span class="tsd-signature-type">boolean</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Use green-up (where NODATA or no grid exists).</p>
 									</div>
 								</li>
 								<li>
