@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['addburningcondition',['addBurningCondition',['../class_scenario.html#a6ac8235cb11fc6cc0584699a9334aa8f',1,'Scenario']]],
+  ['addburningcondition',['addBurningCondition',['../class_scenario.html#a4d5e40aa083354672b30f5ab83690edc',1,'Scenario']]],
   ['adddirectionfile',['addDirectionFile',['../class_weather_grid.html#ae19dac6bd2b67ec2e31c4a108eafc60b',1,'WeatherGrid']]],
   ['adddirectionweathergrid',['addDirectionWeatherGrid',['../class_p_saa_s.html#a5d2fae044f2eb367b2811373add49c16',1,'PSaaS']]],
   ['addfilefuelbreak',['addFileFuelBreak',['../class_p_saa_s.html#a2d49258e54745d66ac36c93a38430594',1,'PSaaS']]],

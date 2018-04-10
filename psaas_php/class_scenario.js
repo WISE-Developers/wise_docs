@@ -1,7 +1,7 @@
 var class_scenario =
 [
     [ "__construct", "class_scenario.html#a095c5d389db211932136b53f25f39685", null ],
-    [ "addBurningCondition", "class_scenario.html#a6ac8235cb11fc6cc0584699a9334aa8f", null ],
+    [ "addBurningCondition", "class_scenario.html#a4d5e40aa083354672b30f5ab83690edc", null ],
     [ "addFuelBreakReference", "class_scenario.html#af5a8b90d9c708c540b575d5ad2449477", null ],
     [ "addFuelPatchReference", "class_scenario.html#a452af319afe634687ac8b778d64ee17b", null ],
     [ "addGridFileReference", "class_scenario.html#a608e58ccbd192fcf133320108460f1d6", null ],
@@ -13,7 +13,7 @@ var class_scenario =
     [ "getId", "class_scenario.html#a12251d0c022e9e21c137a105ff683f13", null ],
     [ "isValid", "class_scenario.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
     [ "makeCopy", "class_scenario.html#a2191924718240a567d138d2a43add4bc", null ],
-    [ "setFbpOptions", "class_scenario.html#a3f43606094963c415dec55772d47637e", null ],
+    [ "setFbpOptions", "class_scenario.html#ad80d094a8621e3a26285d7438891a0d1", null ],
     [ "setFgmOptions", "class_scenario.html#af9a3c8dcf3b9be669929ca5310375de8", null ],
     [ "setFmcOptions", "class_scenario.html#aa0a9d0880a4c9a2718f06a47a50b662d", null ],
     [ "setFwiOptions", "class_scenario.html#aa76250d8a50c5d355131cd94ac46f85d", null ],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSaaS Bulder PHP: Admin Class Reference</title>
+<title>PSaaS Builder PHP: Admin Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PSaaS Bulder PHP
-   &#160;<span id="projectnumber">6.2.2.3</span>
+   <div id="projectname">PSaaS Builder PHP
+   &#160;<span id="projectnumber">6.2.3.7</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -108,6 +108,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6461728483f911fe46a0a8888195a711"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_admin.html#a6461728483f911fe46a0a8888195a711">deleteJob</a> ($jobname)</td></tr>
 <tr class="memdesc:a6461728483f911fe46a0a8888195a711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the specified job directory.  <a href="#a6461728483f911fe46a0a8888195a711">More...</a><br /></td></tr>
 <tr class="separator:a6461728483f911fe46a0a8888195a711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887d5d76ed16e49ba6bdbbd3e31678a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_admin.html#ad887d5d76ed16e49ba6bdbbd3e31678a">stopJobPriority</a> ($jobname, $priority)</td></tr>
+<tr class="memdesc:ad887d5d76ed16e49ba6bdbbd3e31678a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests that a specific job stop executing.  <a href="#ad887d5d76ed16e49ba6bdbbd3e31678a">More...</a><br /></td></tr>
+<tr class="separator:ad887d5d76ed16e49ba6bdbbd3e31678a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b315aae39ec7a29bb431edbff79211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_admin.html#a61b315aae39ec7a29bb431edbff79211">stopJob</a> ($jobname)</td></tr>
+<tr class="memdesc:a61b315aae39ec7a29bb431edbff79211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests that a specific job stop executing.  <a href="#a61b315aae39ec7a29bb431edbff79211">More...</a><br /></td></tr>
+<tr class="separator:a61b315aae39ec7a29bb431edbff79211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b819922b0e961f3316e964cb4b0440"><td class="memItemLeft" align="right" valign="top"><a id="ac1b819922b0e961f3316e964cb4b0440"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_admin.html#ac1b819922b0e961f3316e964cb4b0440">echoCompleteJobOptions</a> ()</td></tr>
 <tr class="memdesc:ac1b819922b0e961f3316e964cb4b0440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echos the list of complete jobs (both failed and succeeded) in a format that can be used in a &lt;select&gt; tag. <br /></td></tr>
@@ -209,6 +215,69 @@ Protected Attributes</h2></td></tr>
 <p>This is not reversible. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$jobname</td><td>The name of the job to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61b315aae39ec7a29bb431edbff79211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b315aae39ec7a29bb431edbff79211">&#9670;&nbsp;</a></span>stopJob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stopJob </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$jobname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests that a specific job stop executing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$jobname</td><td>The job to stop executing. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad887d5d76ed16e49ba6bdbbd3e31678a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad887d5d76ed16e49ba6bdbbd3e31678a">&#9670;&nbsp;</a></span>stopJobPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stopJobPriority </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$jobname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests that a specific job stop executing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$jobname</td><td>The job to stop executing. </td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$priority</td><td>The priority with which to stop the job. 0 -&gt; Stop at the soonest time available (may not occur until currently running simulations have completed). 1 -&gt; Stop at the soonest time available but attempt to terminate the job if still running after 5 minutes. 2 -&gt; Attempt to terminate the executing process immediately. </td></tr>
   </table>
   </dd>
 </dl>

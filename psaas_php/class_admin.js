@@ -8,5 +8,7 @@ var class_admin =
     [ "echoQueuedJobOptions", "class_admin.html#a8c0881985060062896261f319a8eac60", null ],
     [ "echoRunningJobOptions", "class_admin.html#ae35526f5f44d1c634217daf1dd24a981", null ],
     [ "openSocket", "class_admin.html#aa084719683e6daa2e299232b48178aec", null ],
+    [ "stopJob", "class_admin.html#a61b315aae39ec7a29bb431edbff79211", null ],
+    [ "stopJobPriority", "class_admin.html#ad887d5d76ed16e49ba6bdbbd3e31678a", null ],
     [ "$socket", "class_admin.html#a33a9dcf5eaeebf833f2390060f8caf5e", null ]
 ];
