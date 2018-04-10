@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PSaaS MQTT Client API 6.2.3.7 documentation</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" />
+</head>
+<body>
+  <div class="navigation">
+    <div class="navigation__logo">
+      <img class="navigation__logo__image" src="http://firegrowthmodel.ca/prometheus/images/logo_prometheus.png" alt="PSaaS MQTT Client API logo">
+      <h1 class="navigation__logo__name">PSaaS MQTT Client API</h1>
+      <div class="navigation__logo__version">1.0.0</div>
+    </div>
+    <h2 class="navigation__header">Introduction</h2>
+    <ul class="navigation__list">
+      <li clas="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#info">Basic Information</a>
+      </li>
+      <li clas="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#connectionDetails">Connection Details</a>
+      </li>
+    </ul>
+
+    <h2 class="navigation__header">Topics</h2>
+    <ul class="navigation__list">
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{job id}/status">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{job id}/status
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{job id}/shutdown">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{job id}/shutdown
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/requesthistory">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{target}/requesthistory
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/responsehistory">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{target}/responsehistory
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/manage">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{target}/manage
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/updatejob">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{target}/updatejob
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="navigation__header">Messages</h2>
+    <ul class="navigation__list">
+    </ul>
+
+    <h2 class="navigation__header">Schemas</h2>
+    <ul class="navigation__list">
+      <li clas="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#schema-MQTTQoSHeader">MQTTQoSHeader</a>
+      </li>
+    </ul>
+  </div>
+  <div class="documentation"><a name="info"></a>
+<h1>PSaaS MQTT Client API 1.0.0</h1>
+
+<p><p>This document will define the API used by the various components of PSaaS to communicate via MQTT.</p>
+<h2>Client Ids</h2>
+<p>All client applications participating in the MQTT communication must have their own unique ID. The unique ID should take the form <code>&lt;client type&gt;_&lt;process id&gt;-&lt;hostname&gt;</code> but there is no requirement to use this format as long as the ID used is unique.</p>
+<table>
+<thead>
+<tr>
+<th>Client Types</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>psaas</td>
+<td>An instance of PSaaS that is executing a job.</td>
+</tr>
+<tr>
+<td>builder</td>
+<td>The PSaaS job builder.</td>
+</tr>
+<tr>
+<td>manager</td>
+<td>The PSaaS job manager.</td>
+</tr>
+</tbody>
+</table>
+<h3>Special Circumstances</h3>
+<p>Some cross platform development environments have limited support for determining the running process ID and the hostname of the computer the process is running on. If a language is not able to find either of these values a random number will be used in their place to ensure that a unique client ID is still generated.</p>
+<p>Client side apps should use a similar format but may need to replace the process ID and hostname fields with a value relevant to the platform.</p>
+<h2>Topic Structure</h2>
+<p>All topics will have a similar structure for easy parsing.</p>
+<pre class="hljs"><code>{root path}/{originator}/{target}/{message type}
+</code></pre>
+<p>The root path will be a static string used for all communication. This document will assume the root path is always <code>psaas</code>. The originator is the unique ID of the client that is publishing the message. The target can either be a specific client or a more general group of clients. The message type is a unique identifier for the type of data being communicated in the payload as well as the intent of that data.</p>
+<h3>Possible Targets</h3>
+<ul>
+<li>A specific client can be the target of a message. The values used as the <code>target</code> parameter will be the same value the client uses as the <code>originator</code> when it publishes messages.</li>
+<li>A general client type can be used as the <code>target</code>. Ex. <code>manager</code> can be used to communicate with all PSaaS manager instances connected to the MQTT broker.</li>
+<li>Job names can also be used as the <code>target</code>. When the status of a running job changes it will publish messages for anyone who is watching the job to see by using the job name as the <code>target</code>.</li>
+<li>To communicate with all clients connected to the MQTT broker that care about a specific message type <code>broadcast</code> is used as the <code>target</code>.</li>
+</ul>
+<h2>Enabling MQTT</h2>
+<p>There are several steps required to enable usage of MQTT.</p>
+<ul>
+<li>In your defaults.xml define the required MQTT parameters. These include the topic (recommended to be psaas), the broker location, and the broker's username and password if it has one.</li>
+<li>PSaaS builder and PSaaS manager will both still work with pipes so as not to break currently server setups. PSaaS manager will always listen to the configured pipe and will also listen to MQTT if configured in the defaults.xml file. PSaaS builder requires you to start it with MQTT enabled. When running PSaaS builder replace the IP address for PSaaS manager with <code>-m</code>. Ex.</li>
+</ul>
+<p><code>java -jar PSaaS_builder.jar -m /mnt/shared/folder 32479</code></p>
+</p>
+
+
+  <a name="connectionDetails"></a>
+  <h2 class="info__servers__header">Connection details</h2>
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">URL</th>
+        <th class="table__head__cell">Scheme</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+      <tr class="table__body__row">
+        <td class="table__body__cell"><div class="table__expand" data-index=0></div>mqtt.vm.sparcsonline.com:{port}</td>
+        <td class="table__body__cell">mqtt</td>
+        <td class="table__body__cell"><p>Allows you to connect using the MQTT protocol. Both TCP and Websocket connections are available.</p>
+</td>
+      </tr>
+
+      <tr class="table__body__row--with-nested" data-nested-index=0>
+        <td colspan="3">
+          <table class="table table--nested">
+            <thead class="table__head table--nested__head">
+              <tr>
+                <td class="table--nested__header" colspan="4">URL Variables</td>
+              </tr>
+              <tr class="table__head__row table--nested__head__row">
+                <th class="table__head__cell table--nested__head__cell">Name</th>
+                <th class="table__head__cell table--nested__head__cell">Default value</th>
+                <th class="table__head__cell table--nested__head__cell">Possible values</th>
+                <th class="table__head__cell table--nested__head__cell">Description</th>
+              </tr>
+            </thead>
+            <tbody class="table__body table--nested__body">
+              <tr class="table__body__row table--nested__body__row">
+                <td class="table__body__cell table--nested__body__cell">port</td>
+                <td class="table__body__cell table--nested__body__cell">
+                    1883
+                </td>
+                <td class="table__body__cell table--nested__body__cell">
+                  <ul class="info__server__enum-list">
+                    <li>1883</li>
+                    <li>8883</li>
+                  </ul>
+                </td>
+                <td class="table__body__cell table--nested__body__cell"><p>Port <code>8883</code> is used for SSL connections.</p>
+</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+<h2 class="section-header">Topics</h2>
+
+<div class="topic">
+  <a name="topic-psaas/{originator}/{job id}/status"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{job id}/status
+  </h3><p>Report the current status of a running job.</p>
+
+<p>The PSaaS executable will report the status of the currently executing job when various conditions are met. The <code>originator</code> value will indicate which instance of PSaaS is running the job.</p>
+<p>The status code may be one of the following values:</p>
+<ul>
+<li><code>0</code> - The job has been submitted for execution.</li>
+<li><code>1</code> - PSaaS has started running the job.</li>
+<li><code>2</code> - A scenario in the job has been started.</li>
+<li><code>3</code> - A scenario in the job has completed.</li>
+<li><code>4</code> - A scenario in the job has failed.</li>
+<li><code>5</code> - The job has completed.</li>
+<li><code>6</code> - The job has failed.</li>
+<li><code>7</code> - An unexpected error has occurred.</li>
+<li><code>8</code> - Generic execution information.</li>
+<li><code>9</code> - A request has been received to stop the job.</li>
+</ul>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">status </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Status Code</td>
+    </tr>
+    <tr class="table__body__row">
+      <td class="table__body__cell">message </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">A user readable message describing the status.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">{
+  &quot;status&quot;: 1,
+  &quot;message&quot;: &quot;The job status has changed&quot;
+}</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Status</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{job id}/shutdown"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{job id}/shutdown
+  </h3>
+<p>Cancel a job that has not yet started or terminate a job that is currently running.</p>
+<p>The <code>originator</code> value will be the ID of the process that sends the shutdown message.</p>
+<p>There are three different priorities with which the job can be terminated.</p>
+<ul>
+<li><code>0</code> - Shutdown when possible,</li>
+<li><code>1</code> - Shutdown when possible but attempt to forcibly close after a timeout (in minutes),</li>
+<li><code>2</code> - Forcibly close immediately.</li>
+</ul>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">priority </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">The urgency with which the system should attempt to stop the job from running.</td>
+    </tr>
+    <tr class="table__body__row">
+      <td class="table__body__cell">timeout </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Only valid when priority is 1. This will be the number of minutes to wait for the job to shutdown on its own before attempting to terminate it. If not specified 5 minutes is used.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">{
+  &quot;priority&quot;: 1,
+  &quot;timeout&quot;: 5
+}</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Management</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/requesthistory"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{target}/requesthistory
+  </h3>
+<p>Request the list of jobs that are known to a job manager.</p>
+<p>The <code>target</code> can either be a specific manager ID to only query a single instance or <code>manager</code> to request that all managers connected to the same broker send their job list.</p>
+<p>The returned jobs can be filtered by their current status within the manager:</p>
+<ul>
+<li><code>all</code> - Return all jobs,</li>
+<li><code>run</code> - Only return running jobs,</li>
+<li><code>queue</code> - Only return jobs that are queued to be run,</li>
+<li><code>complete</code> - Only return jobs that have ended, either successfully or in error.</li>
+</ul>
+<p>If no payload is attached to the message or the filter is not one of the above values no filter will be applied to the response.</p>
+<p>The managers that receive the message will respond by publishing a <a href="#topic-psaas/%7Boriginator%7D/%7Btarget%7D/responsehistory">response message</a>.</p>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">filter </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">Filter the returned job list.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">{
+  &quot;filter&quot;: &quot;all&quot;
+}</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Management</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/responsehistory"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{target}/responsehistory
+  </h3>
+<p>This is the response to the <a href="#topic-psaas/%7Boriginator%7D/%7Btarget%7D/requesthistory">job list request</a> message. The <code>target</code> of this message will be the <code>originator</code> of the request.</p>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">job_name </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">The name of the job.</td>
+    </tr>
+    <tr class="table__body__row">
+      <td class="table__body__cell">status </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">[
+  {
+    &quot;job_name&quot;: &quot;job_20180221215557233&quot;,
+    &quot;status&quot;: &quot;queue&quot;
+  }
+]</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Management</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/manage"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{target}/manage
+  </h3>
+<p>System management requests. Not all client types are guaranteed to respect all types of management calls.</p>
+<p>Possible request types are:</p>
+<ul>
+<li><code>shutdown</code> - Shutdown the specified client or group of clients.</li>
+<li><code>reboot</code> - Restart the specified client or group of clients. PSaaS Builder will not respect this request.</li>
+</ul>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">request </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">The type of management being requested.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">{
+  &quot;request&quot;: &quot;shutdown&quot;
+}</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Management</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/updatejob"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{target}/updatejob
+  </h3>
+<p>Update the details of an already running job. Currently only cancelling scenarios is supported.</p>
+<p>The payload can either be a single object to update or an array of objects.</p>
+
+
+<h3>Headers</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">qos </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Quality of Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Payload</h3>
+
+<table class="table">
+  <thead class="table__head">
+    <tr class="table__head__row">
+      <th class="table__head__cell">Name</th>
+      <th class="table__head__cell">Type</th>
+      <th class="table__head__cell">Description</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__body__row">
+      <td class="table__body__cell">name </td>
+      <td class="table__body__cell">string</td>
+      <td class="table__body__cell">The name of the scenario that is to be editted.</td>
+    </tr>
+    <tr class="table__body__row">
+      <td class="table__body__cell">status </td>
+      <td class="table__body__cell">integer</td>
+      <td class="table__body__cell">Set to 0 or leave unspecified to not modify the status of the scenario. Set to 1 to cancel the scenario (will stop executing when possible if running or not be run if it has not yet started).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+
+<pre class="hljs"><code class="json">[
+  {
+    &quot;name&quot;: &quot;scenario 1&quot;,
+    &quot;status&quot;: 1
+  }
+]</code></pre>
+
+<h3>Tags</h3>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Management</div>
+</div>
+</div>
+<h2 class="section-header">Messages</h2>
+
+<h2 class="section-header">Schemas</h2>
+
+  <a name="schema-MQTTQoSHeader"></a>
+  <div class="schema">
+    <h3>MQTTQoSHeader</h3>
+  
+    <table class="table">
+      <thead class="table__head">
+        <tr class="table__head__row">
+          <th class="table__head__cell">Name</th>
+          <th class="table__head__cell">Title</th>
+          <th class="table__head__cell">Type</th>
+          <th class="table__head__cell">Format</th>
+          <th class="table__head__cell">Default</th>
+          <th class="table__head__cell">Description</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+          <tr class="table__body__row">
+            <td class="table__body__cell">MQTTQoSHeader </td>
+            <td class="table__body__cell">qos</td>
+            <td class="table__body__cell">integer</td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell">1</td>
+            <td class="table__body__cell">Quality of Service</td>
+          </tr>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" type="application/javascript"></script>
+  <script type="application/javascript">
+    function removeCurrentLinkSelection () {
+      var links = document.querySelectorAll('.navigation__list__item-text--link');
+      if (!links) return;
+
+      for (var i=0; i < links.length; i++) {
+        links[i].classList.remove('navigation__list__item-text--link--active');
+      }
+    }
+
+    function selectCurrentLink () {
+      removeCurrentLinkSelection();
+
+      var hash = window.location.hash;
+      if (!hash) return;
+
+      var link = document.querySelector("a[href='"+hash+"']");
+      if (!link) return;
+
+      link.classList.add('navigation__list__item-text--link--active');
+    }
+
+    function highlightCode () {
+      var blocks = document.querySelectorAll('.hljs code');
+
+      for(var i=0; i < blocks.length; i++) {
+        hljs.highlightBlock(blocks[i]);
+      }
+    }
+
+    function bindExpandButtons () {
+      var buttons = document.querySelectorAll('.table__expand');
+
+      for(var i=0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function (e) {
+          var tableRow = document.querySelector('[data-nested-index="' + e.target.attributes['data-index'].value + '"]');
+          tableRow.classList.toggle('table__body__row--with-nested--expanded');
+          e.target.classList.toggle('table__expand--open');
+        });
+      }
+    }
+
+    window.addEventListener('hashchange', selectCurrentLink);
+    window.addEventListener('load', selectCurrentLink);
+    window.addEventListener('load', highlightCode);
+    window.addEventListener('load', bindExpandButtons);
+  </script>
+</body>
+</html>
