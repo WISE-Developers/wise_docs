@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "PSaaS Builder PHP", "index.html", [
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -40,8 +41,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "class_fuel_patch.html#aa99264dcf2dcdc0316d2068de76d266d",
-"class_p_saa_s_outputs.html#aa99264dcf2dcdc0316d2068de76d266d",
-"class_weather_patch___relative_humidity.html#a6a201799983ca14ec28ef58a96424635"
+"class_s_o_c_k_e_t___h_e_l_p_e_r.html#aa09c57faf950e7995deb5993ac771f5d",
+"class_weather_patch___relative_humidity.html#a7b37efab7473a1effc29f8be2421f6e3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
