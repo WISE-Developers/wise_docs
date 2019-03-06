@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['addattachment',['addAttachment',['../class_p_saa_s.html#a8d837185abbc21b56660c44d10f16eb5',1,'PSaaS']]],
   ['addburningcondition',['addBurningCondition',['../class_scenario.html#a4d5e40aa083354672b30f5ab83690edc',1,'Scenario']]],
   ['adddirectionfile',['addDirectionFile',['../class_weather_grid.html#ae19dac6bd2b67ec2e31c4a108eafc60b',1,'WeatherGrid']]],
   ['adddirectionweathergrid',['addDirectionWeatherGrid',['../class_p_saa_s.html#a5d2fae044f2eb367b2811373add49c16',1,'PSaaS']]],
@@ -28,6 +29,7 @@ var searchData=
   ['addprimaryweatherstreamreference',['addPrimaryWeatherStreamReference',['../class_scenario.html#ac0255c67b20ff69fff4f274b8d99ac5d',1,'Scenario']]],
   ['addscenario',['addScenario',['../class_p_saa_s.html#a9844ebb4db6150acb1d0e5deac035e79',1,'PSaaS']]],
   ['addspeedweathergrid',['addSpeedWeatherGrid',['../class_p_saa_s.html#a25afe63e5991a0f3304039c4c704cf25',1,'PSaaS']]],
+  ['addstatistic',['addStatistic',['../class_timestep_settings.html#a2552f244b1dc76d0672f077893e8f77b',1,'TimestepSettings']]],
   ['addweathergridreference',['addWeatherGridReference',['../class_scenario.html#a83c8104c56a439a74af8889ff80131cd',1,'Scenario']]],
   ['addweatherpatchreference',['addWeatherPatchReference',['../class_scenario.html#ac663d1e0751706d103389f0b4a5512a1',1,'Scenario']]],
   ['addweatherstation',['addWeatherStation',['../class_p_saa_s.html#a5e62e471e55106e735d0d68d4eb11566',1,'PSaaS']]],

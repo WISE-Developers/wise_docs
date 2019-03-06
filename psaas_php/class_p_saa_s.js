@@ -1,6 +1,7 @@
 var class_p_saa_s =
 [
     [ "__construct", "class_p_saa_s.html#a095c5d389db211932136b53f25f39685", null ],
+    [ "addAttachment", "class_p_saa_s.html#a8d837185abbc21b56660c44d10f16eb5", null ],
     [ "addDirectionWeatherGrid", "class_p_saa_s.html#a5d2fae044f2eb367b2811373add49c16", null ],
     [ "addFileFuelBreak", "class_p_saa_s.html#a2d49258e54745d66ac36c93a38430594", null ],
     [ "addFileFuelPatch", "class_p_saa_s.html#a08e7e1dce9d8b97623b029fe32f6e2ef", null ],
@@ -40,5 +41,6 @@ var class_p_saa_s =
     [ "$inputs", "class_p_saa_s.html#a0db0ea23ab8d48a0eebb1c1da0c38349", null ],
     [ "$outputs", "class_p_saa_s.html#a41bd23edf09bbda4c9641ee6a1c49f23", null ],
     [ "$socket", "class_p_saa_s.html#a33a9dcf5eaeebf833f2390060f8caf5e", null ],
+    [ "$timestepSettings", "class_p_saa_s.html#a31bae1cf9d061786167f59ab0f5b3628", null ],
     [ "PARAM_COMMENT", "class_p_saa_s.html#a01fd27a0c892a654e9a1e96dda46fc84", null ]
 ];

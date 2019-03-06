@@ -3,6 +3,7 @@ var class_weather_patch =
     [ "__construct", "class_weather_patch.html#a095c5d389db211932136b53f25f39685", null ],
     [ "getId", "class_weather_patch.html#a12251d0c022e9e21c137a105ff683f13", null ],
     [ "isValid", "class_weather_patch.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
+    [ "setName", "class_weather_patch.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "setPrecipitationOperation", "class_weather_patch.html#a1aa383bcfff8c690b8913d1c5c698a8b", null ],
     [ "setRhOperation", "class_weather_patch.html#a2a670439e3368172dd4fe5d1dceca3b6", null ],
     [ "setTemperatureOperation", "class_weather_patch.html#a7a99ffb976d3da9da9ff97174ab14314", null ],

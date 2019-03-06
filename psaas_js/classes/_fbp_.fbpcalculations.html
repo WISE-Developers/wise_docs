@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_fbp_.html">&quot;fbp&quot;</a>
@@ -73,7 +73,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FbpCalculations</span>
+						<a href="_psaasglobals_.ipsaasserializable.html" class="tsd-signature-type">IPSaaSSerializable</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">FbpCalculations</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -106,6 +111,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#dmc" class="tsd-kind-icon">dmc</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#elapsedtime" class="tsd-kind-icon">elapsed<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#elevation" class="tsd-kind-icon">elevation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_fbp_.fbpcalculations.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#ffi" class="tsd-kind-icon">ffi</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#ffmc" class="tsd-kind-icon">ffmc</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#firedescription" class="tsd-kind-icon">fire<wbr>Description</a></li>
@@ -138,17 +144,19 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#windspeed" class="tsd-kind-icon">wind<wbr>Speed</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#wsv" class="tsd-kind-icon">wsv</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_fbp_.fbpcalculations.html#calculate_key" class="tsd-kind-icon">CALCULATE_<wbr>KEY</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_fbp_.fbpcalculations.html#get_fuels_key" class="tsd-kind-icon">GET_<wbr>FUELS_<wbr>KEY</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_fbp_.fbpcalculations.html#get_fuels_v2_key" class="tsd-kind-icon">GET_<wbr>FUELS_<wbr><wbr>V2_<wbr>KEY</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#calculate" class="tsd-kind-icon">calculate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_fbp_.fbpcalculations.html#calculateinternal" class="tsd-kind-icon">calculate<wbr>Internal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#calculatepromise" class="tsd-kind-icon">calculate<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_fbp_.fbpcalculations.html#setfueltype" class="tsd-kind-icon">set<wbr>Fuel<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_fbp_.fbpcalculations.html#getfuels" class="tsd-kind-icon">get<wbr>Fuels</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_fbp_.fbpcalculations.html#getfuelspromise" class="tsd-kind-icon">get<wbr>Fuels<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_fbp_.fbpcalculations.html#getfuelswithdefaults" class="tsd-kind-icon">get<wbr>Fuels<wbr>With<wbr>Defaults</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_fbp_.fbpcalculations.html#getfuelswithdefaultspromise" class="tsd-kind-icon">get<wbr>Fuels<wbr>With<wbr>Defaults<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
@@ -347,6 +355,12 @@
 							<p>[Input] The elevation of the ignition.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="fetchstate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fetch<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">fetch<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ffi" class="tsd-anchor"></a>
@@ -695,18 +709,6 @@
 					<div class="tsd-signature tsd-kind-icon">CALCULATE_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FBP_CALCULATE"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FBP_CALCULATE&quot;</span></div>
 					
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="get_fuels_key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> GET_<wbr>FUELS_<wbr>KEY</h3>
-					<div class="tsd-signature tsd-kind-icon">GET_<wbr>FUELS_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FBP_GET_FUELS"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FBP_GET_FUELS&quot;</span></div>
-					
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="get_fuels_v2_key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> GET_<wbr>FUELS_<wbr><wbr>V2_<wbr>KEY</h3>
-					<div class="tsd-signature tsd-kind-icon">GET_<wbr>FUELS_<wbr><wbr>V2_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FBP_GET_FUELS_V2"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FBP_GET_FUELS_V2&quot;</span></div>
-					
-				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
@@ -749,6 +751,88 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="calculateinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> calculate<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Internal<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>defaults<span class="tsd-signature-symbol">: </span><a href="_fbp_.fbpcalculations.html" class="tsd-signature-type">FbpCalculations</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>defaults: <a href="_fbp_.fbpcalculations.html" class="tsd-signature-type">FbpCalculations</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>message: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="calculatepromise" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fbpcalculations.html" class="tsd-signature-type">FbpCalculations</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculate the FBP values. If there was an error during calculation a string indicating the cause of the error will be returned.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>This method can only be called once at a time per instance.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fbpcalculations.html" class="tsd-signature-type">FbpCalculations</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The current <a href="_fbp_.fbpcalculations.html">FbpCalculations</a> object.</p>
 						</li>
 					</ul>
 				</section>
@@ -823,6 +907,25 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getfuelspromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Fuels<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Fuels<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fueltype.html" class="tsd-signature-type">FuelType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the list of fuel types from the server.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fueltype.html" class="tsd-signature-type">FuelType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An array of <a href="_fbp_.fueltype.html">FuelType</a> without the default values populated.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="getfuelswithdefaults" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Fuels<wbr>With<wbr>Defaults</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -864,13 +967,35 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getfuelswithdefaultspromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Fuels<wbr>With<wbr>Defaults<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Fuels<wbr>With<wbr>Defaults<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fueltype.html" class="tsd-signature-type">FuelType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the list of fuel types from the server.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_fbp_.fueltype.html" class="tsd-signature-type">FuelType</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An array of <a href="_fbp_.fueltype.html">FuelType</a> with the default values populated.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -961,6 +1086,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_fbp_.fbpcalculations.html#elevation" class="tsd-kind-icon">elevation</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_fbp_.fbpcalculations.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_fbp_.fbpcalculations.html#ffi" class="tsd-kind-icon">ffi</a>
@@ -1058,14 +1186,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="_fbp_.fbpcalculations.html#calculate_key" class="tsd-kind-icon">CALCULATE_<wbr>KEY</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_fbp_.fbpcalculations.html#get_fuels_key" class="tsd-kind-icon">GET_<wbr>FUELS_<wbr>KEY</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_fbp_.fbpcalculations.html#get_fuels_v2_key" class="tsd-kind-icon">GET_<wbr>FUELS_<wbr><wbr>V2_<wbr>KEY</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_fbp_.fbpcalculations.html#calculate" class="tsd-kind-icon">calculate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_fbp_.fbpcalculations.html#calculateinternal" class="tsd-kind-icon">calculate<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_fbp_.fbpcalculations.html#calculatepromise" class="tsd-kind-icon">calculate<wbr>Promise</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_fbp_.fbpcalculations.html#setfueltype" class="tsd-kind-icon">set<wbr>Fuel<wbr>Type</a>
@@ -1074,7 +1202,13 @@
 								<a href="_fbp_.fbpcalculations.html#getfuels" class="tsd-kind-icon">get<wbr>Fuels</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_fbp_.fbpcalculations.html#getfuelspromise" class="tsd-kind-icon">get<wbr>Fuels<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_fbp_.fbpcalculations.html#getfuelswithdefaults" class="tsd-kind-icon">get<wbr>Fuels<wbr>With<wbr>Defaults</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_fbp_.fbpcalculations.html#getfuelswithdefaultspromise" class="tsd-kind-icon">get<wbr>Fuels<wbr>With<wbr>Defaults<wbr>Promise</a>
 							</li>
 						</ul>
 					</li>
@@ -1085,6 +1219,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="_fbp_.fueltypedefaults.html" class="tsd-kind-icon">Fuel<wbr>Type<wbr>Defaults</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_fbp_.fuelsgetter.html" class="tsd-kind-icon">Fuels<wbr>Getter</a>
 					</li>
 				</ul>
 			</nav>

@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_weather_.html">&quot;weather&quot;</a>
@@ -66,6 +66,24 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Fetch current weather conditions from Environment Canada for
+							a given city and province. The supported cities for each
+						province can also be retrieved.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<p>For fetching the supported cities in Alberta:</p>
+					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> cities = <span class="hljs-keyword">await</span> WeatherCalculator.getCitiesPromise(Province.ALBERTA);</code></pre>
+					<p>For fetching the current weather for a location:</p>
+					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> calculator = <span class="hljs-keyword">new</span> WeatherCalculator();
+calculator.province = <span class="hljs-string">"AB"</span>;
+calculator.city = <span class="hljs-string">"Calgary"</span>;
+<span class="hljs-keyword">await</span> calculator.fetchWeatherPromise();
+<span class="hljs-comment">//********* the calculator will now contain current weather values ***********</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -73,6 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported"><a href="../classes/_weather_.citiesgetter.html" class="tsd-kind-icon">Cities<wbr>Getter</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_weather_.weathercalculator.html" class="tsd-kind-icon">Weather<wbr>Calculator</a></li>
 							</ul>
 						</section>
@@ -84,7 +103,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>
@@ -120,6 +142,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../classes/_weather_.citiesgetter.html" class="tsd-kind-icon">Cities<wbr>Getter</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_weather_.weathercalculator.html" class="tsd-kind-icon">Weather<wbr>Calculator</a>
 					</li>

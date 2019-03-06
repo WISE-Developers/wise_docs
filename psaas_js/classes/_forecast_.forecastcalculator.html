@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_forecast_.html">&quot;forecast&quot;</a>
@@ -73,7 +73,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ForecastCalculator</span>
+						<a href="_psaasglobals_.ipsaasserializable.html" class="tsd-signature-type">IPSaaSSerializable</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ForecastCalculator</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -92,6 +97,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#city" class="tsd-kind-icon">city</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#date" class="tsd-kind-icon">date</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_forecast_.forecastcalculator.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#forecasttype" class="tsd-kind-icon">forecast<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#model" class="tsd-kind-icon">model</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#modelids" class="tsd-kind-icon">model<wbr>Ids</a></li>
@@ -100,7 +106,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#results" class="tsd-kind-icon">results</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#time" class="tsd-kind-icon">time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#timezone" class="tsd-kind-icon">timezone</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_forecast_.forecastcalculator.html#get_cities_key" class="tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_forecast_.forecastcalculator.html#get_forecast" class="tsd-kind-icon">GET_<wbr>FORECAST</a></li>
 							</ul>
 						</section>
@@ -108,7 +113,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#fetchforecast" class="tsd-kind-icon">fetch<wbr>Forecast</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_forecast_.forecastcalculator.html#fetchforecastinternal" class="tsd-kind-icon">fetch<wbr>Forecast<wbr>Internal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_forecast_.forecastcalculator.html#fetchforecastpromise" class="tsd-kind-icon">fetch<wbr>Forecast<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_forecast_.forecastcalculator.html#getcities" class="tsd-kind-icon">get<wbr>Cities</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_forecast_.forecastcalculator.html#getcitiespromise" class="tsd-kind-icon">get<wbr>Cities<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
@@ -155,6 +163,12 @@
 							only exist approximately a month into the past.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="fetchstate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fetch<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">fetch<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="forecasttype" class="tsd-anchor"></a>
@@ -248,12 +262,6 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="get_cities_key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> GET_<wbr>CITIES_<wbr>KEY</h3>
-					<div class="tsd-signature tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FORECAST_LIST_CITIES"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FORECAST_LIST_CITIES&quot;</span></div>
-					
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 					<a name="get_forecast" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> GET_<wbr>FORECAST</h3>
 					<div class="tsd-signature tsd-kind-icon">GET_<wbr>FORECAST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FORECAST_GET"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FORECAST_GET&quot;</span></div>
@@ -267,6 +275,56 @@
 					<h3>fetch<wbr>Forecast</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Forecast<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lookup a forecast for the currently specified location and model.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>This method can only be called once at a time per instance.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A method that will be called when the forecast has been received.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>forecast<span class="tsd-signature-symbol">: </span><a href="_forecast_.forecastcalculator.html" class="tsd-signature-type">ForecastCalculator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>forecast: <a href="_forecast_.forecastcalculator.html" class="tsd-signature-type">ForecastCalculator</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="fetchforecastinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> fetch<wbr>Forecast<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Forecast<wbr>Internal<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -294,8 +352,53 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>message: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fetchforecastpromise" class="tsd-anchor"></a>
+					<h3>fetch<wbr>Forecast<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Forecast<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_forecast_.forecastcalculator.html" class="tsd-signature-type">ForecastCalculator</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lookup a forecast for the currently specified location and model.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>This method can only be called once at a time per instance.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_forecast_.forecastcalculator.html" class="tsd-signature-type">ForecastCalculator</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The current <a href="_forecast_.forecastcalculator.html">ForecastCalculator</a> object.</p>
 						</li>
 					</ul>
 				</section>
@@ -317,6 +420,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>province: <a href="../enums/_psaasglobals_.province.html" class="tsd-signature-type">Province</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The province to get the available cities for.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
@@ -344,13 +450,49 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getcitiespromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Cities<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cities<wbr>Promise<span class="tsd-signature-symbol">(</span>province<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasglobals_.province.html" class="tsd-signature-type">Province</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a list of supported cities in the provided province.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>This method can only be called once at a time per instance.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>province: <a href="../enums/_psaasglobals_.province.html" class="tsd-signature-type">Province</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The province to get the available cities for.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A list of supported cities for the requested province.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -386,6 +528,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_forecast_.citygetter.html" class="tsd-kind-icon">City<wbr>Getter</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
@@ -399,6 +544,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_forecast_.forecastcalculator.html#date" class="tsd-kind-icon">date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_forecast_.forecastcalculator.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_forecast_.forecastcalculator.html#forecasttype" class="tsd-kind-icon">forecast<wbr>Type</a>
@@ -425,16 +573,22 @@
 								<a href="_forecast_.forecastcalculator.html#timezone" class="tsd-kind-icon">timezone</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_forecast_.forecastcalculator.html#get_cities_key" class="tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="_forecast_.forecastcalculator.html#get_forecast" class="tsd-kind-icon">GET_<wbr>FORECAST</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_forecast_.forecastcalculator.html#fetchforecast" class="tsd-kind-icon">fetch<wbr>Forecast</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_forecast_.forecastcalculator.html#fetchforecastinternal" class="tsd-kind-icon">fetch<wbr>Forecast<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_forecast_.forecastcalculator.html#fetchforecastpromise" class="tsd-kind-icon">fetch<wbr>Forecast<wbr>Promise</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_forecast_.forecastcalculator.html#getcities" class="tsd-kind-icon">get<wbr>Cities</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_forecast_.forecastcalculator.html#getcitiespromise" class="tsd-kind-icon">get<wbr>Cities<wbr>Promise</a>
 							</li>
 						</ul>
 					</li>

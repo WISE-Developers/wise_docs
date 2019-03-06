@@ -17,6 +17,7 @@ var class_scenario =
     [ "setFgmOptions", "class_scenario.html#af9a3c8dcf3b9be669929ca5310375de8", null ],
     [ "setFmcOptions", "class_scenario.html#aa0a9d0880a4c9a2718f06a47a50b662d", null ],
     [ "setFwiOptions", "class_scenario.html#aa76250d8a50c5d355131cd94ac46f85d", null ],
+    [ "setName", "class_scenario.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "setProbabilisticValues", "class_scenario.html#a0beee32e75f04c000d549e29ef7c0f1f", null ],
     [ "stream", "class_scenario.html#aa99264dcf2dcdc0316d2068de76d266d", null ],
     [ "$burningConditions", "class_scenario.html#a50847847f144b269fa1ccff12e00f118", null ],

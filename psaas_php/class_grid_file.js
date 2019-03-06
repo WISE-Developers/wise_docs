@@ -3,6 +3,7 @@ var class_grid_file =
     [ "__construct", "class_grid_file.html#a095c5d389db211932136b53f25f39685", null ],
     [ "getId", "class_grid_file.html#a12251d0c022e9e21c137a105ff683f13", null ],
     [ "isValid", "class_grid_file.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
+    [ "setName", "class_grid_file.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "stream", "class_grid_file.html#aa99264dcf2dcdc0316d2068de76d266d", null ],
     [ "$comment", "class_grid_file.html#a2936c93dbff0924be82e73f9979104e5", null ],
     [ "$filename", "class_grid_file.html#ad062065e14940affe82df3cbc477375b", null ],

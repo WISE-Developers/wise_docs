@@ -5,6 +5,7 @@ var class_weather_station =
     [ "addWeatherStreamWithDiurnalParameters", "class_weather_station.html#a0f3e2b589cf5a97c18c7232b4903eba5", null ],
     [ "getId", "class_weather_station.html#a12251d0c022e9e21c137a105ff683f13", null ],
     [ "isValid", "class_weather_station.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
+    [ "setName", "class_weather_station.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "stream", "class_weather_station.html#aa99264dcf2dcdc0316d2068de76d266d", null ],
     [ "$comments", "class_weather_station.html#a559544568af6ed4283e0e7802cc353b3", null ],
     [ "$elevation", "class_weather_station.html#a28bd8a2b0a0f07746dd5de0e4ae188e8", null ],

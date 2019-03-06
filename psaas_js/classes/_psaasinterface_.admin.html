@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_psaasinterface_.html">&quot;psaasInterface&quot;</a>
@@ -85,12 +85,19 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#archivetar" class="tsd-kind-icon">archive<wbr>Tar</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#archivetarpromise" class="tsd-kind-icon">archive<wbr>Tar<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#archivezip" class="tsd-kind-icon">archive<wbr>Zip</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#archivezippromise" class="tsd-kind-icon">archive<wbr>Zip<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#deletejob" class="tsd-kind-icon">delete<wbr>Job</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#deletejobpromise" class="tsd-kind-icon">delete<wbr>Job<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echocompletejoboptions" class="tsd-kind-icon">echo<wbr>Complete<wbr>Job<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echocompletejoboptionspromise" class="tsd-kind-icon">echo<wbr>Complete<wbr>Job<wbr>Options<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echoqueuedjoboptions" class="tsd-kind-icon">echo<wbr>Queued<wbr>Job<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echoqueuedjoboptionspromise" class="tsd-kind-icon">echo<wbr>Queued<wbr>Job<wbr>Options<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echorunningjoboptions" class="tsd-kind-icon">echo<wbr>Running<wbr>Job<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#echorunningjoboptionspromise" class="tsd-kind-icon">echo<wbr>Running<wbr>Job<wbr>Options<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#stopjob" class="tsd-kind-icon">stop<wbr>Job</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasinterface_.admin.html#stopjobpromise" class="tsd-kind-icon">stop<wbr>Job<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
@@ -141,6 +148,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="archivetarpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> archive<wbr>Tar<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">archive<wbr>Tar<wbr>Promise<span class="tsd-signature-symbol">(</span>jobname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a TAR archive of the specified job. Note this does not delete the job directory.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jobname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the job to archive.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="archivezip" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> archive<wbr>Zip</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -183,6 +217,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="archivezippromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> archive<wbr>Zip<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">archive<wbr>Zip<wbr>Promise<span class="tsd-signature-symbol">(</span>jobname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a ZIP archive of the specified job. Note this does not delete the job directory.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jobname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the job to archive.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="deletejob" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> delete<wbr>Job</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -200,6 +261,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>jobname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the job to delete.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
@@ -218,6 +282,33 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="deletejobpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> delete<wbr>Job<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Job<wbr>Promise<span class="tsd-signature-symbol">(</span>jobname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes the specified job directory. This is not reversible.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jobname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the job to delete.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -264,6 +355,26 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="echocompletejoboptionspromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> echo<wbr>Complete<wbr>Job<wbr>Options<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">echo<wbr>Complete<wbr>Job<wbr>Options<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Echos the list of complete jobs (both failed and succeeded) in a format that can be used in a <select> tag.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A string containing a list of <code>&lt;option&gt;</code> tags with the completed job list that can be used
+							to populate a webpage.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="echoqueuedjoboptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> echo<wbr>Queued<wbr>Job<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -306,6 +417,26 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="echoqueuedjoboptionspromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> echo<wbr>Queued<wbr>Job<wbr>Options<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">echo<wbr>Queued<wbr>Job<wbr>Options<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Echos the list of queued jobs in a format that can be used in a <select> tag.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A string containing a list of <code>&lt;option&gt;</code> tags with the queued job list
+							that can be used to populate a webpage.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="echorunningjoboptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> echo<wbr>Running<wbr>Job<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -344,6 +475,26 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="echorunningjoboptionspromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> echo<wbr>Running<wbr>Job<wbr>Options<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">echo<wbr>Running<wbr>Job<wbr>Options<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Echos the list of running jobs in a format that can be used in a <select> tag.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A string containing a list of <code>&lt;option&gt;</code> tags with the running job list
+							that can be used to populate a webpage.</p>
 						</li>
 					</ul>
 				</section>
@@ -395,13 +546,49 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="stopjobpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> stop<wbr>Job<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>Job<wbr>Promise<span class="tsd-signature-symbol">(</span>jobname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, priority<span class="tsd-signature-symbol">?: </span><a href="../enums/_psaasinterface_.stoppriority.html" class="tsd-signature-type">StopPriority</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Requests that a specific job stop executing.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jobname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The job to stop executing.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> priority: <a href="../enums/_psaasinterface_.stoppriority.html" class="tsd-signature-type">StopPriority</a><span class="tsd-signature-symbol"> =&nbsp;StopPriority.NONE</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The priority with which to stop the job.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -446,22 +633,43 @@
 								<a href="_psaasinterface_.admin.html#archivetar" class="tsd-kind-icon">archive<wbr>Tar</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#archivetarpromise" class="tsd-kind-icon">archive<wbr>Tar<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#archivezip" class="tsd-kind-icon">archive<wbr>Zip</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#archivezippromise" class="tsd-kind-icon">archive<wbr>Zip<wbr>Promise</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#deletejob" class="tsd-kind-icon">delete<wbr>Job</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#deletejobpromise" class="tsd-kind-icon">delete<wbr>Job<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#echocompletejoboptions" class="tsd-kind-icon">echo<wbr>Complete<wbr>Job<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#echocompletejoboptionspromise" class="tsd-kind-icon">echo<wbr>Complete<wbr>Job<wbr>Options<wbr>Promise</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#echoqueuedjoboptions" class="tsd-kind-icon">echo<wbr>Queued<wbr>Job<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#echoqueuedjoboptionspromise" class="tsd-kind-icon">echo<wbr>Queued<wbr>Job<wbr>Options<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#echorunningjoboptions" class="tsd-kind-icon">echo<wbr>Running<wbr>Job<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#echorunningjoboptionspromise" class="tsd-kind-icon">echo<wbr>Running<wbr>Job<wbr>Options<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasinterface_.admin.html#stopjob" class="tsd-kind-icon">stop<wbr>Job</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasinterface_.admin.html#stopjobpromise" class="tsd-kind-icon">stop<wbr>Job<wbr>Promise</a>
 							</li>
 						</ul>
 					</li>

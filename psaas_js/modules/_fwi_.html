@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_fwi_.html">&quot;fwi&quot;</a>
@@ -66,6 +66,35 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Call PSaaS Builder to calculate FWI values for a given
+						set of inputs.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<pre><code class="language-javascript"><span class="hljs-comment">//populate the calculator with example values</span>
+<span class="hljs-keyword">let</span> calculator = <span class="hljs-keyword">new</span> FwiCalculations();
+calculator.date = <span class="hljs-string">"2014-10-4 12:18:00"</span>;
+calculator.dst = <span class="hljs-number">1</span>;
+calculator.location = <span class="hljs-keyword">new</span> LatLon(<span class="hljs-number">49.78</span>, <span class="hljs-number">-97.15</span>);
+calculator.noonTemp = <span class="hljs-number">8.0</span>;
+calculator.noonRh = <span class="hljs-number">44</span>;
+calculator.noonPrecip = <span class="hljs-number">0</span>;
+calculator.noonWindSpeed = <span class="hljs-number">18.0</span>;
+calculator.hourlyMethod = FWICalculationMethod.VAN_WAGNER;
+calculator.temp = <span class="hljs-number">5</span>;
+calculator.rh = <span class="hljs-number">53</span>;
+calculator.precip = <span class="hljs-number">0</span>;
+calculator.windSpeed = <span class="hljs-number">10</span>;
+calculator.prevHourFFMC = <span class="hljs-number">85.0</span>;
+calculator.ystrdyFFMC = <span class="hljs-number">85.0</span>;
+calculator.ystrdyDMC = <span class="hljs-number">25.0</span>;
+calculator.ystrdyDC = <span class="hljs-number">200.0</span>;
+<span class="hljs-keyword">await</span> calculator.FWICalculateDailyStatisticsPromise();
+<span class="hljs-comment">//************* calculator should now contain calculated FWI values ************************</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -80,6 +109,7 @@
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_fwi_.fwicalculations.html" class="tsd-kind-icon">Fwi<wbr>Calculations</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported"><a href="../classes/_fwi_.valuegetter.html" class="tsd-kind-icon">Value<wbr>Getter</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,7 +120,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>
@@ -131,6 +164,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_fwi_.fwicalculations.html" class="tsd-kind-icon">Fwi<wbr>Calculations</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../classes/_fwi_.valuegetter.html" class="tsd-kind-icon">Value<wbr>Getter</a>
 					</li>
 				</ul>
 			</nav>

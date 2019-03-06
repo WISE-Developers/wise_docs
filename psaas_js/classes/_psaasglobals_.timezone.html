@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_psaasglobals_.html">&quot;psaasGlobals&quot;</a>
@@ -113,8 +113,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasglobals_.timezone.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasglobals_.timezone.html#stream" class="tsd-kind-icon">stream</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasglobals_.timezone.html#parsetimezone" class="tsd-kind-icon">Parse<wbr>Timezone</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.timezone.html#gettimezonelist" class="tsd-kind-icon">get<wbr>Timezone<wbr>List</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.timezone.html#gettimezonelistpromise" class="tsd-kind-icon">get<wbr>Timezone<wbr>List<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.timezone.html#gettimezonenamelist" class="tsd-kind-icon">get<wbr>Timezone<wbr>Name<wbr>List</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.timezone.html#gettimezonenamelistpromise" class="tsd-kind-icon">get<wbr>Timezone<wbr>Name<wbr>List<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
@@ -227,6 +230,25 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="parsetimezone" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> Parse<wbr>Timezone</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">Parse<wbr>Timezone<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.timezonename.html" class="tsd-signature-type">TimezoneName</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.timezonename.html" class="tsd-signature-type">TimezoneName</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="gettimezonelist" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Timezone<wbr>List</h3>
@@ -239,9 +261,13 @@
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets a list of the possible time zones from Java. The list is combined into
-										a single string with name/value pairs separated by a &#39;|&#39;. Use
-									{@link Timezone#getTimezoneNameList()} instead.</p>
+									a single string with name/value pairs separated by a &#39;|&#39;.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link Timezone#getTimezoneNameList()} instead.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -268,6 +294,31 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="gettimezonelistpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Timezone<wbr>List<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Timezone<wbr>List<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a list of the possible time zones from Java. The list is combined into
+									a single string with name/value pairs separated by a &#39;|&#39;.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link Timezone#getTimezoneNameListPromise()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The list of timezone names and their UTC offsets in a single string separated by &#39;|&#39;.</p>
 						</li>
 					</ul>
 				</section>
@@ -314,13 +365,35 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="gettimezonenamelistpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Timezone<wbr>Name<wbr>List<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Timezone<wbr>Name<wbr>List<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.timezonename.html" class="tsd-signature-type">TimezoneName</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a list of possible time zones from Java.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.timezonename.html" class="tsd-signature-type">TimezoneName</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An array of timezone names.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -381,6 +454,9 @@
 						<a href="_psaasglobals_.fwioptions.html" class="tsd-kind-icon">FWIOptions</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_psaasglobals_.ipsaasserializable.html" class="tsd-kind-icon">IPSaaSSerializable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="_psaasglobals_.latlon.html" class="tsd-kind-icon">Lat<wbr>Lon</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
@@ -421,16 +497,28 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasglobals_.timezone.html#stream" class="tsd-kind-icon">stream</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="_psaasglobals_.timezone.html#parsetimezone" class="tsd-kind-icon">Parse<wbr>Timezone</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasglobals_.timezone.html#gettimezonelist" class="tsd-kind-icon">get<wbr>Timezone<wbr>List</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasglobals_.timezone.html#gettimezonelistpromise" class="tsd-kind-icon">get<wbr>Timezone<wbr>List<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasglobals_.timezone.html#gettimezonenamelist" class="tsd-kind-icon">get<wbr>Timezone<wbr>Name<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasglobals_.timezone.html#gettimezonenamelistpromise" class="tsd-kind-icon">get<wbr>Timezone<wbr>Name<wbr>List<wbr>Promise</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_psaasglobals_.timezonegetter.html" class="tsd-kind-icon">Timezone<wbr>Getter</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="_psaasglobals_.timezonename.html" class="tsd-kind-icon">Timezone<wbr>Name</a>
 					</li>

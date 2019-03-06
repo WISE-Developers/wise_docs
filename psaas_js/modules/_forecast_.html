@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_forecast_.html">&quot;forecast&quot;</a>
@@ -66,6 +66,27 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Request forecast information for a given city and province
+							from PSaaS Builder. Forecast information is pulled from
+						Environment Canada.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<pre><code class="language-javascript"><span class="hljs-comment">//populate the calculator with some example values</span>
+<span class="hljs-keyword">let</span> calculator = <span class="hljs-keyword">new</span> ForecastCalculator();
+calculator.province = <span class="hljs-string">"AB"</span>;
+calculator.city = <span class="hljs-string">"Calgary"</span>;
+calculator.model = <span class="hljs-string">"GEM_DETER"</span>;
+calculator.date = <span class="hljs-string">"2019-01-01"</span>;
+calculator.timezone = <span class="hljs-number">13</span>; <span class="hljs-comment">//index retrieved from the Timezone class in psaasGlobals.js</span>
+calculator.time = <span class="hljs-string">"00Z"</span>; <span class="hljs-comment">//00Z for the midnight forecast, 12Z for the noon forecast</span>
+calculator.forecastType = <span class="hljs-string">"hour"</span>; <span class="hljs-comment">//hour for hourly forecast, day for daily forecast</span>
+<span class="hljs-keyword">await</span> calculator.fetchForecastPromise();
+<span class="hljs-comment">//********** the calculator will now contain an array of forecasts for different hours/days. ****************</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -73,6 +94,7 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported"><a href="../classes/_forecast_.citygetter.html" class="tsd-kind-icon">City<wbr>Getter</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_forecast_.forecastcalculator.html" class="tsd-kind-icon">Forecast<wbr>Calculator</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_forecast_.forecastday.html" class="tsd-kind-icon">Forecast<wbr>Day</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_forecast_.forecasthour.html" class="tsd-kind-icon">Forecast<wbr>Hour</a></li>
@@ -86,7 +108,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>
@@ -122,6 +147,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../classes/_forecast_.citygetter.html" class="tsd-kind-icon">City<wbr>Getter</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_forecast_.forecastcalculator.html" class="tsd-kind-icon">Forecast<wbr>Calculator</a>
 					</li>

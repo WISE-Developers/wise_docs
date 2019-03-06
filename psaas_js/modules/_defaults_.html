@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_defaults_.html">&quot;defaults&quot;</a>
@@ -66,6 +66,19 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A few simulation options contain default values that are
+							read by PSaaS Builder during startup. This module allows
+							you to query those defaults for use when building new
+						simulations.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<p>Asynchronously retrieve the default values.</p>
+					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> jDefaults = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> JobDefaults().getDeafultsPromise();</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -84,7 +97,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>

@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_solar_.html">&quot;solar&quot;</a>
@@ -66,6 +66,25 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Use PSaaS Builder to calculate solar times
+							based on the input location and date. Solar times
+						include sunrise, sunset, and solar noon.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> calculator = <span class="hljs-keyword">new</span> SolarCalculator();
+calculator.latitude = <span class="hljs-number">49.8998</span>;
+calculator.longitude = <span class="hljs-number">-97.1375</span>;
+calculator.timezone = <span class="hljs-number">15</span>; <span class="hljs-comment">//index was retrieved from the Timezone class in psaasGlobals.js</span>
+calculator.year = <span class="hljs-number">2019</span>;
+calculator.month = <span class="hljs-number">1</span>;
+calculator.day = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">await</span> calculator.fetchSolarPromise();
+<span class="hljs-comment">//********* calculator will now contain the calulated solar values ***********</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -84,7 +103,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>

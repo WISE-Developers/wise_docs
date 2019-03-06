@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.4.3</span>
+   &#160;<span id="projectnumber">6.2.5.2</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -196,6 +196,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9eaa6a43a544e643a95dd1273dd226fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s.html#a9eaa6a43a544e643a95dd1273dd226fb">addOutputSummaryFileToScenario</a> ($scen, $filename)</td></tr>
 <tr class="memdesc:a9eaa6a43a544e643a95dd1273dd226fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a summary output file to a scenario.  <a href="#a9eaa6a43a544e643a95dd1273dd226fb">More...</a><br /></td></tr>
 <tr class="separator:a9eaa6a43a544e643a95dd1273dd226fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d837185abbc21b56660c44d10f16eb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s.html#a8d837185abbc21b56660c44d10f16eb5">addAttachment</a> ($filename, $contents)</td></tr>
+<tr class="memdesc:a8d837185abbc21b56660c44d10f16eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a file attachment to the project.  <a href="#a8d837185abbc21b56660c44d10f16eb5">More...</a><br /></td></tr>
+<tr class="separator:a8d837185abbc21b56660c44d10f16eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d2b0f39ae8407ef3faa0946d012573"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s.html#a98d2b0f39ae8407ef3faa0946d012573">beginJob</a> ()</td></tr>
 <tr class="memdesc:a98d2b0f39ae8407ef3faa0946d012573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the job to the job manager for execution.  <a href="#a98d2b0f39ae8407ef3faa0946d012573">More...</a><br /></td></tr>
 <tr class="separator:a98d2b0f39ae8407ef3faa0946d012573"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +220,10 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_COMMENT</b> = 
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s.html#a41bd23edf09bbda4c9641ee6a1c49f23">$outputs</a></td></tr>
 <tr class="memdesc:a41bd23edf09bbda4c9641ee6a1c49f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Files that will be output from the job. <br /></td></tr>
 <tr class="separator:a41bd23edf09bbda4c9641ee6a1c49f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bae1cf9d061786167f59ab0f5b3628"><td class="memItemLeft" align="right" valign="top"><a id="a31bae1cf9d061786167f59ab0f5b3628"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s.html#a31bae1cf9d061786167f59ab0f5b3628">$timestepSettings</a></td></tr>
+<tr class="memdesc:a31bae1cf9d061786167f59ab0f5b3628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings that modify <a class="el" href="class_p_saa_s.html" title="The top level class where all information required to run a PSaaS job will be stored. ">PSaaS</a>'s behaviour at the end of each timestep. <br /></td></tr>
+<tr class="separator:a31bae1cf9d061786167f59ab0f5b3628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -240,6 +247,44 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>The top level class where all information required to run a <a class="el" href="class_p_saa_s.html" title="The top level class where all information required to run a PSaaS job will be stored. ">PSaaS</a> job will be stored. </p>
 <dl class="section author"><dt>Author</dt><dd>"Travis Redpath" </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8d837185abbc21b56660c44d10f16eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d837185abbc21b56660c44d10f16eb5">&#9670;&nbsp;</a></span>addAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addAttachment </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$contents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a file attachment to the project. </p>
+<p>Attachments can be used anywhere a filename would be used. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$filename</td><td>The name of the file to attach. Must be a valid Windows filename. </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$contents</td><td>The file contents. Must still be valid if streamed to a file with UTF-8 encoding. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Will return false if the filename is not valid, otherwise the URL to use as the filename when referencing the attachment will be returned. </dd></dl>
+
+</div>
+</div>
 <a id="a5d2fae044f2eb367b2811373add49c16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d2fae044f2eb367b2811373add49c16">&#9670;&nbsp;</a></span>addDirectionWeatherGrid()</h2>
 
@@ -1410,7 +1455,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>deprecated since 6.2.4.3. Project level default FMC is no longer used. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>deprecated since 6.2.4.3. Project level default FMC is no longer used. </dd></dl>
 
 </div>
 </div>

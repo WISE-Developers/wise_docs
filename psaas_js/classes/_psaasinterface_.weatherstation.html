@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_psaasinterface_.html">&quot;psaasInterface&quot;</a>
@@ -106,6 +106,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#addweatherstreamwithdiurnalparameters" class="tsd-kind-icon">add<wbr>Weather<wbr>Stream<wbr>With<wbr>Diurnal<wbr>Parameters</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#getid" class="tsd-kind-icon">get<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#setname" class="tsd-kind-icon">set<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
 						</section>
@@ -306,54 +307,105 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>filename: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The file location for the streams data.</p>
+									</div>
 								</li>
 								<li>
 									<h5>hffmc_value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The HFFMC value.</p>
+									</div>
 								</li>
 								<li>
 									<h5>hffmc_hour: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The hour the HFFMC value was measured. Must be between -1 and 23 inclusive.</p>
+									</div>
 								</li>
 								<li>
 									<h5>hffmc_method: <a href="../enums/_psaasinterface_.hffmcmethod.html" class="tsd-signature-type">HFFMCMethod</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The method to calculate HFFMC.</p>
+									</div>
 								</li>
 								<li>
 									<h5>starting_ffmc: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting FFMC value.</p>
+									</div>
 								</li>
 								<li>
 									<h5>starting_dmc: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting DMC value.</p>
+									</div>
 								</li>
 								<li>
 									<h5>starting_dc: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting DC value.</p>
+									</div>
 								</li>
 								<li>
 									<h5>starting_precip: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting amount of precipitation.</p>
+									</div>
 								</li>
 								<li>
 									<h5>start_time: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting time of the weather stream. Must be formatted as &quot;YYYY-MM-DD&quot;</p>
+									</div>
 								</li>
 								<li>
 									<h5>end_time: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ending time of the weather stream. Must be formatted as &quot;YYYY-MM-DD&quot;</p>
+									</div>
 								</li>
 								<li>
 									<h5>talpha: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal alpha temperature parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5>tbeta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal alpha temperature parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5>tgamma: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal gamma temperature parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5>wsalpha: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal alpha wind speed parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5>wsbeta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal beta wind speed parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5>wsgamma: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The diurnal gamma wind speed parameter.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> comments: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An optional user comment to attach to the weather stream.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_psaasinterface_.weatherstream.html" class="tsd-signature-type">WeatherStream</a></h4>
@@ -393,6 +445,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setname" class="tsd-anchor"></a>
+					<h3>set<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Name<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the name of the weather station. This name must be unique within
+										the simulation. The name will get a default value when the
+									weather station is constructed but can be overriden with this method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="stream" class="tsd-anchor"></a>
 					<h3>stream</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -424,7 +502,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -500,6 +581,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weatherstation.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.weatherstation.html#setname" class="tsd-kind-icon">set<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weatherstation.html#stream" class="tsd-kind-icon">stream</a>

@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OutputStreamInfo
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OutputStreamInfo
+   ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../images/Prometheus-Logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo">
+  
+  
+  <h1 id="PSaaS_API_NET_Interface_OutputStreamInfo" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo" class="text-break">Class OutputStreamInfo
+  </h1>
+  <div class="markdown level0 summary"><p>After all simulations have completed the output files can be streamed to another
+location to be consumed by a client side application. Currently only streaming
+over MQTT is supported.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">OutputStreamInfo</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PSaaS_API.NET.Ext.IStreamable.html">IStreamable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PSaaS_API.NET.Interface.html">PSaaS_API.NET.Interface</a></h6>
+  <h6><strong>Assembly</strong>: PSaaS_API.NET.dll</h6>
+  <h5 id="PSaaS_API_NET_Interface_OutputStreamInfo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OutputStreamInfo : IStreamable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_OutputStreamInfo_Password_" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Password*"></a>
+  <h4 id="PSaaS_API_NET_Interface_OutputStreamInfo_Password" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Password">Password</h4>
+  <div class="markdown level1 summary"><p>An optional password used to authenticate on the service
+that is referenced in <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_API_NET_Interface_OutputStreamInfo_Url">Url</a>. What
+service is being used will determine how the password
+will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PSaaS_API_NET_Interface_OutputStreamInfo_Password_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>WARNING</strong> The password will be transferred and stored
+in plaintext. Don&apos;t use passwords to sensitive services
+in this field.</p>
+</div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_OutputStreamInfo_Url_" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Url*"></a>
+  <h4 id="PSaaS_API_NET_Interface_OutputStreamInfo_Url" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Url">Url</h4>
+  <div class="markdown level1 summary"><p>The URL to stream the output files to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Url { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PSaaS_API_NET_Interface_OutputStreamInfo_Url_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Currently only a single URL scheme is supported, MQTT.</p>
+<p>The URL supports a few parameters that will be replaced by
+runtime values. Parameters should be surrounded with
+curly brackets ({, }).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jobid</td>
+<td>The unique ID of the running job returned when the job is started.</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>The name of the file that is being transferred.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabGroup" id="tabgroup_moxi6HHSGl">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_moxi6HHSGl_mqtt" role="tab" aria-controls="tabpanel_moxi6HHSGl_mqtt" data-tab="mqtt" tabindex="0" aria-selected="true"><strong>MQTT</strong></a>
+</li>
+</ul>
+<section id="tabpanel_moxi6HHSGl_mqtt" role="tabpanel" data-tab="mqtt">
+<p>To stream files to MQTT the URL scheme must begin with either
+mqtt:// or mqtts://. For example:</p>
+<pre><code>mqtt://url.com/server/path:port#topic/path/to/use
+</code></pre><p>Where topic/path/to/use should be replaced with the MQTT topic
+that you want the files sent to. The port should be the port
+that your MQTT server is listening on or left absent to use
+the default of 1883 for mqtt and 8883 for mqtts.</p>
+<p>Example: This will send files over MQTT to a topic with the job ID and
+filename in it.</p>
+<pre><code>mqtt://url.com/server/path:port#psaas/jobs/{jobid}/{filename}
+</code></pre><p>If the filename is not included as a parameter in the topic
+it will be sent as a separate message before the actual file
+is transferred.</p>
+</section>
+</div>
+</div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_OutputStreamInfo_Username_" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Username*"></a>
+  <h4 id="PSaaS_API_NET_Interface_OutputStreamInfo_Username" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Username">Username</h4>
+  <div class="markdown level1 summary"><p>An optional username used to authenticate on the service
+that is referenced in <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_API_NET_Interface_OutputStreamInfo_Url">Url</a>. What
+service is being used will determine how the username
+will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Username { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_OutputStreamInfo_Stream_" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Stream*"></a>
+  <h4 id="PSaaS_API_NET_Interface_OutputStreamInfo_Stream_PSaaS_API_NET_Globals_SocketEx_" data-uid="PSaaS_API.NET.Interface.OutputStreamInfo.Stream(PSaaS_API.NET.Globals.SocketEx)">Stream(SocketEx)</h4>
+  <div class="markdown level1 summary"><p>Streams the output stream information to a socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stream(SocketEx socket)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.SocketEx.html">SocketEx</a></td>
+        <td><span class="parametername">socket</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PSaaS_API.NET.Ext.IStreamable.html">IStreamable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

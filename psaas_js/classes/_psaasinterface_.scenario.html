@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_psaasinterface_.html">&quot;psaasInterface&quot;</a>
@@ -156,6 +156,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#setfgmoptions" class="tsd-kind-icon">set<wbr>Fgm<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#setfmcoptions" class="tsd-kind-icon">set<wbr>Fmc<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#setfwioptions" class="tsd-kind-icon">set<wbr>Fwi<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#setname" class="tsd-kind-icon">set<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#setprobabilisticvalues" class="tsd-kind-icon">set<wbr>Probabilistic<wbr>Values</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.scenario.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
@@ -546,6 +547,7 @@
 								<li>
 									<h5>brck: <a href="_psaasinterface_.fuelbreak.html" class="tsd-signature-type">FuelBreak</a></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>The fuel break to add to the scenario.</p>
 									</div>
 								</li>
 							</ul>
@@ -571,6 +573,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>patch: <a href="_psaasinterface_.fuelpatch.html" class="tsd-signature-type">FuelPatch</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The fuel patch to add to the scenario.</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
@@ -602,6 +607,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>grid: <a href="_psaasinterface_.gridfile.html" class="tsd-signature-type">GridFile</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The grid file to add to the scenario.</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
@@ -634,6 +642,7 @@
 								<li>
 									<h5>ignition: <a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>The ignition to add to the scenario.</p>
 									</div>
 								</li>
 							</ul>
@@ -660,6 +669,7 @@
 								<li>
 									<h5>stream: <a href="_psaasinterface_.weatherstream.html" class="tsd-signature-type">WeatherStream</a></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>The weather stream to set as the scenario&#39;s primary stream.</p>
 									</div>
 								</li>
 							</ul>
@@ -685,6 +695,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>wthr: <a href="_psaasinterface_.weathergrid.html" class="tsd-signature-type">WeatherGrid</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The weather grid to add to the scenario.</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
@@ -716,6 +729,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>patch: <a href="_psaasinterface_.weatherpatch.html" class="tsd-signature-type">WeatherPatch</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The weather patch to add to the scenario.</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
@@ -748,6 +764,7 @@
 								<li>
 									<h5>stream: <a href="_psaasinterface_.weatherstream.html" class="tsd-signature-type">WeatherStream</a></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>The weather stream to add to the scenario.</p>
 									</div>
 								</li>
 							</ul>
@@ -985,7 +1002,7 @@
 								<li>
 									<h5>fwiSpacInterp: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Apply spatial interpolation to FWI valuesv.</p>
+										<p>Apply spatial interpolation to FWI values.</p>
 									</div>
 								</li>
 								<li>
@@ -1011,6 +1028,32 @@
 									<div class="tsd-comment tsd-typography">
 										<p>Apply spatial interpolation to FWI values.</p>
 									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setname" class="tsd-anchor"></a>
+					<h3>set<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Name<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the name of the scenario. This name must be unique within
+										the simulation. The name will get a default value when the
+									scenario is constructed but can be overriden with this method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1089,7 +1132,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -1279,6 +1325,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.scenario.html#setfwioptions" class="tsd-kind-icon">set<wbr>Fwi<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.scenario.html#setname" class="tsd-kind-icon">set<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.scenario.html#setprobabilisticvalues" class="tsd-kind-icon">set<wbr>Probabilistic<wbr>Values</a>

@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="index.html">Globals</a>
+					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
 			<h1> PSaaS Node.JS API</h1>
@@ -63,34 +63,42 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>External modules</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-external-module"><a href="modules/_configure_.html" class="tsd-kind-icon">"configure"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_defaults_.html" class="tsd-kind-icon">"defaults"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_fbp_.html" class="tsd-kind-icon">"fbp"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_forecast_.html" class="tsd-kind-icon">"forecast"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_fwi_.html" class="tsd-kind-icon">"fwi"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_psaasglobals_.html" class="tsd-kind-icon">"psaas<wbr>Globals"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_psaasinterface_.html" class="tsd-kind-icon">"psaas<wbr>Interface"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_solar_.html" class="tsd-kind-icon">"solar"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_weather_.html" class="tsd-kind-icon">"weather"</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
+			<div class="tsd-panel tsd-typography">
+				<p>This is documentation for the Node.JS version of the PSaaS API.</p>
+				<h2 id="main-modules">Main Modules</h2>
+				<p>The API is split up into several modules.</p>
+				<h3 id="client-js">client.js</h3>
+				<p>This module contains the client API needed to listen for events raised by running PSaaS jobs using MQTT.</p>
+				<h3 id="configure-js">configure.js</h3>
+				<p>This is a configuration script for the sample web server in index.js. This will allow you to configure the job directory and the location and port of the running PSaaS Builder instance.</p>
+				<h3 id="defaults-js">defaults.js</h3>
+				<p>This module loads default values from PSaaS Builder for the few simulation parameters that have defaults.</p>
+				<h3 id="fbp-js">fbp.js</h3>
+				<p>A module to run FBP calculations from PSaaS Builder.</p>
+				<h3 id="forecast-js">forecast.js</h3>
+				<p>Request PSaaS Builder to lookup forecast information from Environment Canada. This module also provides methods to fetch the cities that support forecast lookups.</p>
+				<h3 id="fwi-js">fwi.js</h3>
+				<p>A module to run FWI calculations from PSaaS Builder.</p>
+				<h3 id="index-js">index.js</h3>
+				<p>An example web server that uses all other modules. It displays a basic website with a static FWI calculation example, forms for doing FBP and solar calculations, forecast and current condition weather lookups, and a simple start PSaaS job function. The start job function will display statistic results from the running job as they are emitted.</p>
+				<h3 id="psaasglobals-js">psaasGlobals.js</h3>
+				<p>Global classes needed for interacting with various parts of the PSaaS network.</p>
+				<h3 id="psaasinterface-js">psaasInterface.js</h3>
+				<p>Classes needed for building and running PSaaS jobs. Simulations are built and PSaaS Builder is triggered to create the job for PSaaS to run.</p>
+				<h3 id="solar-js">solar.js</h3>
+				<p>A module to run solar calculations (sunrise, sunset, solar noon) from PSaaS Builder.</p>
+				<h3 id="weather-js">weather.js</h3>
+				<p>A module to lookup current weather conditions with PSaaS Builder. The module also contains methods to lookup the cities that support current weather conditions.</p>
+			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals current ">
-						<a href="index.html"><em>Globals</em></a>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_configure_.html">"configure"</a>

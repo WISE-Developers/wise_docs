@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_weather_.html">&quot;weather&quot;</a>
@@ -69,11 +69,23 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Fetch current weather information for a given city, province.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">WeatherCalculator</span>
+						<a href="_psaasglobals_.ipsaasserializable.html" class="tsd-signature-type">IPSaaSSerializable</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">WeatherCalculator</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -85,13 +97,13 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#city" class="tsd-kind-icon">city</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_weather_.weathercalculator.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#humidity" class="tsd-kind-icon">humidity</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#province" class="tsd-kind-icon">province</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#temperature" class="tsd-kind-icon">temperature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#time" class="tsd-kind-icon">time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#winddirection" class="tsd-kind-icon">wind<wbr>Direction</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#windspeed" class="tsd-kind-icon">wind<wbr>Speed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_weather_.weathercalculator.html#get_cities_key" class="tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_weather_.weathercalculator.html#get_weather_key" class="tsd-kind-icon">GET_<wbr>WEATHER_<wbr>KEY</a></li>
 							</ul>
 						</section>
@@ -99,7 +111,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#fetchweather" class="tsd-kind-icon">fetch<wbr>Weather</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_weather_.weathercalculator.html#fetchweatherinternal" class="tsd-kind-icon">fetch<wbr>Weather<wbr>Internal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_weather_.weathercalculator.html#fetchweatherpromise" class="tsd-kind-icon">fetch<wbr>Weather<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_weather_.weathercalculator.html#getcities" class="tsd-kind-icon">get<wbr>Cities</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_weather_.weathercalculator.html#getcitiespromise" class="tsd-kind-icon">get<wbr>Cities<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,10 +129,16 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The city to fetch the forecast for. Must be one of the predefined cities for the
+							<p>The city to fetch the weather for. Must be one of the predefined cities for the
 							specified province.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="fetchstate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fetch<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">fetch<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="humidity" class="tsd-anchor"></a>
@@ -137,7 +158,7 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The province to fetch the forecast for (can be either the full name or abbreviation).</p>
+							<p>The province to fetch the weather for (can be either the full name or abbreviation).</p>
 						</div>
 					</div>
 				</section>
@@ -184,12 +205,6 @@
 							<p>The current wind speed (km/h).</p>
 						</div>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="get_cities_key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> GET_<wbr>CITIES_<wbr>KEY</h3>
-					<div class="tsd-signature tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"WEATHER_LIST_CITIES"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;WEATHER_LIST_CITIES&quot;</span></div>
-					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 					<a name="get_weather_key" class="tsd-anchor"></a>
@@ -242,6 +257,89 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="fetchweatherinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> fetch<wbr>Weather<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Weather<wbr>Internal<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>defaults<span class="tsd-signature-symbol">: </span><a href="_weather_.weathercalculator.html" class="tsd-signature-type">WeatherCalculator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>defaults: <a href="_weather_.weathercalculator.html" class="tsd-signature-type">WeatherCalculator</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>message: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fetchweatherpromise" class="tsd-anchor"></a>
+					<h3>fetch<wbr>Weather<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Weather<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_weather_.weathercalculator.html" class="tsd-signature-type">WeatherCalculator</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the current weather conditions for the specified province and city.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>This method can only be called once at a time per instance.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_weather_.weathercalculator.html" class="tsd-signature-type">WeatherCalculator</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A <a href="_weather_.weathercalculator.html">WeatherCalculator</a> object that contains the current weather
+							conditions for the specified city and province.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="getcities" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Cities</h3>
@@ -287,13 +385,44 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getcitiespromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Cities<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cities<wbr>Promise<span class="tsd-signature-symbol">(</span>province<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasglobals_.province.html" class="tsd-signature-type">Province</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a list of supported cities in the provided province.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>province: <a href="../enums/_psaasglobals_.province.html" class="tsd-signature-type">Province</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The province to get the supported cities in.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An array of city names.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_configure_.html">"configure"</a>
@@ -329,6 +458,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_weather_.citiesgetter.html" class="tsd-kind-icon">Cities<wbr>Getter</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
@@ -336,6 +468,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_weather_.weathercalculator.html#city" class="tsd-kind-icon">city</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_weather_.weathercalculator.html#fetchstate" class="tsd-kind-icon">fetch<wbr>State</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_weather_.weathercalculator.html#humidity" class="tsd-kind-icon">humidity</a>
@@ -356,16 +491,22 @@
 								<a href="_weather_.weathercalculator.html#windspeed" class="tsd-kind-icon">wind<wbr>Speed</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_weather_.weathercalculator.html#get_cities_key" class="tsd-kind-icon">GET_<wbr>CITIES_<wbr>KEY</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="_weather_.weathercalculator.html#get_weather_key" class="tsd-kind-icon">GET_<wbr>WEATHER_<wbr>KEY</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_weather_.weathercalculator.html#fetchweather" class="tsd-kind-icon">fetch<wbr>Weather</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_weather_.weathercalculator.html#fetchweatherinternal" class="tsd-kind-icon">fetch<wbr>Weather<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_weather_.weathercalculator.html#fetchweatherpromise" class="tsd-kind-icon">fetch<wbr>Weather<wbr>Promise</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_weather_.weathercalculator.html#getcities" class="tsd-kind-icon">get<wbr>Cities</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_weather_.weathercalculator.html#getcitiespromise" class="tsd-kind-icon">get<wbr>Cities<wbr>Promise</a>
 							</li>
 						</ul>
 					</li>

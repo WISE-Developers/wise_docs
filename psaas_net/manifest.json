@@ -1,0 +1,1419 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/gitprojects/v7/PSaaS_Builder_PHP/netapi/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Defaults.JobDefaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Defaults.JobDefaults.html",
+          "hash": "4QjD4i5a2Rjno27PCgs7OQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Defaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Defaults.html",
+          "hash": "CUiruR2ZIO8sgqLBax2YTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Ext.IDefaultable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Ext.IDefaultable.html",
+          "hash": "GbYNYSGRXx/rH9Vsa8M/LQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Ext.IStreamable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Ext.IStreamable.html",
+          "hash": "JRryROfB//XUtltTeA6n8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Ext.IValidable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Ext.IValidable.html",
+          "hash": "uJ9bB2Id0BB7DcOKcYcq/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Ext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Ext.html",
+          "hash": "VIcwI4oYd7hCFT+SdIUkWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FBP.FbpCalculations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FBP.FbpCalculations.html",
+          "hash": "TO+GmHMNS0C6mtkjEQVkkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FBP.FuelType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FBP.FuelType.html",
+          "hash": "hktr8AHeoG9KiqgMVZXPww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FBP.FuelTypeDefaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FBP.FuelTypeDefaults.html",
+          "hash": "A6YTKfSCCnUVZfGeOm1evg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FBP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FBP.html",
+          "hash": "VtW32Qum1hYU2N8ndLtBlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FWI.FWICalculationMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FWI.FWICalculationMethod.html",
+          "hash": "L97wCCSWV2wObrHTUGBygg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FWI.FWICalculations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FWI.FWICalculations.html",
+          "hash": "jXWts5X25UTc8Llm3WlnKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.FWI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.FWI.html",
+          "hash": "Y5tXxOby5RH6k06f+QwzNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Forecast.ForecastCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Forecast.ForecastCalculator.html",
+          "hash": "Pci9V7SXJTyg8e0RRAtACQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Forecast.ForecastDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Forecast.ForecastDay.html",
+          "hash": "aPZxC5h+3PVFJemfzeQ4FQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Forecast.ForecastHour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Forecast.ForecastHour.html",
+          "hash": "fUO89pFMEjEJrWWEIQ790Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Forecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Forecast.html",
+          "hash": "wz3gdndSRTnh6oqJgONaBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.Duration.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.Duration.Builder.html",
+          "hash": "wf1P5DWynWzVjrOVWiZ9gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.Duration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.Duration.html",
+          "hash": "iBmoAU8rUb5wikzmDz+UIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.FBPOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.FBPOptions.html",
+          "hash": "fML154hG+ji2YNRMJWGrRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.FGMOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.FGMOptions.html",
+          "hash": "hIp2611kov8eNvYvecS/Mg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.FMCOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.FMCOptions.html",
+          "hash": "T6sfiE9FEmhSC4k6xNvaaA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.FWIOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.FWIOptions.html",
+          "hash": "dNnI60wj+VL7igK2GlkbGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.LatLon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.LatLon.html",
+          "hash": "17YOel5Fh+RnLf1amaQOww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.PSaaSLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.PSaaSLogLevel.html",
+          "hash": "Jt2Cxzcf3ijsV+iM0Rc7ww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.PSaaSLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.PSaaSLogger.html",
+          "hash": "bukTTNADfChaiWZuNaZIUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.Province.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.Province.html",
+          "hash": "X7iKM49nJSod8zQvk5xpsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.SocketEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.SocketEx.html",
+          "hash": "T1n4H0ofqIfIrUEL7nKpSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.SocketHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.SocketHelper.html",
+          "hash": "9W+XlNK4wrSu/Pb6m0qC6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.SocketMsg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.SocketMsg.html",
+          "hash": "f7MWAIy0CevngszbgiaJlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.SummaryOutputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.SummaryOutputs.html",
+          "hash": "hU22jVGt23Ts/NwdzQ4vGw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.Timezone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.Timezone.html",
+          "hash": "8ZISABiIs3QYp2UzUYBeWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.TimezoneName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.TimezoneName.html",
+          "hash": "v0EEleHKJUke1kFH6VoAHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.Units.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.Units.html",
+          "hash": "rRvNMMnFHO1dpb7q5BEolQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.VectorMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.VectorMetadata.html",
+          "hash": "PF3W/+tqZODE2C+4pnrHxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Globals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Globals.html",
+          "hash": "E3SWZcB6ujFVrjhhLBJW0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Admin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Admin.html",
+          "hash": "y3PNhuACNbtkZ5tijjvz6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.BurningConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.BurningConditions.html",
+          "hash": "Jh1qlTG8gzSaLdMeNeukcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.DiurnalParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.DiurnalParameters.html",
+          "hash": "x3crY+g78xU1KFCVQ+Zs2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FromFuel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FromFuel.html",
+          "hash": "j3ASEEX7V/FQfKwH0pjTug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FromFuelHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FromFuelHelper.html",
+          "hash": "m8DEO4WrDB3ej+SSauKE/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FuelBreak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FuelBreak.html",
+          "hash": "DGpJ/g4zGJDu+IvWgXdW4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FuelBreakType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FuelBreakType.html",
+          "hash": "mrwpizXj8GtdB1HiHAjxYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FuelPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FuelPatch.html",
+          "hash": "RH1aItE3+gu+3SjLBtfK1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.FuelPatchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.FuelPatchType.html",
+          "hash": "03jXSXco3Xg2soJbD0BRow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.GridFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.GridFile.html",
+          "hash": "JKK6h9whwqTeErcpF3q9zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.GridFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.GridFileType.html",
+          "hash": "x4PB5JhS78cLAex87lfg7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.HffmcMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.HffmcMethod.html",
+          "hash": "YcAXqVvkgTNTtKQg3Q9Nrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Ignition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Ignition.html",
+          "hash": "QD54EAiLfEPHGx+eogfWEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.IgnitionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.IgnitionType.html",
+          "hash": "jBbZBH1g4mSXE5jO3X2UrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.LayerInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.LayerInfo.html",
+          "hash": "2N2z8kInaBeSLTX8MH4hRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.MqttSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.MqttSettings.html",
+          "hash": "yHkzSaGu40/PXTnmRMCkQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.GridFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.GridFile.html",
+          "hash": "GuvQMkeBxx+cHuKvZchIyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileInterpolation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileInterpolation.html",
+          "hash": "LXZ0T1bksc9VsJ6QUAhgVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileInterpolationHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileInterpolationHelper.html",
+          "hash": "l2c3tUQKIRURyLheA8+qbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileType.html",
+          "hash": "Asb3MiCzfKWj4TEpJw5hbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileTypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.GridFileTypeHelper.html",
+          "hash": "pOW2aDWoXTFfkG1xxsXhkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.PSaaSOutputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.PSaaSOutputs.html",
+          "hash": "NntX49MFqPmvla8tKoL9+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.SummaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.SummaryFile.html",
+          "hash": "srEUj24ALD8tXOsAtTe9uA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFile.html",
+          "hash": "ogNH94DDxQGugiN9zuVJWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFileType.html",
+          "hash": "h2coo3YgDanj2YEm3rkF8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFileTypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.VectorFileTypeHelper.html",
+          "hash": "FKi1LuzvoCbhpqr7Q2KR8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Output.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Output.html",
+          "hash": "G7NV0nXYg/21QPLclxd1zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.OutputStreamInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.OutputStreamInfo.html",
+          "hash": "w1NVt2p9DwEWWTrHHhqDZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.PSaaS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.PSaaS.html",
+          "hash": "2u9Xz4wrWmHYAzLZ23dx9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.PSaaSInputFiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.PSaaSInputFiles.html",
+          "hash": "pSQRDiYuax/x70f1i3iaNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.PSaaSInputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.PSaaSInputs.html",
+          "hash": "OKGRuOXURqGOO/tCGkpvcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.Scenario.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.Scenario.html",
+          "hash": "uX5RqOWgNIzXInPJpn2Q5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.StopJobPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.StopJobPriority.html",
+          "hash": "M9mlqbcakYTRa6JvwZ70YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.TimestepSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.TimestepSettings.html",
+          "hash": "YpoXz15lWhHgYnlOZKsuYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.VersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.VersionInfo.html",
+          "hash": "HFDKtla/YOP5ulZYjO51og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherGrid.html",
+          "hash": "xQKvB26U3N5RFCm9ypzn3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherGridGridFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherGridGridFile.html",
+          "hash": "T2JikjIT//0s43vZpa8bdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherGridSector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherGridSector.html",
+          "hash": "JKuH9IhbTCzcybA/nDlxhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherGridType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherGridType.html",
+          "hash": "et9NFcfNHjYI5oC/cUKWGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherGridTypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherGridTypeHelper.html",
+          "hash": "tcpTOTAJ8TXFSbUfYElUuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatch.html",
+          "hash": "kfcguaWCbSQkdvtPGsw9nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchDetails.html",
+          "hash": "AX5BoP4wj8rffyJRVQaD6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchOperation.html",
+          "hash": "vOim+zzW0tb02TEO+zwnVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchPrecipitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchPrecipitation.html",
+          "hash": "SKVLCTRxbBGzNHiMlHUQwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchRelativeHumidity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchRelativeHumidity.html",
+          "hash": "82rpHcyENCrhAjc9TNqRLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchTemperature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchTemperature.html",
+          "hash": "NrlP101vpn4AfLhGwA/oOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchType.html",
+          "hash": "9Wg06HXWX0wIkIHklkybig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchWindDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchWindDirection.html",
+          "hash": "x+81VQq/PMZmSUtqB95X4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchWindSpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherPatchWindSpeed.html",
+          "hash": "8tEKIIn1zdPS5sIGj+iy7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherStation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherStation.html",
+          "hash": "INH1/WAgQAGchrWGtYinWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.WeatherStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.WeatherStream.html",
+          "hash": "pCGJH/3bNzJ3wMRSsaBW/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Interface.html",
+          "hash": "9QbKeRPrEn9ZLj1b2QbYSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Solar.SolarCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Solar.SolarCalculator.html",
+          "hash": "m49Lz1P0BXZ0EbLR9/dxMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Solar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Solar.html",
+          "hash": "IHBa+ouWK5H+XJ0bmaXq8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Weather.WeatherCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Weather.WeatherCalculator.html",
+          "hash": "2QDSmLKbwUYKHJO7rhrYSQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSaaS_API.NET.Weather.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSaaS_API.NET.Weather.html",
+          "hash": "rcDs8EKx5EvWz3BaV6kMbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Lzuze4vLWkmuX6On+3dUGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "tcKLVIOBv0MNdY5YI8puIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.Internal.JobStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.Internal.JobStatus.html",
+          "hash": "2lflq8otOevXQfk1mdvx/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.Internal.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.Internal.MessageType.html",
+          "hash": "UDqSDNjiLHGwnYt9KPM0rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.Internal.MessageTypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.Internal.MessageTypeHelper.html",
+          "hash": "1NvxmXhHMdNFWHViBYgchw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.Internal.MqttMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.Internal.MqttMessage.html",
+          "hash": "QU969HexKfU3dB1yhW2+4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.Internal.html",
+          "hash": "yLxUNHC+v47Cdkd4+StkZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.JobManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.JobManager.html",
+          "hash": "iVPfMgxxm3k1+AxCKItc7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.JobManagerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.JobManagerOptions.html",
+          "hash": "hg+su3tgv7QipqiwfgikBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.ScenarioCompleteEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.ScenarioCompleteEventArgs.html",
+          "hash": "jISGrQfoYhy5WypVGPLn4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.SimulationCompleteEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.SimulationCompleteEventArgs.html",
+          "hash": "FTSrhSf0pTaBUQBHnOs6tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.DoubleStatistic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.DoubleStatistic.html",
+          "hash": "XBHJKXStkS0Mgw1Kl80yNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.IStatistic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.IStatistic.html",
+          "hash": "1o3bsmD7Pg9zsptFeUdPhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.IntegerStatistic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.IntegerStatistic.html",
+          "hash": "Qfn6JuAYu1ynKurorGKqrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.StringStatistic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.StringStatistic.html",
+          "hash": "TL+1MLHcL4FTNyaSuhJZeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.StatisticsEventArgs.html",
+          "hash": "3/WlUF4M2kclo4YwsZN3LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "client/PSaaS_API.NET.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/PSaaS_API.NET.Client.html",
+          "hash": "e3UemdP8GvB2D7FJMk0PNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "client/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "client/index.html",
+          "hash": "8E89ZCTPo/ugZ/kEgkY4EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "client/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "client/toc.html",
+          "hash": "JhdY1/QVdP2yYHECSIn/lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Prometheus-Logo-40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Prometheus-Logo-40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "xP5wcVsCYpYsRrelzhwQIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "zY1V+pupLZozODrXqPhyFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_fbp_.html">&quot;fbp&quot;</a>
@@ -66,6 +66,37 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Request PSaaS Builder to calculate FBP values from
+						the given inputs.</p>
+					</div>
+					<h2 id="example">Example</h2>
+					<pre><code class="language-javascript"><span class="hljs-comment">//cache the FBP fuel type defaults</span>
+<span class="hljs-keyword">let</span> fuelCache = <span class="hljs-keyword">await</span> FbpCalculations.getFuelsWithDefaultsPromise();
+
+<span class="hljs-comment">//populate the calculator with example values</span>
+<span class="hljs-keyword">let</span> calculator = <span class="hljs-keyword">new</span> FbpCalculations();
+calculator.fuelType = <span class="hljs-string">"C-1"</span>;
+calculator.elevation = <span class="hljs-number">500</span>;
+calculator.useSlope = <span class="hljs-literal">false</span>;
+calculator.slopeValue = <span class="hljs-number">0</span>;
+calculator.aspect = <span class="hljs-number">0</span>;
+calculator.useLine = <span class="hljs-literal">false</span>;
+calculator.startTime = <span class="hljs-string">"2019-01-01T12:00:00"</span>;
+calculator.elapsedTime = <span class="hljs-number">60</span>;
+calculator.ffmc = <span class="hljs-number">85</span>;
+calculator.bui = <span class="hljs-number">40</span>;
+calculator.useBui = <span class="hljs-literal">true</span>;
+calculator.windSpeed = <span class="hljs-number">10</span>;
+calculator.windDirection = <span class="hljs-number">0</span>;
+calculator.latitude = <span class="hljs-number">62.454</span>;
+calculator.longitude = <span class="hljs-number">-114.3718</span>;
+<span class="hljs-keyword">await</span> calculator.calculatePromise();
+<span class="hljs-comment">//******* calculator is now populated with FBP values **********</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -76,6 +107,7 @@
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_fbp_.fbpcalculations.html" class="tsd-kind-icon">Fbp<wbr>Calculations</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_fbp_.fueltype.html" class="tsd-kind-icon">Fuel<wbr>Type</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_fbp_.fueltypedefaults.html" class="tsd-kind-icon">Fuel<wbr>Type<wbr>Defaults</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported"><a href="../classes/_fbp_.fuelsgetter.html" class="tsd-kind-icon">Fuels<wbr>Getter</a></li>
 							</ul>
 						</section>
 					</div>
@@ -86,7 +118,10 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>
@@ -130,6 +165,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_fbp_.fueltypedefaults.html" class="tsd-kind-icon">Fuel<wbr>Type<wbr>Defaults</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../classes/_fbp_.fuelsgetter.html" class="tsd-kind-icon">Fuels<wbr>Getter</a>
 					</li>
 				</ul>
 			</nav>

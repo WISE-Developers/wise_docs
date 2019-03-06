@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
 					<a href="_index_.html">&quot;index&quot;</a>
@@ -66,6 +66,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A full example web server that uses all parts of the API.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -94,8 +101,10 @@
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#f_yukon" class="tsd-kind-icon">f_<wbr>yukon</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#fuelcache" class="tsd-kind-icon">fuel<wbr>Cache</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#fwi" class="tsd-kind-icon">fwi</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#io" class="tsd-kind-icon">io</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#jdefaults" class="tsd-kind-icon">j<wbr>Defaults</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#localdir" class="tsd-kind-icon">local<wbr>Dir</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#server" class="tsd-kind-icon">server</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_alberta" class="tsd-kind-icon">w_<wbr>alberta</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_bc" class="tsd-kind-icon">w_<wbr>bc</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_brunswick" class="tsd-kind-icon">w_<wbr>brunswick</a></li>
@@ -110,6 +119,12 @@
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_scotia" class="tsd-kind-icon">w_<wbr>scotia</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_yukon" class="tsd-kind-icon">w_<wbr>yukon</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#zonecache" class="tsd-kind-icon">zone<wbr>Cache</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#handletimestepmessage" class="tsd-kind-icon">handle<wbr>Timestep<wbr>Message</a></li>
 							</ul>
 						</section>
 					</div>
@@ -208,6 +223,12 @@
 					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="io" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> io</h3>
+					<div class="tsd-signature tsd-kind-icon">io<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Server</span><span class="tsd-signature-symbol"> =&nbsp;ioLib(server)</span></div>
+					
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="jdefaults" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> j<wbr>Defaults</h3>
 					<div class="tsd-signature tsd-kind-icon">j<wbr>Defaults<span class="tsd-signature-symbol">:</span> <a href="../classes/_defaults_.jobdefaults.html" class="tsd-signature-type">JobDefaults</a></div>
@@ -217,6 +238,12 @@
 					<a name="localdir" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> local<wbr>Dir</h3>
 					<div class="tsd-signature tsd-kind-icon">local<wbr>Dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;@@JOBS@@&quot;</span></div>
+					
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="server" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> server</h3>
+					<div class="tsd-signature tsd-kind-icon">server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Server</span><span class="tsd-signature-symbol"> =&nbsp;http.createServer((req, res) &#x3D;&gt; {let website &#x3D; new TestWebsite();if (req.method.toLowerCase() &#x3D;&#x3D; &#x27;get&#x27;) {res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/html&#x27; });website.writeHead(res);website.writePrometheusJob(res);website.writeFbpCalc(res);website.writeFwiCalc(res);website.writeSolarForm(res);website.writeGetWeather(res);website.writeGetForecast(res);website.writeFoot(res);res.end();}else if (req.method.toLowerCase() &#x3D;&#x3D; &#x27;post&#x27;) {website.parseForm(req, () &#x3D;&gt; {res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/html&#x27; });website.writeHead(res);website.writePrometheusJob(res);website.writeFbpCalc(res);website.writeFwiCalc(res);website.writeSolarForm(res);website.writeGetWeather(res);website.writeGetForecast(res);website.writeFoot(res);res.end();});}}).listen(8888)</span></div>
 					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
@@ -304,12 +331,43 @@
 					
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="handletimestepmessage" class="tsd-anchor"></a>
+					<h3>handle<wbr>Timestep<wbr>Message</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Timestep<wbr>Message<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><a href="../classes/_client_.statisticseventargs.html" class="tsd-signature-type">StatisticsEventArgs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Notify listening webpages of statistics that have been
+									emitted from a running PSaaS job.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <a href="../classes/_client_.statisticseventargs.html" class="tsd-signature-type">StatisticsEventArgs</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_client_.html">"client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_configure_.html">"configure"</a>
@@ -394,10 +452,16 @@
 						<a href="_index_.html#fwi" class="tsd-kind-icon">fwi</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_.html#io" class="tsd-kind-icon">io</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#jdefaults" class="tsd-kind-icon">j<wbr>Defaults</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#localdir" class="tsd-kind-icon">local<wbr>Dir</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_.html#server" class="tsd-kind-icon">server</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#w_alberta" class="tsd-kind-icon">w_<wbr>alberta</a>
@@ -440,6 +504,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#zonecache" class="tsd-kind-icon">zone<wbr>Cache</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_.html#handletimestepmessage" class="tsd-kind-icon">handle<wbr>Timestep<wbr>Message</a>
 					</li>
 				</ul>
 			</nav>
