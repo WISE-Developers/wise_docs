@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PSaaS MQTT Client API 6.2.3.7 documentation</title>
+  <title>PSaaS MQTT Client API 6.2.5.2 documentation</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" />
 </head>
@@ -91,7 +91,8 @@
 
 <p><p>This document will define the API used by the various components of PSaaS to communicate via MQTT.</p>
 <h2>Client Ids</h2>
-<p>All client applications participating in the MQTT communication must have their own unique ID. The unique ID should take the form <code>&lt;client type&gt;_&lt;process id&gt;-&lt;hostname&gt;</code> but there is no requirement to use this format as long as the ID used is unique.</p>
+<p>All client applications participating in the MQTT communication must have their own unique ID. The unique ID should take the form <code>&lt;client type&gt;_&lt;process id&gt;-&lt;hostname&gt;</code>
+but there is no requirement to use this format as long as the ID used is unique.</p>
 <table>
 <thead>
 <tr>
@@ -100,6 +101,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>job</td>
+<td>Information about a running PSaaS job.</td>
+</tr>
 <tr>
 <td>psaas</td>
 <td>An instance of PSaaS that is executing a job.</td>
@@ -115,14 +120,18 @@
 </tbody>
 </table>
 <h3>Special Circumstances</h3>
-<p>Some cross platform development environments have limited support for determining the running process ID and the hostname of the computer the process is running on. If a language is not able to find either of these values a random number will be used in their place to ensure that a unique client ID is still generated.</p>
+<p>Some cross platform development environments have limited support for determining the running process ID and the hostname of the computer the process is running on.
+If a language is not able to find either of these values a random number will be used in their place to ensure that a unique client ID is still generated.</p>
 <p>Client side apps should use a similar format but may need to replace the process ID and hostname fields with a value relevant to the platform.</p>
 <h2>Topic Structure</h2>
 <p>All topics will have a similar structure for easy parsing.</p>
 <pre class="hljs"><code>{root path}/{originator}/{target}/{message type}
 </code></pre>
-<p>The root path will be a static string used for all communication. This document will assume the root path is always <code>psaas</code>. The originator is the unique ID of the client that is publishing the message. The target can either be a specific client or a more general group of clients. The message type is a unique identifier for the type of data being communicated in the payload as well as the intent of that data.</p>
+<p>The root path will be a static string used for all communication. This document will assume the root path is always <code>psaas</code>. The originator
+is the unique ID of the client that is publishing the message. The target can either be a specific client or a more general group of clients.
+The message type is a unique identifier for the type of data being communicated in the payload as well as the intent of that data.</p>
 <h3>Possible Targets</h3>
+<p>The topics that applications will respond to depends on whether they are the specific target in the topic, their application type is the target of the topic, or if the topic is a broadcast to all applications.</p>
 <ul>
 <li>A specific client can be the target of a message. The values used as the <code>target</code> parameter will be the same value the client uses as the <code>originator</code> when it publishes messages.</li>
 <li>A general client type can be used as the <code>target</code>. Ex. <code>manager</code> can be used to communicate with all PSaaS manager instances connected to the MQTT broker.</li>
@@ -133,9 +142,10 @@
 <p>There are several steps required to enable usage of MQTT.</p>
 <ul>
 <li>In your defaults.xml define the required MQTT parameters. These include the topic (recommended to be psaas), the broker location, and the broker's username and password if it has one.</li>
-<li>PSaaS builder and PSaaS manager will both still work with pipes so as not to break currently server setups. PSaaS manager will always listen to the configured pipe and will also listen to MQTT if configured in the defaults.xml file. PSaaS builder requires you to start it with MQTT enabled. When running PSaaS builder replace the IP address for PSaaS manager with <code>-m</code>. Ex.</li>
+<li>PSaaS builder and PSaaS manager will both still work with pipes so as not to break currently server setups. PSaaS manager will always listen to the configured pipe and will also listen to MQTT if
+configured in the defaults.xml file. PSaaS builder requires you to start it with MQTT enabled. When running PSaaS builder replace the IP address for PSaaS manager with <code>-m</code>. Ex.</li>
 </ul>
-<p><code>java -jar PSaaS_builder.jar -m /mnt/shared/folder 32479</code></p>
+<p><code>java -jar PSaaS_builder.jar -m -j /mnt/shared/folder -l 32479</code></p>
 </p>
 
 
@@ -152,7 +162,7 @@
     </thead>
     <tbody class="table__body">
       <tr class="table__body__row">
-        <td class="table__body__cell"><div class="table__expand" data-index=0></div>mqtt.vm.sparcsonline.com:{port}</td>
+        <td class="table__body__cell"><div class="table__expand" data-index=0></div>emq.vm.sparcsonline.com:{port}</td>
         <td class="table__body__cell">mqtt</td>
         <td class="table__body__cell"><p>Allows you to connect using the MQTT protocol. Both TCP and Websocket connections are available.</p>
 </td>
@@ -204,9 +214,16 @@
     <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
 
     psaas/{originator}/{job id}/status
-  </h3><p>Report the current status of a running job.</p>
+  </h3>
 
-<p>The PSaaS executable will report the status of the currently executing job when various conditions are met. The <code>originator</code> value will indicate which instance of PSaaS is running the job.</p>
+
+  <h4>Message</h4>
+
+<div class="operation ">
+<p>Reports the current status of a running job.</p>
+
+<p>The PSaaS executable will report the status of the currently executing job when various conditions are met. The <code>originator</code> value will indicate which instance of PSaaS is running the job.
+The status may include any statistics outputs that were requested as part of the timestep settings when creating the job.</p>
 <p>The status code may be one of the following values:</p>
 <ul>
 <li><code>0</code> - The job has been submitted for execution.</li>
@@ -222,61 +239,510 @@
 </ul>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">status </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Status Code</td>
-    </tr>
-    <tr class="table__body__row">
-      <td class="table__body__cell">message </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">A user readable message describing the status.</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">status </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Status Code</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">message </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A user readable message describing the status.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">stats </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            object
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">An optional collection of requested statistics emitted at the end of each timestep. All parameters in this object are optional depending on the job configuration.</td>
+        </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>BURNED_AREA </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Total area of the fire (sq. m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TOTAL_PERIMETER </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Total fire perimeter (m), including interior and exterior and active/inactive portions.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>EXTERIOR_PERIMETER </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Total exterior fire perimeter (m), including active and inactive portions.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>ACTIVE_PERIMETER </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Portion of the fire front considered active (interior and exterior) (where 1 or both vertices are active) (m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TOTAL_PERIMETER_CHANGE </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Change in the total perimeter growth (m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TOTAL_PERIMETER_GROWTH </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Rate of change in the total perimeter growth rate (m/min).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>EXTERIOR_PERIMETER_CHANGE </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Change in the exterior perimeter growth (m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>EXTERIOR_PERIMETER_GROWTH </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Rate of change in the exterior perimeter growth rate (m/min).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>ACTIVE_PERIMETER_CHANGE </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Change in the active perimeter growth (m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>ACTIVE_PERIMETER_GROWTH </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Rate of change in the active perimeter growth rate (m/min).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>AREA_CHANGE </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Change in fire area (sq. m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>AREA_GROWTH </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Rate of change in the fire area (sq. m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>NUM_VERTICES </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of vertices defining the fire perimeter(s).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>NUM_ACTIVE_POINTS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of active vertices defining the fire perimeter(s).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>CUMULATIVE_NUM_ACTIVE_POINTS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Cumulative number of active vertices defining the fire perimeter(s).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>CUMULATIVE_NUM_POINTS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Total, cumulative number of verticies defining the simulation&#x27;s perimeters.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>NUM_FRONTS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of fire fronts (interior and exterior).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>NUM_ACTIVE_FRONTS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int32</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of fire fronts (interior and exterior) which have at least 1 active vertex.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>ROS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum rate of spread (m/min).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>CFB </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum crown fraction burned (unitless).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>CFC </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum crown fuel consumption (kg/m2).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>SFC </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum surface fuel consumption (kg/m2).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TFC </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum total fuel consumption (kg/m2).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>FI </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum fire intensity, based on ROS.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>FLAMELENGTH </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Maximum flame length (m).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TIMESTEP_REALTIME </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int64</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of real-time (clock) seconds to calculate the current display time step.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TIMESTEP_CUMULATIVE_REALTIME </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of real-time (clock) seconds to calculate all display time steps.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>TIMESTEP_CUMULATIVE_BURNING_SECS </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Number of simulated seconds that burning was allowed since the start of the simulation.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>SCENARIO_CURRENT_TIME </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              string
+              
+              
+              
+            </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">The current simulation time (stored as ISO 8601).</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>SCENARIO_NAME </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              string
+              
+              
+              
+            </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">The name of the scenario that the accompanying statistics are for.</td>
+          </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">{
-  &quot;status&quot;: 1,
-  &quot;message&quot;: &quot;The job status has changed&quot;
+  &quot;status&quot;: 8,
+  &quot;message&quot;: &quot;The job status has changed&quot;,
+  &quot;stats&quot;: {
+    &quot;BURNED_AREA&quot;: 478528.421,
+    &quot;SCENARIO_NAME&quot;: &quot;scen0&quot;
+  }
 }</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Status</div>
+</div>
 </div>
 </div>
 <div class="topic">
@@ -288,8 +754,15 @@
 
     psaas/{originator}/{job id}/shutdown
   </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
 <p>Cancel a job that has not yet started or terminate a job that is currently running.</p>
 <p>The <code>originator</code> value will be the ID of the process that sends the shutdown message.</p>
+<p>The <code>target</code> value must be the full ID of a running job.</p>
 <p>There are three different priorities with which the job can be terminated.</p>
 <ul>
 <li><code>0</code> - Shutdown when possible,</li>
@@ -298,61 +771,103 @@
 </ul>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">priority </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">The urgency with which the system should attempt to stop the job from running.</td>
-    </tr>
-    <tr class="table__body__row">
-      <td class="table__body__cell">timeout </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Only valid when priority is 1. This will be the number of minutes to wait for the job to shutdown on its own before attempting to terminate it. If not specified 5 minutes is used.</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">priority </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">0</td>
+          <td class="table__body__cell">The urgency with which the system should attempt to stop the job from running.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">timeout </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Only valid when priority is 1. This will be the number of minutes to wait for the job to shutdown on its own before attempting to terminate it. If not specified 5 minutes is used.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">{
   &quot;priority&quot;: 1,
   &quot;timeout&quot;: 5
 }</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Management</div>
+</div>
 </div>
 </div>
 <div class="topic">
@@ -364,6 +879,12 @@
 
     psaas/{originator}/{target}/requesthistory
   </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
 <p>Request the list of jobs that are known to a job manager.</p>
 <p>The <code>target</code> can either be a specific manager ID to only query a single instance or <code>manager</code> to request that all managers connected to the same broker send their job list.</p>
 <p>The returned jobs can be filtered by their current status within the manager:</p>
@@ -377,55 +898,89 @@
 <p>The managers that receive the message will respond by publishing a <a href="#topic-psaas/%7Boriginator%7D/%7Btarget%7D/responsehistory">response message</a>.</p>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">filter </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">Filter the returned job list.</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">filter </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">all</td>
+          <td class="table__body__cell">Filter the returned job list.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">{
   &quot;filter&quot;: &quot;all&quot;
 }</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Management</div>
+</div>
 </div>
 </div>
 <div class="topic">
@@ -437,53 +992,100 @@
 
     psaas/{originator}/{target}/responsehistory
   </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
 <p>This is the response to the <a href="#topic-psaas/%7Boriginator%7D/%7Btarget%7D/requesthistory">job list request</a> message. The <code>target</code> of this message will be the <code>originator</code> of the request.</p>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">job_name </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">The name of the job.</td>
-    </tr>
-    <tr class="table__body__row">
-      <td class="table__body__cell">status </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job_name </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The name of the job.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">status </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">[
   {
@@ -492,11 +1094,12 @@
   }
 ]</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Management</div>
+</div>
 </div>
 </div>
 <div class="topic">
@@ -508,6 +1111,12 @@
 
     psaas/{originator}/{target}/manage
   </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
 <p>System management requests. Not all client types are guaranteed to respect all types of management calls.</p>
 <p>Possible request types are:</p>
 <ul>
@@ -516,54 +1125,88 @@
 </ul>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">request </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">The type of management being requested.</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">request </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The type of management being requested.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">{
   &quot;request&quot;: &quot;shutdown&quot;
 }</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Management</div>
+</div>
 </div>
 </div>
 <div class="topic">
@@ -575,54 +1218,101 @@
 
     psaas/{originator}/{target}/updatejob
   </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
 <p>Update the details of an already running job. Currently only cancelling scenarios is supported.</p>
 <p>The payload can either be a single object to update or an array of objects.</p>
 
 
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">qos </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Quality of Service</td>
-    </tr>
-  </tbody>
-</table>
+<a name="schema-Message Headers"></a>
+<div class="schema">
 
-<h3>Payload</h3>
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    <tr class="table__body__row">
-      <td class="table__body__cell">name </td>
-      <td class="table__body__cell">string</td>
-      <td class="table__body__cell">The name of the scenario that is to be editted.</td>
-    </tr>
-    <tr class="table__body__row">
-      <td class="table__body__cell">status </td>
-      <td class="table__body__cell">integer</td>
-      <td class="table__body__cell">Set to 0 or leave unspecified to not modify the status of the scenario. Set to 1 to cancel the scenario (will stop executing when possible if running or not be run if it has not yet started).</td>
-    </tr>
-  </tbody>
-</table>
+</div>
 
-<h3>Example</h3>
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">name </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The name of the scenario that is to be editted.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">status </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Set to 0 or leave unspecified to not modify the status of the scenario. Set to 1 to cancel the scenario (will stop executing when possible if running or not be run if it has not yet started).</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">[
   {
@@ -631,45 +1321,54 @@
   }
 ]</code></pre>
 
-<h3>Tags</h3>
+<h4>Tags</h4>
 
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Management</div>
 </div>
 </div>
+</div>
 <h2 class="section-header">Messages</h2>
 
 <h2 class="section-header">Schemas</h2>
 
-  <a name="schema-MQTTQoSHeader"></a>
-  <div class="schema">
-    <h3>MQTTQoSHeader</h3>
-  
-    <table class="table">
-      <thead class="table__head">
-        <tr class="table__head__row">
-          <th class="table__head__cell">Name</th>
-          <th class="table__head__cell">Title</th>
-          <th class="table__head__cell">Type</th>
-          <th class="table__head__cell">Format</th>
-          <th class="table__head__cell">Default</th>
-          <th class="table__head__cell">Description</th>
+<a name="schema-MQTTQoSHeader"></a>
+<div class="schema">
+  <h4>MQTTQoSHeader</h4>
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">MQTTQoSHeader </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
         </tr>
-      </thead>
-      <tbody class="table__body">
-          <tr class="table__body__row">
-            <td class="table__body__cell">MQTTQoSHeader </td>
-            <td class="table__body__cell">qos</td>
-            <td class="table__body__cell">integer</td>
-            <td class="table__body__cell">int32</td>
-            <td class="table__body__cell">1</td>
-            <td class="table__body__cell">Quality of Service</td>
-          </tr>
-      </tbody>
-    </table>
-  
-  </div>
+    </tbody>
+  </table>
+
+  <h4>Example <em>(generated)</em></h4>
+
+  <pre class="hljs"><code class="json">1</code></pre>
+</div>
 </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" type="application/javascript"></script>
