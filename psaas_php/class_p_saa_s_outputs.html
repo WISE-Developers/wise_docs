@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.5.2</span>
+   &#160;<span id="projectnumber">6.2.5.3</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -101,6 +101,15 @@ $(document).ready(function(){initNavTree('class_p_saa_s_outputs.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a16e20fe015b78799886f127635b8cf8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a16e20fe015b78799886f127635b8cf8f">NewGridFile</a> ($scen)</td></tr>
+<tr class="memdesc:a16e20fe015b78799886f127635b8cf8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new grid file to the list of output files.  <a href="#a16e20fe015b78799886f127635b8cf8f">More...</a><br /></td></tr>
+<tr class="separator:a16e20fe015b78799886f127635b8cf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc85581b186ca5eb25f6724a9420ba0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#abc85581b186ca5eb25f6724a9420ba0a">NewVectorFile</a> ($scen)</td></tr>
+<tr class="memdesc:abc85581b186ca5eb25f6724a9420ba0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new vector file to the list of output files.  <a href="#abc85581b186ca5eb25f6724a9420ba0a">More...</a><br /></td></tr>
+<tr class="separator:abc85581b186ca5eb25f6724a9420ba0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036c42bfafd7a57d9b8a7b233666dec7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a036c42bfafd7a57d9b8a7b233666dec7">NewSummaryFile</a> ($scen)</td></tr>
+<tr class="memdesc:a036c42bfafd7a57d9b8a7b233666dec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new summary file to the list of output files.  <a href="#a036c42bfafd7a57d9b8a7b233666dec7">More...</a><br /></td></tr>
+<tr class="separator:a036c42bfafd7a57d9b8a7b233666dec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b37efab7473a1effc29f8be2421f6e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a7b37efab7473a1effc29f8be2421f6e3">isValid</a> ()</td></tr>
 <tr class="memdesc:a7b37efab7473a1effc29f8be2421f6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if all of the required values have been set.  <a href="#a7b37efab7473a1effc29f8be2421f6e3">More...</a><br /></td></tr>
 <tr class="separator:a7b37efab7473a1effc29f8be2421f6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,6 +131,9 @@ Data Fields</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a762ddee0985e9ce7c0f9788a19754f67">$summaryFiles</a> = array()</td></tr>
 <tr class="memdesc:a762ddee0985e9ce7c0f9788a19754f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The summary files that should be output (optional). <br /></td></tr>
 <tr class="separator:a762ddee0985e9ce7c0f9788a19754f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889e25fde65239fb288fa5c90d41e350"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a889e25fde65239fb288fa5c90d41e350">$streamAll</a> = false</td></tr>
+<tr class="memdesc:a889e25fde65239fb288fa5c90d41e350"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default stream status for all newly created output files.  <a href="#a889e25fde65239fb288fa5c90d41e350">More...</a><br /></td></tr>
+<tr class="separator:a889e25fde65239fb288fa5c90d41e350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about which files should be output from the job. </p>
@@ -144,6 +156,84 @@ Data Fields</h2></td></tr>
 
 <p>Checks to see if all of the required values have been set. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="a16e20fe015b78799886f127635b8cf8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e20fe015b78799886f127635b8cf8f">&#9670;&nbsp;</a></span>NewGridFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewGridFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$scen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new grid file to the list of output files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_scenario.html" title="A simulation scenario. ">Scenario</a></td><td class="paramname">$scen</td><td>The scenario to add the output file to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a036c42bfafd7a57d9b8a7b233666dec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036c42bfafd7a57d9b8a7b233666dec7">&#9670;&nbsp;</a></span>NewSummaryFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewSummaryFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$scen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new summary file to the list of output files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_scenario.html" title="A simulation scenario. ">Scenario</a></td><td class="paramname">$scen</td><td>The scenario to add the output file to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc85581b186ca5eb25f6724a9420ba0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc85581b186ca5eb25f6724a9420ba0a">&#9670;&nbsp;</a></span>NewVectorFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewVectorFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$scen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new vector file to the list of output files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_scenario.html" title="A simulation scenario. ">Scenario</a></td><td class="paramname">$scen</td><td>The scenario to add the output file to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -171,6 +261,24 @@ Data Fields</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string An empty string if streaming succeeded, an error otherwise. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a889e25fde65239fb288fa5c90d41e350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889e25fde65239fb288fa5c90d41e350">&#9670;&nbsp;</a></span>$streamAll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$streamAll = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The default stream status for all newly created output files. </p>
+<p>If true, newly created output files will be defaulted to streaming to any specified stream locations. If false, newly created output files will be defaulted to not stream. The user can override this setting on each output file. </p>
 
 </div>
 </div>

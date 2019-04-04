@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PSaaS MQTT Client API 6.2.5.2 documentation</title>
+  <title>PSaaS MQTT Client API 6.2.5.3 documentation</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" />
 </head>
@@ -71,6 +71,30 @@
           <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
           
           psaas/{originator}/{target}/updatejob
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/filerequest">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{target}/filerequest
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/fileresponse">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{target}/fileresponse
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/filechunk">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{target}/filechunk
         </a>
       </li>
     </ul>
@@ -236,6 +260,7 @@ The status may include any statistics outputs that were requested as part of the
 <li><code>7</code> - An unexpected error has occurred.</li>
 <li><code>8</code> - Generic execution information.</li>
 <li><code>9</code> - A request has been received to stop the job.</li>
+<li><code>10</code> - A file stream/upload request has completed.</li>
 </ul>
 
 
@@ -1326,6 +1351,441 @@ The status may include any statistics outputs that were requested as part of the
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Management</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/filerequest"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{target}/filerequest
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>Published by PSaaS Manager when a job has output a file that the creator has requested by streamed over MQTT. The target will always be the job that output the file.</p>
+<p>Subscribers should respond with a /fileresponse topic if they want to receive the file in question..</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The unique ID/name of the job that output the file.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">filename </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A relative path and filename of the output file within the job directory.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">file_size </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int64</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The size of the file in bytes.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">[
+  {
+    &quot;job&quot;: &quot;job_20180221215557233&quot;,
+    &quot;filename&quot;: &quot;scen0/outputfile.txt&quot;,
+    &quot;file_size&quot;: 128
+  }
+]</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Files</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/fileresponse"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{target}/fileresponse
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>This is the response message for /filerequest topics. The target should always be the ID of the PSaaS Manager instance that was the originator
+or the /filerequest topic.</p>
+<p>This topic initializes a partial transfer of the requested file from PSaaS Manager to the requestor. The size of the returned chunk of the file
+is set by PSaaS Manager.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The unique ID/name of the job that output the file.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">filename </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A relative path and filename of the output file within the job directory.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">offset </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int64</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">An offset into the file to return. Although PSaaS Manager sets the amount of data that can be returned in a single call
+        the requestor must manage the offset when the file won&#x27;t fit in a single payload. The offset should be increased by the
+        size of the data chunk in the /filechunk topic.
+        </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">[
+  {
+    &quot;job&quot;: &quot;job_20180221215557233&quot;,
+    &quot;filename&quot;: &quot;scen0/outputfile.txt&quot;,
+    &quot;offset&quot;: 0
+  }
+]</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Files</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/filechunk"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{target}/filechunk
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>PSaaS Manager will publish to this topic when it receives a valid /fileresponse message. This topic will include a chunk of the
+requested file starting at the requested offset and with a maximum length set by PSaaS Manager.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The unique ID/name of the job that output the file.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">filename </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A relative path and filename of the output file within the job directory.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">is_end_of_file </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            boolean
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Indicates if this is the last chunk of the file. If false another /fileresponse message should be sent with an incremented offset.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">file_size </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int64</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The size of the file in bytes.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">data </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A string wrapping UTF-8 encoded bytes read from the file. This is raw file data, not compressed or in any other way encoded.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">[
+  {
+    &quot;job&quot;: &quot;job_20180221215557233&quot;,
+    &quot;filename&quot;: &quot;scen0/outputfile.txt&quot;,
+    &quot;is_end_of_file&quot;: false,
+    &quot;file_size&quot;: 128,
+    &quot;data&quot;: &quot;F9D879978A98D98E&quot;
+  }
+]</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Files</div>
 </div>
 </div>
 </div>

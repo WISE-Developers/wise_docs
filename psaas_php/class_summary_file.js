@@ -6,5 +6,6 @@ var class_summary_file =
     [ "$filename", "class_summary_file.html#a80f7dfcce1c0eeaa17de4bb49d00f07e", null ],
     [ "$outputs", "class_summary_file.html#a5dd51500ef5f398ee3def626979504dc", null ],
     [ "$scenName", "class_summary_file.html#ae7541763cd6020f106aca64d76b9709e", null ],
+    [ "$shouldStream", "class_summary_file.html#a61cefcbbe1954c6ec63db02605263897", null ],
     [ "PARAM_SUMMARYFILE", "class_summary_file.html#ad4546ba85a72501a658024f049ba4a32", null ]
 ];

@@ -6,6 +6,7 @@ var class_output___grid_file =
     [ "$interpMethod", "class_output___grid_file.html#ae646378cc45c16136c2265b109b0f8c4", null ],
     [ "$outputTime", "class_output___grid_file.html#a38a29d89217ec8ee566e0a550f3286f0", null ],
     [ "$scenarioName", "class_output___grid_file.html#a163adad32f70bad746841f1538796f54", null ],
+    [ "$shouldStream", "class_output___grid_file.html#a61cefcbbe1954c6ec63db02605263897", null ],
     [ "$statistic", "class_output___grid_file.html#a56f3bbe0d2e5504c85023b457921c44a", null ],
     [ "INTERP_AREA_WEIGHTING", "class_output___grid_file.html#a5454df76ed82b1c4701d1b93abc69814", null ],
     [ "INTERP_CLOSEST_VERTEX", "class_output___grid_file.html#ac890347263e780c77107a38b8fcfebc1", null ],

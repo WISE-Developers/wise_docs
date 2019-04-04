@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['duration',['Duration',['../class_duration.html',1,'']]]
+  ['componenttype',['ComponentType',['../class_component_type.html',1,'']]]
 ];

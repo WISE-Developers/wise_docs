@@ -28,6 +28,7 @@ var NAVTREE =
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
@@ -40,9 +41,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_fuel_patch.html#a4ea214055e8861907ffd913f565689bd",
-"class_p_saa_s_inputs_files.html#adbac858336d96522b455af3f841c4e1c",
-"class_weather_grid___grid_file.html#aa6035c4fdd872420f230f75f9b87a27b"
+"class_fuel_option.html#a267b7d620260d5c77221eae4f7f7afbf",
+"class_p_saa_s.html#a7b37efab7473a1effc29f8be2421f6e3",
+"class_vector_metadata.html#a0c5ab3a76e493db14491b58018e72d48"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -105,6 +105,7 @@
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#jdefaults" class="tsd-kind-icon">j<wbr>Defaults</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#localdir" class="tsd-kind-icon">local<wbr>Dir</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#server" class="tsd-kind-icon">server</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#serverconfig" class="tsd-kind-icon">server<wbr>Config</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_alberta" class="tsd-kind-icon">w_<wbr>alberta</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_bc" class="tsd-kind-icon">w_<wbr>bc</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#w_brunswick" class="tsd-kind-icon">w_<wbr>brunswick</a></li>
@@ -237,13 +238,19 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="localdir" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> local<wbr>Dir</h3>
-					<div class="tsd-signature tsd-kind-icon">local<wbr>Dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;@@JOBS@@&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">local<wbr>Dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;serverConfig.exampleDirectory</span></div>
 					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="server" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> server</h3>
 					<div class="tsd-signature tsd-kind-icon">server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Server</span><span class="tsd-signature-symbol"> =&nbsp;http.createServer((req, res) &#x3D;&gt; {let website &#x3D; new TestWebsite();if (req.method.toLowerCase() &#x3D;&#x3D; &#x27;get&#x27;) {res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/html&#x27; });website.writeHead(res);website.writePrometheusJob(res);website.writeFbpCalc(res);website.writeFwiCalc(res);website.writeSolarForm(res);website.writeGetWeather(res);website.writeGetForecast(res);website.writeFoot(res);res.end();}else if (req.method.toLowerCase() &#x3D;&#x3D; &#x27;post&#x27;) {website.parseForm(req, () &#x3D;&gt; {res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/html&#x27; });website.writeHead(res);website.writePrometheusJob(res);website.writeFbpCalc(res);website.writeFwiCalc(res);website.writeSolarForm(res);website.writeGetWeather(res);website.writeGetForecast(res);website.writeFoot(res);res.end();});}}).listen(8888)</span></div>
+					
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="serverconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> server<wbr>Config</h3>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="../classes/_defaults_.serverconfiguration.html" class="tsd-signature-type">ServerConfiguration</a><span class="tsd-signature-symbol"> =&nbsp;new ServerConfiguration()</span></div>
 					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
@@ -376,6 +383,30 @@
 						<a href="_defaults_.html">"defaults"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_example_cities_.html">"example_<wbr>cities"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_fbp_.html">"example_<wbr>fbp"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_fuels_.html">"example_<wbr>fuels"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_fwi_.html">"example_<wbr>fwi"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_job_.html">"example_<wbr>job"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_solar_.html">"example_<wbr>solar"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_timezone_.html">"example_<wbr>timezone"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_example_weather_.html">"example_<wbr>weather"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_fbp_.html">"fbp"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -462,6 +493,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#server" class="tsd-kind-icon">server</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_.html#serverconfig" class="tsd-kind-icon">server<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#w_alberta" class="tsd-kind-icon">w_<wbr>alberta</a>

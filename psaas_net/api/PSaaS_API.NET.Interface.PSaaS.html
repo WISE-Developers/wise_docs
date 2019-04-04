@@ -282,7 +282,7 @@ simulations have completed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutputStreamInfo StreamInfo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;OutputStreamInfo&gt; StreamInfo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +294,7 @@ simulations have completed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html">OutputStreamInfo</a></td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html">OutputStreamInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1970,6 +1970,41 @@ returned.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_SetCrownBaseHeight_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetCrownBaseHeight*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_SetCrownBaseHeight_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetCrownBaseHeight(System.String,System.Double)">SetCrownBaseHeight(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the crown base height for the C-6 fuel type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCrownBaseHeight(string fuel, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fuel</span></td>
+        <td><p>The fuel type to set the grass fuel load for. Must be C-6.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The crown base height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_SetElevationFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetElevationFile*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetElevationFile_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetElevationFile(System.String)">SetElevationFile(String)</h4>
   <div class="markdown level1 summary"><p>Set the elevation grid file. An levation grid file is optional.
@@ -2030,6 +2065,76 @@ An exception will be thrown if the file does not exist.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_SetGrassCuring_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassCuring*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_SetGrassCuring_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassCuring(System.String,System.Double)">SetGrassCuring(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the grass curing for either the O-1a or O-1b fuel type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGrassCuring(string fuel, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fuel</span></td>
+        <td><p>The fuel type to set the grass curing for. Must be either O-1a or O-1b.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The grass curing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_SetGrassFuelLoad_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassFuelLoad*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_SetGrassFuelLoad_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassFuelLoad(System.String,System.Double)">SetGrassFuelLoad(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the grass fuel load for either the O-1a or O-1b fuel type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGrassFuelLoad(string fuel, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fuel</span></td>
+        <td><p>The fuel type to set the grass fuel load for. Must be either O-1a or O-1b.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The grass fuel load.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_SetLutFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetLutFile*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetLutFile_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetLutFile(System.String)">SetLutFile(String)</h4>
   <div class="markdown level1 summary"><p>Set the look up table. This file is required.
@@ -2054,6 +2159,76 @@ An exception will be thrown if the file does not exist.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">file</span></td>
         <td><p>The fuel lookup table file location.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_SetPercentConifer_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentConifer*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_SetPercentConifer_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentConifer(System.String,System.Double)">SetPercentConifer(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the percent conifer for either the M-1 or M-2 fuel type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPercentConifer(string fuel, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fuel</span></td>
+        <td><p>The fuel type to set the percent conifer for. Must be either M-1 or M-2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The percent conifer as a percent (0 - 100%).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_SetPercentDeadFir_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentDeadFir*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_SetPercentDeadFir_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentDeadFir(System.String,System.Double)">SetPercentDeadFir(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the percent dead fir for either the M-3 or M-4 fuel type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPercentDeadFir(string fuel, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fuel</span></td>
+        <td><p>The fuel type to set the percent dead fir for. Must be either M-3 or M-4.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The percent dead fir as a percent (0 - 100%).</p>
 </td>
       </tr>
     </tbody>
@@ -2155,14 +2330,14 @@ provided by the timezone classes <pre><code>getTimezoneNameList()</code></pre> f
   </table>
   
   
-  <a id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToLocation_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToLocation*"></a>
-  <h4 id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToLocation_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToLocation(System.String)">StreamOutputToLocation(String)</h4>
-  <div class="markdown level1 summary"><p>Stream output files to a remote location.</p>
+  <a id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToGeoServer_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToGeoServer*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToGeoServer_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToGeoServer(System.String,System.String,System.String,System.String,System.String,System.String)">StreamOutputToGeoServer(String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Stream output files to a GeoServer instance. Currently only GeoTIFF files can be streamed to GeoServer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StreamOutputToLocation(string location)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StreamOutputToGeoServer(string username, string password, string url, string workspace, string coverageStore, string srs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2176,23 +2351,52 @@ provided by the timezone classes <pre><code>getTimezoneNameList()</code></pre> f
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">location</span></td>
-        <td><p>The URL of the location to stream the files to.
-See <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_API_NET_Interface_OutputStreamInfo_Url">Url</a> for valid locations.</p>
+        <td><span class="parametername">username</span></td>
+        <td><p>The username to authenticate on the GeoServer instance with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The password to authenticate on the GeoServer instance with. WARNING: the password will be stored in plain text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">url</span></td>
+        <td><p>The URL of the GeoServer instance. The web interface should be at {url}/web.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">workspace</span></td>
+        <td><p>The name of the workspace to upload the file to. If the workspace doesn&apos;t exist it will be created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">coverageStore</span></td>
+        <td><p>The name of the coverage store to upload the file to. If the coverage store doesn&apos;t exist it will be created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">srs</span></td>
+        <td><p>The declared spatial reference system of the uploaded file. If not provided the uploaded coverage will not be enabled.</p>
 </td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToSecureLocation_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToSecureLocation*"></a>
-  <h4 id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToSecureLocation_System_String_System_String_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToSecureLocation(System.String,System.String,System.String)">StreamOutputToSecureLocation(String, String, String)</h4>
-  <div class="markdown level1 summary"><p>Stream output files to a remote location.</p>
+  <a id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToMqtt_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToMqtt*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_StreamOutputToMqtt_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.StreamOutputToMqtt(System.String)">StreamOutputToMqtt(String)</h4>
+  <div class="markdown level1 summary"><p>Stream output files to the MQTT connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StreamOutputToSecureLocation(string location, string username, string password)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StreamOutputToMqtt(string location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2207,22 +2411,7 @@ See <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_AP
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">location</span></td>
-        <td><p>The URL of the location to stream the files to.
-See <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_API_NET_Interface_OutputStreamInfo_Url">Url</a> for valid locations.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">username</span></td>
-        <td><p>A username used to authenticate on the remote location.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">password</span></td>
-        <td><p>A password used to authenticate on the remote location.
-See notes on <a class="xref" href="PSaaS_API.NET.Interface.OutputStreamInfo.html#PSaaS_API_NET_Interface_OutputStreamInfo_Password">Password</a> for details on password security.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

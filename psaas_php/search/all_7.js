@@ -15,6 +15,8 @@ var searchData=
   ['ft',['FT',['../class_u_n_i_t_s.html#adfc4c4f6a364168cbbc37a488cf027f1',1,'UNITS']]],
   ['ft2',['FT2',['../class_u_n_i_t_s.html#acda5a57570f118fa349dcf596279713b',1,'UNITS']]],
   ['fuelbreak',['FuelBreak',['../class_fuel_break.html',1,'']]],
+  ['fueloption',['FuelOption',['../class_fuel_option.html',1,'']]],
+  ['fueloptiontype',['FuelOptionType',['../class_fuel_option_type.html',1,'']]],
   ['fuelpatch',['FuelPatch',['../class_fuel_patch.html',1,'']]],
   ['fueltype',['FuelType',['../class_fuel_type.html',1,'']]],
   ['fueltypedefaults',['FuelTypeDefaults',['../class_fuel_type_defaults.html',1,'']]],

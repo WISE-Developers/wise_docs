@@ -7,6 +7,7 @@ var searchData=
   ['getfuels',['getFuels',['../class_fbp_calculations.html#a90072aa2913a5dc5ca8960fd12cb9a97',1,'FbpCalculations']]],
   ['getfuelswithdefaults',['getFuelsWithDefaults',['../class_fbp_calculations.html#a8393bfa2ea415ef359b4aeec2a960c69',1,'FbpCalculations']]],
   ['getid',['getId',['../class_weather_stream.html#a12251d0c022e9e21c137a105ff683f13',1,'WeatherStream']]],
+  ['getlicenses',['getLicenses',['../class_license.html#a0c24a158a633e165b4aa9ffc9a50fe98',1,'License']]],
   ['getparentid',['getParentId',['../class_weather_stream.html#ac20e2a2743628e13ecfd0dbaa2c1a300',1,'WeatherStream']]],
   ['getport',['getPort',['../class_s_o_c_k_e_t___h_e_l_p_e_r.html#a473a5a7e8017b36555076b2b2fe7a70c',1,'SOCKET_HELPER']]],
   ['gettimezonelist',['getTimezoneList',['../class_timezone.html#a07c798f6afea0fad2397432e94170277',1,'Timezone']]],

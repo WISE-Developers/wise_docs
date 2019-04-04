@@ -146,6 +146,39 @@
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StreamAll_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StreamAll*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StreamAll" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StreamAll">StreamAll</h4>
+  <div class="markdown level1 summary"><p>The default stream status for all newly created output files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StreamAll { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StreamAll_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If true, newly created output files will be
+defaulted to streaming to any specified stream
+locations. If false, newly created output files will
+be defaulted to not stream. The user can override
+this setting on each output file.</p>
+</div>
+  
+  
   <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_SummaryFiles_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.SummaryFiles*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_SummaryFiles" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.SummaryFiles">SummaryFiles</h4>
   <div class="markdown level1 summary"><p>The summary files that should be output (optional).</p>
@@ -220,6 +253,138 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewGridFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewGridFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewGridFile_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewGridFile(PSaaS_API.NET.Interface.Scenario)">NewGridFile(Scenario)</h4>
+  <div class="markdown level1 summary"><p>Create a new grid file and add it to the list of
+grid file outputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridFile NewGridFile(Scenario scen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.html">GridFile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewSummaryFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewSummaryFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewSummaryFile_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewSummaryFile(PSaaS_API.NET.Interface.Scenario)">NewSummaryFile(Scenario)</h4>
+  <div class="markdown level1 summary"><p>Create a new summary file and add it to the list of
+summary file outputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SummaryFile NewSummaryFile(Scenario scen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.SummaryFile.html">SummaryFile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewVectorFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewVectorFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewVectorFile_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewVectorFile(PSaaS_API.NET.Interface.Scenario)">NewVectorFile(Scenario)</h4>
+  <div class="markdown level1 summary"><p>Create a new vector file and add it to the list of
+vector file outputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorFile NewVectorFile(Scenario scen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.VectorFile.html">VectorFile</a></td>
         <td></td>
       </tr>
     </tbody>
