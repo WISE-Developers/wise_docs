@@ -4,6 +4,7 @@ var class_weather_grid =
     [ "addDirectionFile", "class_weather_grid.html#ae19dac6bd2b67ec2e31c4a108eafc60b", null ],
     [ "getId", "class_weather_grid.html#a12251d0c022e9e21c137a105ff683f13", null ],
     [ "isValid", "class_weather_grid.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
+    [ "removeDirectionFile", "class_weather_grid.html#ad19cc05463c4c0903ca4a7b70d70d12c", null ],
     [ "setName", "class_weather_grid.html#a2fe666694997d047711d7653eca2f132", null ],
     [ "stream", "class_weather_grid.html#aa99264dcf2dcdc0316d2068de76d266d", null ],
     [ "$comments", "class_weather_grid.html#a559544568af6ed4283e0e7802cc353b3", null ],

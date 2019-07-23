@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.5.3</span>
+   &#160;<span id="projectnumber">6.2.5.4</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f3e2b589cf5a97c18c7232b4903eba5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weather_station.html#a0f3e2b589cf5a97c18c7232b4903eba5">addWeatherStreamWithDiurnalParameters</a> ($filename, $hffmc_value, $hffmc_hour, $hffmc_method, $starting_ffmc, $starting_dmc, $starting_dc, $starting_precip, $start_time, $end_time, $talpha, $tbeta, $tgamma, $wsalpha, $wsbeta, $wsgamma, $comments=null)</td></tr>
 <tr class="memdesc:a0f3e2b589cf5a97c18c7232b4903eba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a weather stream to the station with specified diurnal parameters.  <a href="#a0f3e2b589cf5a97c18c7232b4903eba5">More...</a><br /></td></tr>
 <tr class="separator:a0f3e2b589cf5a97c18c7232b4903eba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b1d2cd802cad673ccbaa67125fc3e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weather_station.html#a80b1d2cd802cad673ccbaa67125fc3e4">removeWeatherStream</a> ($weatherStream)</td></tr>
+<tr class="memdesc:a80b1d2cd802cad673ccbaa67125fc3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="class_weather_stream.html" title="Information about a weather stream. ">WeatherStream</a> object from the weather grid.  <a href="#a80b1d2cd802cad673ccbaa67125fc3e4">More...</a><br /></td></tr>
+<tr class="separator:a80b1d2cd802cad673ccbaa67125fc3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99264dcf2dcdc0316d2068de76d266d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weather_station.html#aa99264dcf2dcdc0316d2068de76d266d">stream</a> ($socket)</td></tr>
 <tr class="memdesc:aa99264dcf2dcdc0316d2068de76d266d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams the weather station to a socket.  <a href="#aa99264dcf2dcdc0316d2068de76d266d">More...</a><br /></td></tr>
 <tr class="separator:aa99264dcf2dcdc0316d2068de76d266d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,6 +414,33 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
 
 <p>Checks to see if all required values are specified. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="a80b1d2cd802cad673ccbaa67125fc3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b1d2cd802cad673ccbaa67125fc3e4">&#9670;&nbsp;</a></span>removeWeatherStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">removeWeatherStream </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$weatherStream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a <a class="el" href="class_weather_stream.html" title="Information about a weather stream. ">WeatherStream</a> object from the weather grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_weather_stream.html" title="Information about a weather stream. ">WeatherStream</a></td><td class="paramname">$weatherStream</td><td>The <a class="el" href="class_weather_stream.html" title="Information about a weather stream. ">WeatherStream</a> object to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating if the object was found and removed </dd></dl>
 
 </div>
 </div>

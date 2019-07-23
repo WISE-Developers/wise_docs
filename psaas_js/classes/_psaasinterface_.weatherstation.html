@@ -106,6 +106,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#addweatherstreamwithdiurnalparameters" class="tsd-kind-icon">add<wbr>Weather<wbr>Stream<wbr>With<wbr>Diurnal<wbr>Parameters</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#getid" class="tsd-kind-icon">get<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#removeweatherstream" class="tsd-kind-icon">remove<wbr>Weather<wbr>Stream</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#setname" class="tsd-kind-icon">set<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weatherstation.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
@@ -220,7 +221,8 @@
 								<li>
 									<h5>filename: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The file location for the streams data.</p>
+										<p>The file location for the streams data. Can either be the actual file path
+										or the attachment URL returned from {@link PSaaS#addAttachment}</p>
 									</div>
 								</li>
 								<li>
@@ -308,7 +310,8 @@
 								<li>
 									<h5>filename: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The file location for the streams data.</p>
+										<p>The file location for the streams data. Can either be the actual file path
+										or the attachment URL returned from {@link PSaaS#addAttachment}</p>
 									</div>
 								</li>
 								<li>
@@ -441,6 +444,34 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeweatherstream" class="tsd-anchor"></a>
+					<h3>remove<wbr>Weather<wbr>Stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Weather<wbr>Stream<span class="tsd-signature-symbol">(</span>weatherStream<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.weatherstream.html" class="tsd-signature-type">WeatherStream</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove a WeatherStream object from the weather grid.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>weatherStream: <a href="_psaasinterface_.weatherstream.html" class="tsd-signature-type">WeatherStream</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The WeatherStream object to remove</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>A boolean indicating if the object was found and removed</p>
 						</li>
 					</ul>
 				</section>
@@ -605,6 +636,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weatherstation.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.weatherstation.html#removeweatherstream" class="tsd-kind-icon">remove<wbr>Weather<wbr>Stream</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weatherstation.html#setname" class="tsd-kind-icon">set<wbr>Name</a>

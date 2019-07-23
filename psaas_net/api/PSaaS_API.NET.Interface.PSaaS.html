@@ -1944,6 +1944,27 @@ returned.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_ClearStreamOutputToMqtt_" data-uid="PSaaS_API.NET.Interface.PSaaS.ClearStreamOutputToMqtt*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_ClearStreamOutputToMqtt" data-uid="PSaaS_API.NET.Interface.PSaaS.ClearStreamOutputToMqtt">ClearStreamOutputToMqtt()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearStreamOutputToMqtt()</code></pre>
+  </div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_ClearTimezone_" data-uid="PSaaS_API.NET.Interface.PSaaS.ClearTimezone*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_ClearTimezone" data-uid="PSaaS_API.NET.Interface.PSaaS.ClearTimezone">ClearTimezone()</h4>
+  <div class="markdown level1 summary"><p>Clears the timezone for all specified times.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearTimezone()</code></pre>
+  </div>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_IsValid_" data-uid="PSaaS_API.NET.Interface.PSaaS.IsValid*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_IsValid" data-uid="PSaaS_API.NET.Interface.PSaaS.IsValid">IsValid()</h4>
   <div class="markdown level1 summary"><p>Are the input and output values for the job valid.</p>
@@ -1953,6 +1974,540 @@ returned.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelBreak_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelBreak*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelBreak_PSaaS_API_NET_Interface_FuelBreak_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelBreak(PSaaS_API.NET.Interface.FuelBreak)">RemoveFuelBreak(FuelBreak)</h4>
+  <div class="markdown level1 summary"><p>Remove a FuelBreak object from the fuel break files.
+<param name="fuelBreak">The FuelBreak object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFuelBreak(FuelBreak fuelBreak)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.FuelBreak.html">FuelBreak</a></td>
+        <td><span class="parametername">fuelBreak</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelOption_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelOption*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelOption_PSaaS_API_NET_Interface_FuelOption_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelOption(PSaaS_API.NET.Interface.FuelOption)">RemoveFuelOption(FuelOption)</h4>
+  <div class="markdown level1 summary"><p>Remove a FuelOption object from the input fuel options.
+<param name="fuelOption">The FuelOption object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFuelOption(FuelOption fuelOption)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.FuelOption.html">FuelOption</a></td>
+        <td><span class="parametername">fuelOption</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelPatch_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelPatch*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelPatch_PSaaS_API_NET_Interface_FuelPatch_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelPatch(PSaaS_API.NET.Interface.FuelPatch)">RemoveFuelPatch(FuelPatch)</h4>
+  <div class="markdown level1 summary"><p>Remove a FuelPatch object from the fuel patch files.
+<param name="fuelPatch">The FuelPatch object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFuelPatch(FuelPatch fuelPatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.FuelPatch.html">FuelPatch</a></td>
+        <td><span class="parametername">fuelPatch</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveGridFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveGridFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveGridFile_PSaaS_API_NET_Interface_GridFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveGridFile(PSaaS_API.NET.Interface.GridFile)">RemoveGridFile(GridFile)</h4>
+  <div class="markdown level1 summary"><p>Remove a GridFile object from the grid files.
+<param name="gridFile">The GridFile object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveGridFile(GridFile gridFile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.GridFile.html">GridFile</a></td>
+        <td><span class="parametername">gridFile</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveIgnition_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveIgnition*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveIgnition_PSaaS_API_NET_Interface_Ignition_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveIgnition(PSaaS_API.NET.Interface.Ignition)">RemoveIgnition(Ignition)</h4>
+  <div class="markdown level1 summary"><p>Remove an Ignition object from the ignitions.
+<param name="ignition">The Ignition object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveIgnition(Ignition ignition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
+        <td><span class="parametername">ignition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputGridFileFromScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputGridFileFromScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputGridFileFromScenario_PSaaS_API_NET_Interface_Output_GridFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputGridFileFromScenario(PSaaS_API.NET.Interface.Output.GridFile)">RemoveOutputGridFileFromScenario(GridFile)</h4>
+  <div class="markdown level1 summary"><p>Removes the output grid file from a scenario</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveOutputGridFileFromScenario(GridFile stat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.html">GridFile</a></td>
+        <td><span class="parametername">stat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputSummaryFileFromScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputSummaryFileFromScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputSummaryFileFromScenario_PSaaS_API_NET_Interface_Output_SummaryFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputSummaryFileFromScenario(PSaaS_API.NET.Interface.Output.SummaryFile)">RemoveOutputSummaryFileFromScenario(SummaryFile)</h4>
+  <div class="markdown level1 summary"><p>Removes the output summary file from a scenario</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveOutputSummaryFileFromScenario(SummaryFile stat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.SummaryFile.html">SummaryFile</a></td>
+        <td><span class="parametername">stat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputVectorFileFromScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputVectorFileFromScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputVectorFileFromScenario_PSaaS_API_NET_Interface_Output_VectorFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputVectorFileFromScenario(PSaaS_API.NET.Interface.Output.VectorFile)">RemoveOutputVectorFileFromScenario(VectorFile)</h4>
+  <div class="markdown level1 summary"><p>Removes the output vector file from a scenario</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveOutputVectorFileFromScenario(VectorFile stat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.VectorFile.html">VectorFile</a></td>
+        <td><span class="parametername">stat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveScenario_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveScenario(PSaaS_API.NET.Interface.Scenario)">RemoveScenario(Scenario)</h4>
+  <div class="markdown level1 summary"><p>Remove a Scenario object from the scenarios.
+<param name="scenario">The Scenario object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveScenario(Scenario scenario)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scenario</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherGrid_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherGrid*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherGrid_PSaaS_API_NET_Interface_WeatherGrid_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherGrid(PSaaS_API.NET.Interface.WeatherGrid)">RemoveWeatherGrid(WeatherGrid)</h4>
+  <div class="markdown level1 summary"><p>Remove a WeatherGrid object from the weather grid.
+<param name="weatherGrid">The WeatherGrid object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveWeatherGrid(WeatherGrid weatherGrid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherGrid.html">WeatherGrid</a></td>
+        <td><span class="parametername">weatherGrid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherPatch_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherPatch*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherPatch_PSaaS_API_NET_Interface_WeatherPatch_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherPatch(PSaaS_API.NET.Interface.WeatherPatch)">RemoveWeatherPatch(WeatherPatch)</h4>
+  <div class="markdown level1 summary"><p>Remove a WeatherPatch object from the weather patch files.
+<param name="weatherPatch">The WeatherPatch object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveWeatherPatch(WeatherPatch weatherPatch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherPatch.html">WeatherPatch</a></td>
+        <td><span class="parametername">weatherPatch</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherStation_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherStation*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveWeatherStation_PSaaS_API_NET_Interface_WeatherStation_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveWeatherStation(PSaaS_API.NET.Interface.WeatherStation)">RemoveWeatherStation(WeatherStation)</h4>
+  <div class="markdown level1 summary"><p>Remove a WeatherStation object from the weather stations.
+<param name="weatherStation">The WeatherStation object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveWeatherStation(WeatherStation weatherStation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherStation.html">WeatherStation</a></td>
+        <td><span class="parametername">weatherStation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -2007,7 +2562,7 @@ returned.</p>
   
   <a id="PSaaS_API_NET_Interface_PSaaS_SetElevationFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetElevationFile*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetElevationFile_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetElevationFile(System.String)">SetElevationFile(String)</h4>
-  <div class="markdown level1 summary"><p>Set the elevation grid file. An levation grid file is optional.
+  <div class="markdown level1 summary"><p>Set the elevation grid file. An elevation grid file is optional.
 An exception will be thrown if the file does not exist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2415,6 +2970,61 @@ provided by the timezone classes <pre><code>getTimezoneNameList()</code></pre> f
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_UnsetElevationFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetElevationFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_UnsetElevationFile" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetElevationFile">UnsetElevationFile()</h4>
+  <div class="markdown level1 summary"><p>Unset the elevation grid file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetElevationFile()</code></pre>
+  </div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_UnsetFuelmapFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetFuelmapFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_UnsetFuelmapFile" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetFuelmapFile">UnsetFuelmapFile()</h4>
+  <div class="markdown level1 summary"><p>Unset the fuel map file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetFuelmapFile()</code></pre>
+  </div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_UnsetLutFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetLutFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_UnsetLutFile" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetLutFile">UnsetLutFile()</h4>
+  <div class="markdown level1 summary"><p>Unset the look up table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetLutFile()</code></pre>
+  </div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_UnsetProjectionFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetProjectionFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_UnsetProjectionFile" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetProjectionFile">UnsetProjectionFile()</h4>
+  <div class="markdown level1 summary"><p>Unset the projection file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetProjectionFile()</code></pre>
+  </div>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_UnsetTimezoneByValue_" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetTimezoneByValue*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_UnsetTimezoneByValue" data-uid="PSaaS_API.NET.Interface.PSaaS.UnsetTimezoneByValue">UnsetTimezoneByValue()</h4>
+  <div class="markdown level1 summary"><p>Unset the timezone for all specified times by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnsetTimezoneByValue()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="PSaaS_API.NET.Ext.IValidable.html">IValidable</a>

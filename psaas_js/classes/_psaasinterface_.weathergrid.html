@@ -120,6 +120,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#adddirectionfile" class="tsd-kind-icon">add<wbr>Direction<wbr>File</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#getid" class="tsd-kind-icon">get<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#removedirectionfile" class="tsd-kind-icon">remove<wbr>Direction<wbr>File</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#setname" class="tsd-kind-icon">set<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.weathergrid.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
@@ -272,7 +273,8 @@
 								<li>
 									<h5>filename: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The location of the grid file.</p>
+										<p>The location of the grid file. Can either be the actual file path or the attachment URL returned
+										from {@link PSaaS#addAttachment}</p>
 									</div>
 								</li>
 								<li>
@@ -326,6 +328,34 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removedirectionfile" class="tsd-anchor"></a>
+					<h3>remove<wbr>Direction<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Direction<wbr>File<span class="tsd-signature-symbol">(</span>weatherGrid<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.weathergrid_gridfile.html" class="tsd-signature-type">WeatherGrid_GridFile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove a WeatherGrid_GridFile object from the weather grid.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>weatherGrid: <a href="_psaasinterface_.weathergrid_gridfile.html" class="tsd-signature-type">WeatherGrid_GridFile</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The WeatherGrid_GridFile object to remove</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>A boolean indicating if the object was found and removed</p>
 						</li>
 					</ul>
 				</section>
@@ -496,6 +526,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weathergrid.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.weathergrid.html#removedirectionfile" class="tsd-kind-icon">remove<wbr>Direction<wbr>File</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.weathergrid.html#setname" class="tsd-kind-icon">set<wbr>Name</a>

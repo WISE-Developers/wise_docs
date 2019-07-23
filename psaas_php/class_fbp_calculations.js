@@ -3,6 +3,7 @@ var class_fbp_calculations =
     [ "__construct", "class_fbp_calculations.html#a095c5d389db211932136b53f25f39685", null ],
     [ "calculate", "class_fbp_calculations.html#a584fc96861a2aaa4a7f278b24fb2c4d4", null ],
     [ "setFuelType", "class_fbp_calculations.html#a3048cf8a29ddebebf2074e1d67ccec92", null ],
+    [ "unsetFuelType", "class_fbp_calculations.html#a2bb9a511f258e3f5d650c86715bc5ab4", null ],
     [ "$area", "class_fbp_calculations.html#a666bbed9397ea632d5afc90a4fc94526", null ],
     [ "$aspect", "class_fbp_calculations.html#acbaeeb2372b63295ae5f1f7b265aafb4", null ],
     [ "$bfi", "class_fbp_calculations.html#aa92e1238e97aac49648d9d86032aed47", null ],

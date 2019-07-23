@@ -134,6 +134,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.timestepsettings.html#addstatistic" class="tsd-kind-icon">add<wbr>Statistic</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.timestepsettings.html#removestatistic" class="tsd-kind-icon">remove<wbr>Statistic</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.timestepsettings.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
 						</section>
@@ -491,7 +492,7 @@
 					<a name="addstatistic" class="tsd-anchor"></a>
 					<h3>add<wbr>Statistic</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Statistic<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Statistic<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -510,7 +511,35 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">String</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removestatistic" class="tsd-anchor"></a>
+					<h3>remove<wbr>Statistic</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Statistic<span class="tsd-signature-symbol">(</span>statistic<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove a statistic string from the statistics.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>statistic: <span class="tsd-signature-type">String</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The statistic string to remove</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>A boolean indicating if the string was found and removed</p>
 						</li>
 					</ul>
 				</section>
@@ -712,6 +741,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.timestepsettings.html#addstatistic" class="tsd-kind-icon">add<wbr>Statistic</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.timestepsettings.html#removestatistic" class="tsd-kind-icon">remove<wbr>Statistic</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.timestepsettings.html#stream" class="tsd-kind-icon">stream</a>
