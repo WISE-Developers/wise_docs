@@ -31,9 +31,6 @@ define({ "api": [
     "type": "post",
     "url": "/schedule/schedule/",
     "title": "",
-    "version": "1.0.0",
-    "name": "schedule",
-    "group": "weather",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -47,6 +44,8 @@ define({ "api": [
         ]
       }
     },
+    "name": "schedule",
+    "group": "weather",
     "success": {
       "fields": {
         "Success 200": [
@@ -67,6 +66,7 @@ define({ "api": [
         ]
       }
     },
+    "version": "0.0.0",
     "filename": "./models/schedule_m.js",
     "groupTitle": "weather"
   }
