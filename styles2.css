@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+html {
+  color: #e1e1e1;
+  background-color: rgb(29, 29, 29);
+  font: 16px "Oxygen", sans-serif;
+  font-weight: 400;
+}
+a {
+  color: #ff8400;
+}
+
+a:hover {
+  color: #253be6;
+}
