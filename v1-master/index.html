@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spyd's Documentation</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="purecssframework.min.css" />
+
+    <!-- Use the theme-dark.css to use the dark version of PCF -->
+    <link rel="stylesheet" type="text/css" href="themes/theme-dark.css" />
+
+    <!-- PCF site uses Open Sans Google font,add it below if you like it -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- Add class "dark" to use dark version -->
+  <body class="dark">
+    <header class="main-container header fixed">
+      <!-- Nav Bar with Logo Area -->
+      <div class="flex-grid  navbar">
+        <!-- Mobile Menu -->
+        <input type="checkbox" id="mobileMenu" class="hide" />
+        <label
+          id="mobileMenuLabel"
+          class="mobile-menu left-side"
+          for="mobileMenu"
+        >
+          <i class="hamburger"></i>
+        </label>
+        <label class="full-screen" for="mobileMenu"></label>
+
+        <div class="col-2 logo">
+          <img src="/favicon.ico">
+        </div>
+
+        <nav class="col-10" id="topMenuNav">
+          <div class="navbar-links">
+            <input
+              type="radio"
+              class="hide"
+              name="navbar-menu"
+              id="navbarDropHide"
+              checked
+            />
+            <a href="#">PSaaS</a>
+            <a href="#">IntelliFire</a>
+            <a href="#">EasyMap</a>
+            <a href="#">SPARCS</a>
+
+            <div class="has-drop-menu hover-menu">
+              <input
+                type="radio"
+                id="navbarDropLinkSoon"
+                class="drop-menu-input hide"
+                name="navbar-menu"
+              />
+              <label for="navbarDropLinkSoon" class="menu-label"></label>
+              PSaaS Dox<i class="arrow-down"></i>
+              <label class="full-screen" for="navbarDropHide"></label>
+              <ul class="drop-menu">
+                <li><a href="#">PSaaS JS</a></li>
+                <li><a href="#">PSaaS MQTT</a></li>
+                <li><a href="#">PSaaS .NET</a></li>
+                <li><a href="#">PSaaS PHP</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="fixed-nav-space" id="top"></div>
+
+    <div class="hero-area">
+      <div class="main-container">
+        <div class="flex-grid ">
+          <div class="col-12">
+            <div class="spacer-sm"></div>
+            <h1>Software Documentation</h1>
+            <h4>An Effort to do better Dox!</h4>
+            <div class="spacer-sm"></div>
+            <a href="http://www.spyd.com" target="_blank" class="btn primary"
+              >www.spyd.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="flex-grid ">
+        <div class="col-12">
+          <div class="flex-grid ">
+            <div class="col-4">
+              <h4>PSaaS</h4>
+              <p>
+                PSaaS is an Acronym for "Prometheus Software as a Service".
+                <a href="http://firegrowthmodel.ca/" target="_blank"
+                  >Promethues</a
+                >
+                is the Canadian Wildland Fire Growth Simulation Model and PSaaS is a modelling
+                framework based on Prometheus. There are
+                four APIs used to write PSaaS models:
+                <ul>
+                  <li>Javascript</li>
+                  <li>.NET</li>
+                  <li>MQTT</li>
+                  <li>PHP</li>
+                  <li>Java</li>
+                </ul>
+              </p>
+            </div>
+            <div class="col-4">
+              <h4>IntelliFire</h4>
+              <p>
+                IntelliFire is a combination server micro-services
+                that provide Wildfire Decision Support Services to a web based client, EasyMap. 
+                IntelliFire replaces the 
+                Drupal&trade; Based S.P.A.R.C.S Platform that has been the primary Decision
+                Support System at the Government of the Northwest Territories since 2003.
+                Microservices are written in Node JS Javascript.
+                Documentation is in the JSDOC <a href="https://jsdoc.app/about-getting-started.html#adding-documentation-comments-to-your-code">format</a>
+              </p>
+            </div>
+            <div class="col-4">
+              <h4>EasyMap</h4>
+              <p>
+                EasyMap is a web application with a NodeJS foundation and an HTML/JavaScript GUI.
+                It is a web based client that consumes and uses IntelliFire and SPARCS Microservices.
+                Documentation is in the JSDOC <a href="https://jsdoc.app/about-getting-started.html#adding-documentation-comments-to-your-code">format</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <div class="line"></div>
+
+      <a href="#">Link 1</a> | <a href="#">Link 2</a> | <a href="#">Link 3</a> |
+      <a href="#">Link 4</a> |
+      <a href="#">Link 5</a>
+
+      <div class="spacer-md"></div>
+      <small>© All Rights Reserved.</small>
+    </footer>
+  </body>
+</html>
