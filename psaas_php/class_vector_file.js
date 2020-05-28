@@ -14,6 +14,8 @@ var class_vector_file =
     [ "$removeIslands", "class_vector_file.html#a0425aeb8a8880edc914cbc55b9a52245", null ],
     [ "$scenarioName", "class_vector_file.html#a163adad32f70bad746841f1538796f54", null ],
     [ "$shouldStream", "class_vector_file.html#a61cefcbbe1954c6ec63db02605263897", null ],
+    [ "$subScenarioName", "class_vector_file.html#ae5de6efb9775ff0057152e464441dd2c", null ],
+    [ "$subScenarioOverrides", "class_vector_file.html#a6a87d9ab1af230501070fcadc16d96fa", null ],
     [ "$type", "class_vector_file.html#aa40cc7876dc0b694eda3c898140a0ac8", null ],
     [ "PARAM_VECTORFILE", "class_vector_file.html#a61530bed1edf9cb3ede9836c18ce6b9a", null ],
     [ "TYPE_KML", "class_vector_file.html#a4b32fa9182fb02d001e585ff2dc4f704", null ],

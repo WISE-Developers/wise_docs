@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.5.4</span>
+   &#160;<span id="projectnumber">6.2.5.6</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -191,6 +191,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33ad1f7029018db820152b5f6a629b3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a33ad1f7029018db820152b5f6a629b3d">removeLayerInfo</a> ($ref)</td></tr>
 <tr class="memdesc:a33ad1f7029018db820152b5f6a629b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a layer from the layer info.  <a href="#a33ad1f7029018db820152b5f6a629b3d">More...</a><br /></td></tr>
 <tr class="separator:a33ad1f7029018db820152b5f6a629b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c55249ec5c1e57c6813547a48183bc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a6c55249ec5c1e57c6813547a48183bc8">addAssetFile</a> ($file)</td></tr>
+<tr class="memdesc:a6c55249ec5c1e57c6813547a48183bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an asset file to the scenario.  <a href="#a6c55249ec5c1e57c6813547a48183bc8">More...</a><br /></td></tr>
+<tr class="separator:a6c55249ec5c1e57c6813547a48183bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dc90d22648ba374fc31c95c62d1430"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#ae0dc90d22648ba374fc31c95c62d1430">removeAssetFile</a> ($ref)</td></tr>
+<tr class="memdesc:ae0dc90d22648ba374fc31c95c62d1430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an asset file from the scenario.  <a href="#ae0dc90d22648ba374fc31c95c62d1430">More...</a><br /></td></tr>
+<tr class="separator:ae0dc90d22648ba374fc31c95c62d1430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b37efab7473a1effc29f8be2421f6e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a7b37efab7473a1effc29f8be2421f6e3">isValid</a> ()</td></tr>
 <tr class="memdesc:a7b37efab7473a1effc29f8be2421f6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if all required values have been set.  <a href="#a7b37efab7473a1effc29f8be2421f6e3">More...</a><br /></td></tr>
 <tr class="separator:a7b37efab7473a1effc29f8be2421f6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,6 +248,9 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_PRIMARY_STREAM
 <tr class="memitem:a1d512980c86c5254624ce7212b44dbc2"><td class="memItemLeft" align="right" valign="top"><a id="a1d512980c86c5254624ce7212b44dbc2"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_SCENARIO_TO_COPY</b> = &quot;scenariotocopy&quot;</td></tr>
 <tr class="separator:a1d512980c86c5254624ce7212b44dbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe044a84a10424200adeba9e92d7c67"><td class="memItemLeft" align="right" valign="top"><a id="a3fe044a84a10424200adeba9e92d7c67"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_ASSET_REF</b> = &quot;asset_ref&quot;</td></tr>
+<tr class="separator:a3fe044a84a10424200adeba9e92d7c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a426cfb78b707e9d9541e9c8ea5a6af57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a426cfb78b707e9d9541e9c8ea5a6af57">$id</a></td></tr>
 <tr class="memdesc:a426cfb78b707e9d9541e9c8ea5a6af57"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the scenario.  <a href="#a426cfb78b707e9d9541e9c8ea5a6af57">More...</a><br /></td></tr>
 <tr class="separator:a426cfb78b707e9d9541e9c8ea5a6af57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,22 +290,18 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_SCENARIO_TO_CO
 <tr class="memitem:a70010b0ff40471f70cc3356bb33e1052"><td class="memItemLeft" align="right" valign="top"><a id="a70010b0ff40471f70cc3356bb33e1052"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$vectorInfo</b> = array()</td></tr>
 <tr class="separator:a70010b0ff40471f70cc3356bb33e1052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acebf07a8a6dd20827ad08f652fc58cb9"><td class="memItemLeft" align="right" valign="top"><a id="acebf07a8a6dd20827ad08f652fc58cb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$streamInfo</b> = array()</td></tr>
-<tr class="separator:acebf07a8a6dd20827ad08f652fc58cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4748278873aef6977ff39edd644c8dc8"><td class="memItemLeft" align="right" valign="top"><a id="a4748278873aef6977ff39edd644c8dc8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$stationInfo</b> = array()</td></tr>
-<tr class="separator:a4748278873aef6977ff39edd644c8dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2c0fd48ed90080788b3bf836209d86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a5e2c0fd48ed90080788b3bf836209d86">$primaryStream</a> = -1</td></tr>
-<tr class="memdesc:a5e2c0fd48ed90080788b3bf836209d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The primary weather stream for this scenario.  <a href="#a5e2c0fd48ed90080788b3bf836209d86">More...</a><br /></td></tr>
-<tr class="separator:a5e2c0fd48ed90080788b3bf836209d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa99c65a5554b5e7a2732f23165f6f4"><td class="memItemLeft" align="right" valign="top"><a id="aefa99c65a5554b5e7a2732f23165f6f4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#aefa99c65a5554b5e7a2732f23165f6f4">$ignitionInfo</a> = array()</td></tr>
-<tr class="memdesc:aefa99c65a5554b5e7a2732f23165f6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of ignitions used by this scenario. <br /></td></tr>
-<tr class="separator:aefa99c65a5554b5e7a2732f23165f6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4072b491919a1879de712edf9ba43713"><td class="memItemLeft" align="right" valign="top"><a id="a4072b491919a1879de712edf9ba43713"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$stationStreams</b> = array()</td></tr>
+<tr class="separator:a4072b491919a1879de712edf9ba43713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175b7a9aec7ec6c29b5636bee321dd28"><td class="memItemLeft" align="right" valign="top"><a id="a175b7a9aec7ec6c29b5636bee321dd28"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$ignitionInfo</b> = array()</td></tr>
+<tr class="separator:a175b7a9aec7ec6c29b5636bee321dd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b7d980e75f91a72772466e506e86fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#a67b7d980e75f91a72772466e506e86fb">$layerInfo</a> = array()</td></tr>
 <tr class="memdesc:a67b7d980e75f91a72772466e506e86fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of grids used by the scenario.  <a href="#a67b7d980e75f91a72772466e506e86fb">More...</a><br /></td></tr>
 <tr class="separator:a67b7d980e75f91a72772466e506e86fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1ce0b8203b2d1db0d5efd3aa1eefae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scenario.html#abe1ce0b8203b2d1db0d5efd3aa1eefae">$assetFiles</a> = array()</td></tr>
+<tr class="memdesc:abe1ce0b8203b2d1db0d5efd3aa1eefae"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of assets used by this scenario.  <a href="#abe1ce0b8203b2d1db0d5efd3aa1eefae">More...</a><br /></td></tr>
+<tr class="separator:abe1ce0b8203b2d1db0d5efd3aa1eefae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -318,6 +323,33 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
 <div class="textblock"><p>A simulation scenario. </p>
 <dl class="section author"><dt>Author</dt><dd>"Travis Redpath" </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6c55249ec5c1e57c6813547a48183bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c55249ec5c1e57c6813547a48183bc8">&#9670;&nbsp;</a></span>addAssetFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addAssetFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add an asset file to the scenario. </p>
+<p>Must already be added to the <a class="el" href="class_p_saa_s.html">PSaaS</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_asset_file.html" title="An asset that can be used to stop a simulation early. ">AssetFile</a></td><td class="paramname">$file</td><td>The asset file to add to the scenario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_asset_reference.html" title="A reference to an asset that has been added to a scenario. ">AssetReference</a> </dd></dl>
+
+</div>
+</div>
 <a id="a4d5e40aa083354672b30f5ab83690edc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d5e40aa083354672b30f5ab83690edc">&#9670;&nbsp;</a></span>addBurningCondition()</h2>
 
@@ -514,6 +546,7 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_ignition_reference.html" title="Options for associating an ignition point with a scenario. ">IgnitionReference</a> The added reference object. </dd></dl>
 
 </div>
 </div>
@@ -642,6 +675,7 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_station_stream.html" title="A reference to a weather stream/station used by a scenario. ">StationStream</a> A station/stream reference. </dd></dl>
 
 </div>
 </div>
@@ -662,6 +696,32 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
 
 <p>Checks to see if all required values have been set. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="ae0dc90d22648ba374fc31c95c62d1430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0dc90d22648ba374fc31c95c62d1430">&#9670;&nbsp;</a></span>removeAssetFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">removeAssetFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$ref</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove an asset file from the scenario. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_asset_reference.html" title="A reference to an asset that has been added to a scenario. ">AssetReference</a></td><td class="paramname">$ref</td><td>The asset file reference to remove from the scenario. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1008,7 +1068,7 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
     <tr><td class="paramtype">float</td><td class="paramname">$perOverrideVal</td><td>The value for the FMC (%) override. Use -1 for no override. </td></tr>
     <tr><td class="paramtype">float</td><td class="paramname">$nodataElev</td><td>The elevation where NODATA or no grid exists. </td></tr>
     <tr><td class="paramtype"></td><td class="paramname">float</td><td>terrain </td></tr>
-    <tr><td class="paramtype"></td><td class="paramname">float</td><td>accurateLocation </td></tr>
+    <tr><td class="paramtype"></td><td class="paramname">float</td><td>accurateLocation No longer used, left for compatibility. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1166,6 +1226,23 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="abe1ce0b8203b2d1db0d5efd3aa1eefae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1ce0b8203b2d1db0d5efd3aa1eefae">&#9670;&nbsp;</a></span>$assetFiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">array $assetFiles = array()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A list of assets used by this scenario. </p>
+<p>Assets will be used to end simulations early when a firefront reaches the shape. </p>
+
+</div>
+</div>
 <a id="aa6d3ab9dbee535a000f243e183866729"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6d3ab9dbee535a000f243e183866729">&#9670;&nbsp;</a></span>$displayInterval</h2>
 
@@ -1236,23 +1313,6 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$counter</b> = 0</t
 
 <p>A list of grids used by the scenario. </p>
 <p>The list contains an index value that defines the order of the layers. </p>
-
-</div>
-</div>
-<a id="a5e2c0fd48ed90080788b3bf836209d86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2c0fd48ed90080788b3bf836209d86">&#9670;&nbsp;</a></span>$primaryStream</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string $primaryStream = -1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The primary weather stream for this scenario. </p>
-<p>If the primary stream is not set the first stream will be used. </p>
 
 </div>
 </div>

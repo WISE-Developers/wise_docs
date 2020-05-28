@@ -102,11 +102,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#attributes" class="tsd-kind-icon">attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#comments" class="tsd-kind-icon">comments</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#feature" class="tsd-kind-icon">feature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#filename" class="tsd-kind-icon">filename</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#point" class="tsd-kind-icon">point</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.ignition.html#param_ignition" class="tsd-kind-icon">PARAM_<wbr>IGNITION</a></li>
@@ -116,6 +116,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#addpoint" class="tsd-kind-icon">add<wbr>Point</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#getid" class="tsd-kind-icon">get<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.ignition.html#setname" class="tsd-kind-icon">set<wbr>Name</a></li>
@@ -144,6 +145,18 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="attributes" class="tsd-anchor"></a>
+					<h3>attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_psaasinterface_.attributeentry.html" class="tsd-signature-type">AttributeEntry</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;new Array&lt;AttributeEntry&gt;()</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of attributes for the ignition. Not valid for {@link #filename} types.
+							Valid types for the value are Integer, Long, Double, and String.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="comments" class="tsd-anchor"></a>
 					<h3>comments</h3>
 					<div class="tsd-signature tsd-kind-icon">comments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
@@ -161,7 +174,7 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An array of LatLon describing the ignition. Only valid if type is POLYLINE or POLYGON.</p>
+							<p>An array of LatLon describing the ignition. Only valid if type is POLYLINE, POLYGON, or POINT.</p>
 						</div>
 					</div>
 				</section>
@@ -184,17 +197,6 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the ignition. The name must be unique amongst ignition collections.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="point" class="tsd-anchor"></a>
-					<h3>point</h3>
-					<div class="tsd-signature tsd-kind-icon">point<span class="tsd-signature-symbol">:</span> <a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A point that describes the ignition location. Only valid if type is TYPE_POINT.</p>
 						</div>
 					</div>
 				</section>
@@ -235,6 +237,34 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addpoint" class="tsd-anchor"></a>
+					<h3>add<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Point<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add a new point to the ignition shape. Only valid for POLYLINE, POLYGON, or POINT.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The point to add to the ignition.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></h4>
+							<p>The current ignition object so that multiple additions can be chained.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getid" class="tsd-anchor"></a>
 					<h3>get<wbr>Id</h3>
@@ -396,6 +426,9 @@
 								<a href="_psaasinterface_.ignition.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.ignition.html#attributes" class="tsd-kind-icon">attributes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.ignition.html#comments" class="tsd-kind-icon">comments</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -408,9 +441,6 @@
 								<a href="_psaasinterface_.ignition.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasinterface_.ignition.html#point" class="tsd-kind-icon">point</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.ignition.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -421,6 +451,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static">
 								<a href="_psaasinterface_.ignition.html#counter" class="tsd-kind-icon">counter</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.ignition.html#addpoint" class="tsd-kind-icon">add<wbr>Point</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.ignition.html#getid" class="tsd-kind-icon">get<wbr>Id</a>

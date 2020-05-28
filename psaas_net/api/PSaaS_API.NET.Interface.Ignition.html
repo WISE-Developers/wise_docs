@@ -132,6 +132,33 @@
   </h3>
   
   
+  <a id="PSaaS_API_NET_Interface_Ignition_Attributes_" data-uid="PSaaS_API.NET.Interface.Ignition.Attributes*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Ignition_Attributes" data-uid="PSaaS_API.NET.Interface.Ignition.Attributes">Attributes</h4>
+  <div class="markdown level1 summary"><p>A list of attributes for the ignition. Not valid for <a class="xref" href="PSaaS_API.NET.Interface.Ignition.html#PSaaS_API_NET_Interface_Ignition_Filename">Filename</a> ignitions.
+Valid types for the value are Integer, Long, Double, and String.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;KeyValuePair&lt;string, object&gt;&gt; Attributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Ignition_Comments_" data-uid="PSaaS_API.NET.Interface.Ignition.Comments*"></a>
   <h4 id="PSaaS_API_NET_Interface_Ignition_Comments" data-uid="PSaaS_API.NET.Interface.Ignition.Comments">Comments</h4>
   <div class="markdown level1 summary"><p>User comments about the ignition (optional).</p>
@@ -160,7 +187,7 @@
   
   <a id="PSaaS_API_NET_Interface_Ignition_Features_" data-uid="PSaaS_API.NET.Interface.Ignition.Features*"></a>
   <h4 id="PSaaS_API_NET_Interface_Ignition_Features" data-uid="PSaaS_API.NET.Interface.Ignition.Features">Features</h4>
-  <div class="markdown level1 summary"><p>An array of LatLon describing the ignition. Only valid if type is POLYLINE or POLYGON.</p>
+  <div class="markdown level1 summary"><p>An array of LatLon describing the ignition. Only valid if type is POLYLINE, POLYGON, or POINT.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -236,32 +263,6 @@
   </table>
   
   
-  <a id="PSaaS_API_NET_Interface_Ignition_Point_" data-uid="PSaaS_API.NET.Interface.Ignition.Point*"></a>
-  <h4 id="PSaaS_API_NET_Interface_Ignition_Point" data-uid="PSaaS_API.NET.Interface.Ignition.Point">Point</h4>
-  <div class="markdown level1 summary"><p>A point that describes the ignition location. Only valid if type is TYPE_POINT.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LatLon Point { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="PSaaS_API_NET_Interface_Ignition_StartTime_" data-uid="PSaaS_API.NET.Interface.Ignition.StartTime*"></a>
   <h4 id="PSaaS_API_NET_Interface_Ignition_StartTime" data-uid="PSaaS_API.NET.Interface.Ignition.StartTime">StartTime</h4>
   <div class="markdown level1 summary"><p>The ignition start time (required). Must be formatted as &apos;YYYY-MM-DDThh:mm:ss&apos;.</p>
@@ -314,6 +315,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Ignition_AddPoint_" data-uid="PSaaS_API.NET.Interface.Ignition.AddPoint*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Ignition_AddPoint_PSaaS_API_NET_Globals_LatLon_" data-uid="PSaaS_API.NET.Interface.Ignition.AddPoint(PSaaS_API.NET.Globals.LatLon)">AddPoint(LatLon)</h4>
+  <div class="markdown level1 summary"><p>Add a new point to the ignition shape. Only valid for POLYLINE, POLYGON, or POINT.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Ignition AddPoint(LatLon point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to add to the ignition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
+        <td><p>The current ignition object so that multiple additions can be chained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="PSaaS_API_NET_Interface_Ignition_IsValid_" data-uid="PSaaS_API.NET.Interface.Ignition.IsValid*"></a>

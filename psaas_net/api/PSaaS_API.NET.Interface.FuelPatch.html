@@ -212,7 +212,8 @@
   
   <a id="PSaaS_API_NET_Interface_FuelPatch_FromFuel_" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuel*"></a>
   <h4 id="PSaaS_API_NET_Interface_FuelPatch_FromFuel" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuel">FromFuel</h4>
-  <div class="markdown level1 summary"><p>The fuel that the patch changes from (one of this or <pre><code>FromFuelRule</code></pre> is required).</p>
+  <div class="markdown level1 summary"><p>The fuel that the patch changes from (one of this, <a class="xref" href="PSaaS_API.NET.Interface.FuelPatch.html#PSaaS_API_NET_Interface_FuelPatch_FromFuelIndex">FromFuelIndex</a>,
+or <a class="xref" href="PSaaS_API.NET.Interface.FuelPatch.html#PSaaS_API_NET_Interface_FuelPatch_FromFuelRule">FromFuelRule</a> is required).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -236,9 +237,36 @@
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_FuelPatch_FromFuelIndex_" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuelIndex*"></a>
+  <h4 id="PSaaS_API_NET_Interface_FuelPatch_FromFuelIndex" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuelIndex">FromFuelIndex</h4>
+  <div class="markdown level1 summary"><p>Instead of using the name of a fuel, reference it by index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? FromFuelIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_FuelPatch_FromFuelRule_" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuelRule*"></a>
   <h4 id="PSaaS_API_NET_Interface_FuelPatch_FromFuelRule" data-uid="PSaaS_API.NET.Interface.FuelPatch.FromFuelRule">FromFuelRule</h4>
-  <div class="markdown level1 summary"><p>The rule about which fuels to apply the patch to (one of this or <pre><code>FromFuel</code></pre> is required).
+  <div class="markdown level1 summary"><p>The rule about which fuels to apply the patch to (one of this, <a class="xref" href="PSaaS_API.NET.Interface.FuelPatch.html#PSaaS_API_NET_Interface_FuelPatch_FromFuelIndex">FromFuelIndex</a>,
+or <a class="xref" href="PSaaS_API.NET.Interface.FuelPatch.html#PSaaS_API_NET_Interface_FuelPatch_FromFuel">FromFuel</a> is required).
 If <pre><code>FromFuel</code></pre> is not specified this must be set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -291,7 +319,7 @@ If <pre><code>FromFuel</code></pre> is not specified this must be set.</p>
   
   <a id="PSaaS_API_NET_Interface_FuelPatch_ToFuel_" data-uid="PSaaS_API.NET.Interface.FuelPatch.ToFuel*"></a>
   <h4 id="PSaaS_API_NET_Interface_FuelPatch_ToFuel" data-uid="PSaaS_API.NET.Interface.FuelPatch.ToFuel">ToFuel</h4>
-  <div class="markdown level1 summary"><p>The fuel the patch changes to (required).</p>
+  <div class="markdown level1 summary"><p>The fuel the patch changes to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -309,6 +337,32 @@ If <pre><code>FromFuel</code></pre> is not specified this must be set.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_FuelPatch_ToFuelIndex_" data-uid="PSaaS_API.NET.Interface.FuelPatch.ToFuelIndex*"></a>
+  <h4 id="PSaaS_API_NET_Interface_FuelPatch_ToFuelIndex" data-uid="PSaaS_API.NET.Interface.FuelPatch.ToFuelIndex">ToFuelIndex</h4>
+  <div class="markdown level1 summary"><p>Instead of using the name of a fuel, reference it by index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ToFuelIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

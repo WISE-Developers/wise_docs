@@ -184,6 +184,33 @@
   </h3>
   
   
+  <a id="PSaaS_API_NET_Interface_Scenario_AssetFiles_" data-uid="PSaaS_API.NET.Interface.Scenario.AssetFiles*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Scenario_AssetFiles" data-uid="PSaaS_API.NET.Interface.Scenario.AssetFiles">AssetFiles</h4>
+  <div class="markdown level1 summary"><p>A list of assets used by this scenario. Assets will be used to end simulations early when a firefront
+reaches the shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;AssetReference&gt; AssetFiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.AssetReference.html">AssetReference</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Scenario_BurningConditions_" data-uid="PSaaS_API.NET.Interface.Scenario.BurningConditions*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_BurningConditions" data-uid="PSaaS_API.NET.Interface.Scenario.BurningConditions">BurningConditions</h4>
   <div class="markdown level1 summary"><p>A set of burning conditions.</p>
@@ -425,7 +452,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; IgnitionInfo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Scenario.IgnitionReference&gt; IgnitionInfo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,7 +464,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.Scenario.IgnitionReference.html">Scenario.IgnitionReference</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -464,32 +491,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.LayerInfo.html">LayerInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="PSaaS_API_NET_Interface_Scenario_PrimaryStream_" data-uid="PSaaS_API.NET.Interface.Scenario.PrimaryStream*"></a>
-  <h4 id="PSaaS_API_NET_Interface_Scenario_PrimaryStream" data-uid="PSaaS_API.NET.Interface.Scenario.PrimaryStream">PrimaryStream</h4>
-  <div class="markdown level1 summary"><p>The primary weather stream for this scenario. If the primary stream is not set the first stream will be used.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PrimaryStream { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -548,40 +549,14 @@
   </table>
   
   
-  <a id="PSaaS_API_NET_Interface_Scenario_StationInfo_" data-uid="PSaaS_API.NET.Interface.Scenario.StationInfo*"></a>
-  <h4 id="PSaaS_API_NET_Interface_Scenario_StationInfo" data-uid="PSaaS_API.NET.Interface.Scenario.StationInfo">StationInfo</h4>
-  <div class="markdown level1 summary"><p>A list of stations associated with the streams.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; StationInfo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="PSaaS_API_NET_Interface_Scenario_StreamInfo_" data-uid="PSaaS_API.NET.Interface.Scenario.StreamInfo*"></a>
-  <h4 id="PSaaS_API_NET_Interface_Scenario_StreamInfo" data-uid="PSaaS_API.NET.Interface.Scenario.StreamInfo">StreamInfo</h4>
+  <a id="PSaaS_API_NET_Interface_Scenario_StationStreams_" data-uid="PSaaS_API.NET.Interface.Scenario.StationStreams*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Scenario_StationStreams" data-uid="PSaaS_API.NET.Interface.Scenario.StationStreams">StationStreams</h4>
   <div class="markdown level1 summary"><p>A list of streams used by this scenario.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; StreamInfo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;StationStream&gt; StationStreams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -593,7 +568,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.StationStream.html">StationStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -626,6 +601,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Scenario_AddAssetFile_" data-uid="PSaaS_API.NET.Interface.Scenario.AddAssetFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Scenario_AddAssetFile_PSaaS_API_NET_Interface_AssetFile_" data-uid="PSaaS_API.NET.Interface.Scenario.AddAssetFile(PSaaS_API.NET.Interface.AssetFile)">AddAssetFile(AssetFile)</h4>
+  <div class="markdown level1 summary"><p>Add an asset file to the scenario. Must already be added to the <a class="xref" href="PSaaS_API.NET.Interface.PSaaS.html">PSaaS</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetReference AddAssetFile(AssetFile file)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><span class="parametername">file</span></td>
+        <td><p>The asset file to add to the scenario.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetReference.html">AssetReference</a></td>
+        <td><p>The reference that was just added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="PSaaS_API_NET_Interface_Scenario_AddBurningConditions_" data-uid="PSaaS_API.NET.Interface.Scenario.AddBurningConditions*"></a>
@@ -858,7 +878,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Ignition AddIgnitionReference(Ignition ignition)</code></pre>
+    <pre><code class="lang-csharp hljs">public Scenario.IgnitionReference AddIgnitionReference(Ignition ignition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,7 +907,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.IgnitionReference.html">Scenario.IgnitionReference</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -901,7 +921,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WeatherStream AddPrimaryWeatherStreamReference(WeatherStream stream)</code></pre>
+    <pre><code class="lang-csharp hljs">public StationStream AddPrimaryWeatherStreamReference(WeatherStream stream)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -930,7 +950,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherStream.html">WeatherStream</a></td>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.StationStream.html">StationStream</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1044,7 +1064,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WeatherStream AddWeatherStreamReference(WeatherStream stream)</code></pre>
+    <pre><code class="lang-csharp hljs">public StationStream AddWeatherStreamReference(WeatherStream stream)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1073,7 +1093,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherStream.html">WeatherStream</a></td>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.StationStream.html">StationStream</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1161,6 +1181,96 @@
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_Scenario_RemoveAssetFile_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveAssetFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveAssetFile_PSaaS_API_NET_Interface_AssetFile_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveAssetFile(PSaaS_API.NET.Interface.AssetFile)">RemoveAssetFile(AssetFile)</h4>
+  <div class="markdown level1 summary"><p>Remove an asset file from the scenario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveAssetFile(AssetFile file)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><span class="parametername">file</span></td>
+        <td><p>The asset file to remove from the scenario.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Scenario_RemoveAssetFile_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveAssetFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveAssetFile_PSaaS_API_NET_Interface_AssetReference_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveAssetFile(PSaaS_API.NET.Interface.AssetReference)">RemoveAssetFile(AssetReference)</h4>
+  <div class="markdown level1 summary"><p>Remove an asset file from the scenario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveAssetFile(AssetReference item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetReference.html">AssetReference</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The asset file reference to remove from the scenario.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Scenario_RemoveBurningCondition_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveBurningCondition*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveBurningCondition_PSaaS_API_NET_Interface_BurningConditions_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveBurningCondition(PSaaS_API.NET.Interface.BurningConditions)">RemoveBurningCondition(BurningConditions)</h4>
   <div class="markdown level1 summary"><p>Remove a BurningConditions object from the burning conditions.
@@ -1208,9 +1318,7 @@
   
   <a id="PSaaS_API_NET_Interface_Scenario_RemoveFuelBreakReference_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveFuelBreakReference*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveFuelBreakReference_PSaaS_API_NET_Interface_FuelBreak_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveFuelBreakReference(PSaaS_API.NET.Interface.FuelBreak)">RemoveFuelBreakReference(FuelBreak)</h4>
-  <div class="markdown level1 summary"><p>Remove a FuelBreak object from the vector info.
-<param name="brck">The FuelBreak object to remove
-<returns>A boolean indicating if the object was found and removed</returns></p>
+  <div class="markdown level1 summary"><p>Remove a FuelBreak object from the vector info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1230,7 +1338,8 @@
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.FuelBreak.html">FuelBreak</a></td>
         <td><span class="parametername">brck</span></td>
-        <td></td>
+        <td><p>The FuelBreak object to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1245,7 +1354,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1253,9 +1363,7 @@
   
   <a id="PSaaS_API_NET_Interface_Scenario_RemoveIgnitionReference_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveIgnitionReference*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveIgnitionReference_PSaaS_API_NET_Interface_Ignition_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveIgnitionReference(PSaaS_API.NET.Interface.Ignition)">RemoveIgnitionReference(Ignition)</h4>
-  <div class="markdown level1 summary"><p>Remove an Ignition object from the ignition info.
-<param name="ignition">The Ignition object to remove
-<returns>A boolean indicating if the object was found and removed</returns></p>
+  <div class="markdown level1 summary"><p>Remove an Ignition object from the ignition info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1275,7 +1383,8 @@
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
         <td><span class="parametername">ignition</span></td>
-        <td></td>
+        <td><p>The Ignition object to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1290,7 +1399,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1298,9 +1408,7 @@
   
   <a id="PSaaS_API_NET_Interface_Scenario_RemoveLayerInfo_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveLayerInfo*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveLayerInfo_PSaaS_API_NET_Interface_LayerInfo_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveLayerInfo(PSaaS_API.NET.Interface.LayerInfo)">RemoveLayerInfo(LayerInfo)</h4>
-  <div class="markdown level1 summary"><p>Remove a layer object from the layer info.
-<param name="ref">The LayerInfo object to remove
-<returns>A boolean indicating if the object was found and removed</returns></p>
+  <div class="markdown level1 summary"><p>Remove a layer object from the layer info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1335,7 +1443,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1343,9 +1452,7 @@
   
   <a id="PSaaS_API_NET_Interface_Scenario_RemovePrimaryWeatherStream_" data-uid="PSaaS_API.NET.Interface.Scenario.RemovePrimaryWeatherStream*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemovePrimaryWeatherStream_PSaaS_API_NET_Interface_WeatherStream_" data-uid="PSaaS_API.NET.Interface.Scenario.RemovePrimaryWeatherStream(PSaaS_API.NET.Interface.WeatherStream)">RemovePrimaryWeatherStream(WeatherStream)</h4>
-  <div class="markdown level1 summary"><p>Remove a WeatherStream object from the stream and station info.
-<param name="stream">The WeatherStream object to remove
-<returns>A boolean indicating if the object was found and removed</returns></p>
+  <div class="markdown level1 summary"><p>Remove a WeatherStream object from the stream and station info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1365,7 +1472,8 @@
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherStream.html">WeatherStream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The WeatherStream object to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1380,7 +1488,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1388,9 +1497,7 @@
   
   <a id="PSaaS_API_NET_Interface_Scenario_RemoveWeatherStreamReference_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveWeatherStreamReference*"></a>
   <h4 id="PSaaS_API_NET_Interface_Scenario_RemoveWeatherStreamReference_PSaaS_API_NET_Interface_WeatherStream_" data-uid="PSaaS_API.NET.Interface.Scenario.RemoveWeatherStreamReference(PSaaS_API.NET.Interface.WeatherStream)">RemoveWeatherStreamReference(WeatherStream)</h4>
-  <div class="markdown level1 summary"><p>Remove a WeatherStream object from the stream and station info.
-<param name="stream">The WeatherStream object to remove
-<returns>A boolean indicating if the object was found and removed</returns></p>
+  <div class="markdown level1 summary"><p>Remove a WeatherStream object from the stream and station info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1410,7 +1517,8 @@
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherStream.html">WeatherStream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The WeatherStream object to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1425,7 +1533,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A boolean indicating if the object was found and removed</p>
+</td>
       </tr>
     </tbody>
   </table>

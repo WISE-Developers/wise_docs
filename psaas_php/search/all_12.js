@@ -1,6 +1,9 @@
 var searchData=
 [
+  ['removeasset',['removeAsset',['../class_p_saa_s.html#a75a75fef3351fa174eb8061e1647e45c',1,'PSaaS']]],
+  ['removeassetfile',['removeAssetFile',['../class_scenario.html#ae0dc90d22648ba374fc31c95c62d1430',1,'Scenario']]],
   ['removeburningcondition',['removeBurningCondition',['../class_scenario.html#ae38467c77927382a355a6f4224cf7ff3',1,'Scenario']]],
+  ['removecolumn',['removeColumn',['../class_stats_file.html#aa3ea076af68e3d708c6397ae9ffac162',1,'StatsFile']]],
   ['removedirectionfile',['removeDirectionFile',['../class_weather_grid.html#ad19cc05463c4c0903ca4a7b70d70d12c',1,'WeatherGrid']]],
   ['removefuelbreak',['removeFuelBreak',['../class_p_saa_s.html#ae99648af774bfc235465152d1100aba3',1,'PSaaS']]],
   ['removefuelbreakreference',['removeFuelBreakReference',['../class_scenario.html#a0a95b1a6cc878c6835b2f523aea84809',1,'Scenario']]],
@@ -12,6 +15,8 @@ var searchData=
   ['removelayerinfo',['removeLayerInfo',['../class_scenario.html#a33ad1f7029018db820152b5f6a629b3d',1,'Scenario']]],
   ['removeoutputgridfile',['removeOutputGridFile',['../class_p_saa_s_outputs.html#add28ecde904042fe9e915c209b8224ff',1,'PSaaSOutputs']]],
   ['removeoutputgridfilefromscenario',['removeOutputGridFileFromScenario',['../class_p_saa_s.html#a5435ce959306d481a9bcc5177ed82356',1,'PSaaS']]],
+  ['removeoutputstatsfile',['removeOutputStatsFile',['../class_p_saa_s_outputs.html#a31a9472b8d0307d0f8b64e3ba1f8e45b',1,'PSaaSOutputs']]],
+  ['removeoutputstatsfilefromscenario',['removeOutputStatsFileFromScenario',['../class_p_saa_s.html#ad2ca2a8ef54e2ada7309e872cc9902f5',1,'PSaaS']]],
   ['removeoutputsummaryfile',['removeOutputSummaryFile',['../class_p_saa_s_outputs.html#a1af3f6264ab53380d95d9b695252d9ea',1,'PSaaSOutputs']]],
   ['removeoutputsummaryfilefromscenario',['removeOutputSummaryFileFromScenario',['../class_p_saa_s.html#a029bdc0e1b19cd0036cdaa9b4be17149',1,'PSaaS']]],
   ['removeoutputvectorfile',['removeOutputVectorFile',['../class_p_saa_s_outputs.html#ae0e73b49f5e1edff7bf30b19045d0fa7',1,'PSaaSOutputs']]],

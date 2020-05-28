@@ -41,10 +41,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_fuel_option.html",
-"class_p_saa_s.html#a52fc643af767639fc8087a02723bb64b",
-"class_u_n_i_t_s.html#a4dd634238996be042f6e3d906a036d2c",
-"functions_func_s.html"
+"class_forecast_calculator.html#a3567a1dc90741a9f96977c2c4930aa3a",
+"class_grid_file.html#ae1eb45abe7d12ae6ee3428ea09013adf",
+"class_scenario.html#a095c5d389db211932136b53f25f39685",
+"class_unit_settings.html#a928e5983c8e9658c7cbd0689c1edef9f",
+"class_weather_station.html#ad7ffb4a726e68a1a7aa2608083ff9584"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

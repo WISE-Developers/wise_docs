@@ -4,6 +4,7 @@ var class_p_saa_s_inputs =
     [ "get_error", "class_p_saa_s_inputs.html#a1c0091515372f72e1a87683ca57c74eb", null ],
     [ "isValid", "class_p_saa_s_inputs.html#a7b37efab7473a1effc29f8be2421f6e3", null ],
     [ "stream", "class_p_saa_s_inputs.html#aa99264dcf2dcdc0316d2068de76d266d", null ],
+    [ "$assetFiles", "class_p_saa_s_inputs.html#a54b7f2f7afa54d6f81774dfdb2f86e4c", null ],
     [ "$err", "class_p_saa_s_inputs.html#acfc00bd4a41804552c630950bf61a51f", null ],
     [ "$files", "class_p_saa_s_inputs.html#a40ae9a568a78e6bac5a445bcb6aea89d", null ],
     [ "$fuelOptions", "class_p_saa_s_inputs.html#ac4530795090ad2f4279adecbb0fc306b", null ],

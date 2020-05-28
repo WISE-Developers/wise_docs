@@ -146,6 +146,32 @@
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StatsFiles_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StatsFiles*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StatsFiles" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StatsFiles">StatsFiles</h4>
+  <div class="markdown level1 summary"><p>Output a stats file with information from each scenario timestep.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;StatsFile&gt; StatsFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Interface.Output.StatsFile.html">StatsFile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StreamAll_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StreamAll*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_StreamAll" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.StreamAll">StreamAll</h4>
   <div class="markdown level1 summary"><p>The default stream status for all newly created output files.</p>
@@ -303,6 +329,50 @@ grid file outputs.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewStatsFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewStatsFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewStatsFile_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewStatsFile(PSaaS_API.NET.Interface.Scenario)">NewStatsFile(Scenario)</h4>
+  <div class="markdown level1 summary"><p>Create a new stats file and add it to the list of
+summary file outputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatsFile NewStatsFile(Scenario scen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.StatsFile.html">StatsFile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewSummaryFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewSummaryFile*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_NewSummaryFile_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.NewSummaryFile(PSaaS_API.NET.Interface.Scenario)">NewSummaryFile(Scenario)</h4>
   <div class="markdown level1 summary"><p>Create a new summary file and add it to the list of
@@ -414,6 +484,51 @@ vector file outputs.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.html">GridFile</a></td>
+        <td><span class="parametername">stat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_RemoveOutputStatsFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.RemoveOutputStatsFile*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_PSaaSOutputs_RemoveOutputStatsFile_PSaaS_API_NET_Interface_Output_StatsFile_" data-uid="PSaaS_API.NET.Interface.Output.PSaaSOutputs.RemoveOutputStatsFile(PSaaS_API.NET.Interface.Output.StatsFile)">RemoveOutputStatsFile(StatsFile)</h4>
+  <div class="markdown level1 summary"><p>Remove a StatsFile object from the stats files.
+<param name="stat">The StatsFile object to remove
+<returns>A boolean indicating if the object was found and removed</returns></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveOutputStatsFile(StatsFile stat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.StatsFile.html">StatsFile</a></td>
         <td><span class="parametername">stat</span></td>
         <td></td>
       </tr>

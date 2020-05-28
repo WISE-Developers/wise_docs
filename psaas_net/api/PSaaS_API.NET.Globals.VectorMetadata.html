@@ -128,7 +128,8 @@ Has a default value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Units AreaUnit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use the global unit settings instead. Will be removed in the future.&quot;)]
+public Units AreaUnit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,6 +148,58 @@ Has a default value.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_AssetArrivalCount_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.AssetArrivalCount*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_AssetArrivalCount" data-uid="PSaaS_API.NET.Globals.VectorMetadata.AssetArrivalCount">AssetArrivalCount</h4>
+  <div class="markdown level1 summary"><p>The number of assets that were reached when the simulation stopped, if any (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? AssetArrivalCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_AssetArrivalTime_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.AssetArrivalTime*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_AssetArrivalTime" data-uid="PSaaS_API.NET.Globals.VectorMetadata.AssetArrivalTime">AssetArrivalTime</h4>
+  <div class="markdown level1 summary"><p>The time that the fire front reached an asset and the simulation stopped (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? AssetArrivalTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Globals_VectorMetadata_FireSize_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.FireSize*"></a>
   <h4 id="PSaaS_API_NET_Globals_VectorMetadata_FireSize" data-uid="PSaaS_API.NET.Globals.VectorMetadata.FireSize">FireSize</h4>
   <div class="markdown level1 summary"><p>Fire size (area) (required).
@@ -156,6 +209,111 @@ Has a default value.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? FireSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_FwiValues_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.FwiValues*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_FwiValues" data-uid="PSaaS_API.NET.Globals.VectorMetadata.FwiValues">FwiValues</h4>
+  <div class="markdown level1 summary"><p>Include the FWI values in the output vector file (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? FwiValues { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_IdentifyFinalPerimeter_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IdentifyFinalPerimeter*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_IdentifyFinalPerimeter" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IdentifyFinalPerimeter">IdentifyFinalPerimeter</h4>
+  <div class="markdown level1 summary"><p>Add a column of 0s and 1s to indicate if a perimeter is the final perimeter of a simulation
+or an intermediate step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IdentifyFinalPerimeter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_IgnitionAttributes_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IgnitionAttributes*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_IgnitionAttributes" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IgnitionAttributes">IgnitionAttributes</h4>
+  <div class="markdown level1 summary"><p>Pass ignition attributes from the input ignition file to the output perimeter (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IgnitionAttributes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_IgnitionLocation_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IgnitionLocation*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_IgnitionLocation" data-uid="PSaaS_API.NET.Globals.VectorMetadata.IgnitionLocation">IgnitionLocation</h4>
+  <div class="markdown level1 summary"><p>Include the location of the ignition that created the perimeter in the vector file (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IgnitionLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,6 +411,32 @@ Has a default value.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_MaxBurnDistance_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.MaxBurnDistance*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_MaxBurnDistance" data-uid="PSaaS_API.NET.Globals.VectorMetadata.MaxBurnDistance">MaxBurnDistance</h4>
+  <div class="markdown level1 summary"><p>Add the max burn distance for each perimeter to the vector file (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? MaxBurnDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Globals_VectorMetadata_PerimeterActive_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.PerimeterActive*"></a>
   <h4 id="PSaaS_API_NET_Globals_VectorMetadata_PerimeterActive" data-uid="PSaaS_API.NET.Globals.VectorMetadata.PerimeterActive">PerimeterActive</h4>
   <div class="markdown level1 summary"><p>Active perimeter (required).
@@ -315,7 +499,8 @@ Has a default value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Units PerimeterUnits { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use the global unit settings instead. Will be removed in the future.&quot;)]
+public Units PerimeterUnits { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,6 +582,32 @@ Has a default value.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_VectorMetadata_WxValues_" data-uid="PSaaS_API.NET.Globals.VectorMetadata.WxValues*"></a>
+  <h4 id="PSaaS_API_NET_Globals_VectorMetadata_WxValues" data-uid="PSaaS_API.NET.Globals.VectorMetadata.WxValues">WxValues</h4>
+  <div class="markdown level1 summary"><p>Include the weather information in the output vector file (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? WxValues { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnitSettings
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnitSettings
+   ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../images/Prometheus-Logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PSaaS_API.NET.Interface.UnitSettings">
+  
+  
+  <h1 id="PSaaS_API_NET_Interface_UnitSettings" data-uid="PSaaS_API.NET.Interface.UnitSettings" class="text-break">Class UnitSettings
+  </h1>
+  <div class="markdown level0 summary"><p>Settings that define which units will be used when data is exported in summary
+or statistics files. All units are optional with application defaults being
+used for anything that isn&apos;t specified.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnitSettings</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PSaaS_API.NET.Ext.IStreamable.html">IStreamable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PSaaS_API.NET.Interface.html">PSaaS_API.NET.Interface</a></h6>
+  <h6><strong>Assembly</strong>: PSaaS_API.NET.dll</h6>
+  <h5 id="PSaaS_API_NET_Interface_UnitSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UnitSettings : IStreamable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_AlternateDistanceOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.AlternateDistanceOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_AlternateDistanceOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.AlternateDistanceOutput">AlternateDistanceOutput</h4>
+  <div class="markdown level1 summary"><p>Alternate units for displaying distances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistanceUnit AlternateDistanceOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.DistanceUnit.html">DistanceUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_AlternateVelocityOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.AlternateVelocityOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_AlternateVelocityOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.AlternateVelocityOutput">AlternateVelocityOutput</h4>
+  <div class="markdown level1 summary"><p>An alternate unit for displaying velocity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VelocityUnit AlternateVelocityOutput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.VelocityUnit.html">VelocityUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_AngleOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.AngleOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_AngleOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.AngleOutput">AngleOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying angles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AngleUnit AngleOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.AngleUnit.html">AngleUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_AreaOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.AreaOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_AreaOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.AreaOutput">AreaOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying areas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AreaUnit AreaOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.AreaUnit.html">AreaUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_CoordinateOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.CoordinateOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_CoordinateOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.CoordinateOutput">CoordinateOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoordinateUnit CoordinateOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.CoordinateUnit.html">CoordinateUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_DistanceOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.DistanceOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_DistanceOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.DistanceOutput">DistanceOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying distances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistanceUnit DistanceOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.DistanceUnit.html">DistanceUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_EnergyOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.EnergyOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_EnergyOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.EnergyOutput">EnergyOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying energy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EnergyUnit EnergyOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.EnergyUnit.html">EnergyUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_IntensityOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.IntensityOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_IntensityOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.IntensityOutput">IntensityOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying fire intensity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntensityUnit IntensityOutput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.IntensityUnit.html">IntensityUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_MassAreaOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.MassAreaOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_MassAreaOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.MassAreaOutput">MassAreaOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying mass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MassAreaUnit MassAreaOutput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.MassAreaUnit.html">MassAreaUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_MassOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.MassOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_MassOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.MassOutput">MassOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying mass or weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MassUnit MassOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.MassUnit.html">MassUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_SmallDistanceOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.SmallDistanceOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_SmallDistanceOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.SmallDistanceOutput">SmallDistanceOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying small distances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistanceUnit SmallDistanceOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.DistanceUnit.html">DistanceUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_SmallMeasureOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.SmallMeasureOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_SmallMeasureOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.SmallMeasureOutput">SmallMeasureOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying small distance measurements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistanceUnit SmallMeasureOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.DistanceUnit.html">DistanceUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_TemperatureOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.TemperatureOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_TemperatureOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.TemperatureOutput">TemperatureOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying temperature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TemperatureUnit TemperatureOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.TemperatureUnit.html">TemperatureUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_VelocityOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.VelocityOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_VelocityOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.VelocityOutput">VelocityOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying velocity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VelocityUnit VelocityOutput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.VelocityUnit.html">VelocityUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_VolumeOutput_" data-uid="PSaaS_API.NET.Interface.UnitSettings.VolumeOutput*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_VolumeOutput" data-uid="PSaaS_API.NET.Interface.UnitSettings.VolumeOutput">VolumeOutput</h4>
+  <div class="markdown level1 summary"><p>Units for displaying volumes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VolumeUnit VolumeOutput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Units.VolumeUnit.html">VolumeUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_UnitSettings_Stream_" data-uid="PSaaS_API.NET.Interface.UnitSettings.Stream*"></a>
+  <h4 id="PSaaS_API_NET_Interface_UnitSettings_Stream_PSaaS_API_NET_Globals_SocketEx_" data-uid="PSaaS_API.NET.Interface.UnitSettings.Stream(PSaaS_API.NET.Globals.SocketEx)">Stream(SocketEx)</h4>
+  <div class="markdown level1 summary"><p>Streams the ignition to a socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stream(SocketEx socket)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.SocketEx.html">SocketEx</a></td>
+        <td><span class="parametername">socket</span></td>
+        <td><p>The socket to stream to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PSaaS_API.NET.Ext.IStreamable.html">IStreamable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['units',['UNITS',['../class_u_n_i_t_s.html',1,'']]],
+  ['unitsettings',['UnitSettings',['../class_unit_settings.html',1,'']]],
   ['unknown',['UNKNOWN',['../class_component_type.html#ae6108affa42794b53a4d94042cd1d544',1,'ComponentType']]],
   ['unsetelevationfile',['unsetElevationFile',['../class_p_saa_s.html#a21c88b54786b16952092451173e79904',1,'PSaaS']]],
   ['unsetfuelmapfile',['unsetFuelmapFile',['../class_p_saa_s.html#a9877e7252bb5bf9d70b4301a8f3ae90e',1,'PSaaS']]],

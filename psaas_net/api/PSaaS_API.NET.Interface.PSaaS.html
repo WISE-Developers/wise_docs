@@ -171,6 +171,33 @@
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_ExportUnits_" data-uid="PSaaS_API.NET.Interface.PSaaS.ExportUnits*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_ExportUnits" data-uid="PSaaS_API.NET.Interface.PSaaS.ExportUnits">ExportUnits</h4>
+  <div class="markdown level1 summary"><p>Settings that define which units will be used when data is exported in summary
+or statistics files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnitSettings ExportUnits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.UnitSettings.html">UnitSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_Inputs_" data-uid="PSaaS_API.NET.Interface.PSaaS.Inputs*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_Inputs" data-uid="PSaaS_API.NET.Interface.PSaaS.Inputs">Inputs</h4>
   <div class="markdown level1 summary"><p>Files that are needed as input for the job.</p>
@@ -447,6 +474,57 @@ returned.</p>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.WeatherGrid.html">WeatherGrid</a></td>
         <td><p>The newly added weather grid.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddFileAsset_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddFileAsset*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddFileAsset_System_String_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddFileAsset(System.String,System.String)">AddFileAsset(String, String)</h4>
+  <div class="markdown level1 summary"><p>Add a new asset using a shapefile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFile AddFileAsset(string filename, string comments = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>The location of the shapefile to use as the shape of the asset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">comments</span></td>
+        <td><p>An optional user created comment to attach to the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><p>The newly added asset.</p>
 </td>
       </tr>
     </tbody>
@@ -996,14 +1074,14 @@ returned.</p>
   </table>
   
   
-  <a id="PSaaS_API_NET_Interface_PSaaS_AddOutputGridFileToScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputGridFileToScenario*"></a>
-  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddOutputGridFileToScenario_PSaaS_API_NET_Interface_Output_GridFileType_System_String_System_String_PSaaS_API_NET_Interface_Output_GridFileInterpolation_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputGridFileToScenario(PSaaS_API.NET.Interface.Output.GridFileType,System.String,System.String,PSaaS_API.NET.Interface.Output.GridFileInterpolation,PSaaS_API.NET.Interface.Scenario)">AddOutputGridFileToScenario(GridFileType, String, String, GridFileInterpolation, Scenario)</h4>
-  <div class="markdown level1 summary"><p>Add a grid file output to a scenario.</p>
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddMultiPointIgnition_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddMultiPointIgnition*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddMultiPointIgnition_System_String_System_Collections_Generic_List_PSaaS_API_NET_Globals_LatLon__System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddMultiPointIgnition(System.String,System.Collections.Generic.List{PSaaS_API.NET.Globals.LatLon},System.String)">AddMultiPointIgnition(String, List&lt;LatLon&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Add an ignition with multiple points.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridFile AddOutputGridFileToScenario(GridFileType type, string filename, string time, GridFileInterpolation interpMethod, Scenario scenario)</code></pre>
+    <pre><code class="lang-csharp hljs">public Ignition AddMultiPointIgnition(string startTime, List&lt;LatLon&gt; points, string comments = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1016,7 +1094,64 @@ returned.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFileType.html">GridFileType</a></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">startTime</span></td>
+        <td><p>The ignitions start time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>An array of LatLons that are all point ignitions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">comments</span></td>
+        <td><p>An optional user created comment to attach to the ignition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
+        <td><p>The newly added ignition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddOutputGridFileToScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputGridFileToScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddOutputGridFileToScenario_PSaaS_API_NET_Globals_GlobalStatistics_System_String_System_String_PSaaS_API_NET_Interface_Output_GridFileInterpolation_PSaaS_API_NET_Interface_Scenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputGridFileToScenario(PSaaS_API.NET.Globals.GlobalStatistics,System.String,System.String,PSaaS_API.NET.Interface.Output.GridFileInterpolation,PSaaS_API.NET.Interface.Scenario)">AddOutputGridFileToScenario(GlobalStatistics, String, String, GridFileInterpolation, Scenario)</h4>
+  <div class="markdown level1 summary"><p>Add a grid file output to a scenario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridFile AddOutputGridFileToScenario(GlobalStatistics type, string filename, string time, GridFileInterpolation interpMethod, Scenario scenario)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.GlobalStatistics.html">GlobalStatistics</a></td>
         <td><span class="parametername">type</span></td>
         <td><p>The statistic to output.</p>
 </td>
@@ -1059,6 +1194,57 @@ returned.</p>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.html">GridFile</a></td>
         <td><p>The newly added output grid file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddOutputStatsFileToScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputStatsFileToScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddOutputStatsFileToScenario_PSaaS_API_NET_Interface_Scenario_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddOutputStatsFileToScenario(PSaaS_API.NET.Interface.Scenario,System.String)">AddOutputStatsFileToScenario(Scenario, String)</h4>
+  <div class="markdown level1 summary"><p>Add a stats output file to a scenario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatsFile AddOutputStatsFileToScenario(Scenario scenario, string filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Scenario.html">Scenario</a></td>
+        <td><span class="parametername">scenario</span></td>
+        <td><p>The scenario to add the stats file to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>The name of the file to output to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.StatsFile.html">StatsFile</a></td>
+        <td><p>The newly added output stats file.</p>
 </td>
       </tr>
     </tbody>
@@ -1185,9 +1371,62 @@ returned.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddPointAsset_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPointAsset*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddPointAsset_PSaaS_API_NET_Globals_LatLon_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPointAsset(PSaaS_API.NET.Globals.LatLon,System.String)">AddPointAsset(LatLon, String)</h4>
+  <div class="markdown level1 summary"><p>Add a new asset using a single point. A buffer around the point can be created
+using the <a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html#PSaaS_API_NET_Interface_AssetFile_Buffer">Buffer</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFile AddPointAsset(LatLon location, string comments = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a></td>
+        <td><span class="parametername">location</span></td>
+        <td><p>The lat/lon of the asset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">comments</span></td>
+        <td><p>An optional user created comment to attach to the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><p>The newly added asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_AddPointIgnition_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPointIgnition*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_AddPointIgnition_System_String_PSaaS_API_NET_Globals_LatLon_System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPointIgnition(System.String,PSaaS_API.NET.Globals.LatLon,System.String)">AddPointIgnition(String, LatLon, String)</h4>
-  <div class="markdown level1 summary"><p>Add an ignition from a single point.</p>
+  <div class="markdown level1 summary"><p>Add an ignition from a single point.If this is to be a multipoint more points can be added
+to the returned object using <a class="xref" href="PSaaS_API.NET.Interface.Ignition.html#PSaaS_API_NET_Interface_Ignition_AddPoint_PSaaS_API_NET_Globals_LatLon_">AddPoint(LatLon)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1236,6 +1475,57 @@ returned.</p>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.Ignition.html">Ignition</a></td>
         <td><p>The newly added ignition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddPolygonAsset_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolygonAsset*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddPolygonAsset_System_Collections_Generic_List_PSaaS_API_NET_Globals_LatLon__System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolygonAsset(System.Collections.Generic.List{PSaaS_API.NET.Globals.LatLon},System.String)">AddPolygonAsset(List&lt;LatLon&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Add a new asset using a polygon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFile AddPolygonAsset(List&lt;LatLon&gt; locations, string comments = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a>&gt;</td>
+        <td><span class="parametername">locations</span></td>
+        <td><p>An array of lat/lons that make up the polygon.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">comments</span></td>
+        <td><p>An optional user created comment to attach to the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><p>The newly added asset.</p>
 </td>
       </tr>
     </tbody>
@@ -1620,6 +1910,58 @@ returned.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_AddPolylineAsset_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolylineAsset*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_AddPolylineAsset_System_Collections_Generic_List_PSaaS_API_NET_Globals_LatLon__System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolylineAsset(System.Collections.Generic.List{PSaaS_API.NET.Globals.LatLon},System.String)">AddPolylineAsset(List&lt;LatLon&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Add a new asset using a polyline. A buffer around the line can be created
+using the <a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html#PSaaS_API_NET_Interface_AssetFile_Buffer">Buffer</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFile AddPolylineAsset(List&lt;LatLon&gt; locations, string comments = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="PSaaS_API.NET.Globals.LatLon.html">LatLon</a>&gt;</td>
+        <td><span class="parametername">locations</span></td>
+        <td><p>An array of lat/lons that make up the polyline.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">comments</span></td>
+        <td><p>An optional user created comment to attach to the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><p>The newly added asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_AddPolylineFuelBreak_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolylineFuelBreak*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_AddPolylineFuelBreak_System_Double_System_Collections_Generic_List_PSaaS_API_NET_Globals_LatLon__System_String_" data-uid="PSaaS_API.NET.Interface.PSaaS.AddPolylineFuelBreak(System.Double,System.Collections.Generic.List{PSaaS_API.NET.Globals.LatLon},System.String)">AddPolylineFuelBreak(Double, List&lt;LatLon&gt;, String)</h4>
   <div class="markdown level1 summary"><p>Add a fuel break to the project.</p>
@@ -1991,6 +2333,51 @@ returned.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveAsset_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveAsset*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveAsset_PSaaS_API_NET_Interface_AssetFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveAsset(PSaaS_API.NET.Interface.AssetFile)">RemoveAsset(AssetFile)</h4>
+  <div class="markdown level1 summary"><p>Remove an asset from the job. This will not remove it from any
+scenarios that it may be associated with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveAsset(AssetFile asset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.AssetFile.html">AssetFile</a></td>
+        <td><span class="parametername">asset</span></td>
+        <td><p>The asset to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelBreak_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelBreak*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveFuelBreak_PSaaS_API_NET_Interface_FuelBreak_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveFuelBreak(PSaaS_API.NET.Interface.FuelBreak)">RemoveFuelBreak(FuelBreak)</h4>
   <div class="markdown level1 summary"><p>Remove a FuelBreak object from the fuel break files.
@@ -2237,6 +2624,49 @@ returned.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.html">GridFile</a></td>
+        <td><span class="parametername">stat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputStatsFileFromScenario_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputStatsFileFromScenario*"></a>
+  <h4 id="PSaaS_API_NET_Interface_PSaaS_RemoveOutputStatsFileFromScenario_PSaaS_API_NET_Interface_Output_StatsFile_" data-uid="PSaaS_API.NET.Interface.PSaaS.RemoveOutputStatsFileFromScenario(PSaaS_API.NET.Interface.Output.StatsFile)">RemoveOutputStatsFileFromScenario(StatsFile)</h4>
+  <div class="markdown level1 summary"><p>Removes the output stats file from a scenario</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveOutputStatsFileFromScenario(StatsFile stat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.StatsFile.html">StatsFile</a></td>
         <td><span class="parametername">stat</span></td>
         <td></td>
       </tr>
@@ -2527,7 +2957,7 @@ returned.</p>
   
   <a id="PSaaS_API_NET_Interface_PSaaS_SetCrownBaseHeight_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetCrownBaseHeight*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetCrownBaseHeight_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetCrownBaseHeight(System.String,System.Double)">SetCrownBaseHeight(String, Double)</h4>
-  <div class="markdown level1 summary"><p>Set the crown base height for the C-6 fuel type.</p>
+  <div class="markdown level1 summary"><p>Set the crown base height.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2547,7 +2977,8 @@ returned.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">fuel</span></td>
-        <td><p>The fuel type to set the grass fuel load for. Must be C-6.</p>
+        <td><p>The fuel type to set the grass fuel load for. Must be C-6,
+NZ-60, NZ-61, NZ-66, NZ-67, or NZ-71.</p>
 </td>
       </tr>
       <tr>
@@ -2622,7 +3053,9 @@ An exception will be thrown if the file does not exist.</p>
   
   <a id="PSaaS_API_NET_Interface_PSaaS_SetGrassCuring_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassCuring*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetGrassCuring_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassCuring(System.String,System.Double)">SetGrassCuring(String, Double)</h4>
-  <div class="markdown level1 summary"><p>Set the grass curing for either the O-1a or O-1b fuel type.</p>
+  <div class="markdown level1 summary"><p>Set the grass curing for the O-1a, O-1b, NZ-2, NZ-15, NZ-30, NZ-31, NZ-32, NZ-33, NZ-40,
+NZ-41, NZ-43, NZ-46, NZ-50, NZ-53, NZ-62, NZ-63, or NZ-65 fuel type. If unset, this also
+sets the grass fuel load to 0.35kg/m^2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2642,7 +3075,7 @@ An exception will be thrown if the file does not exist.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">fuel</span></td>
-        <td><p>The fuel type to set the grass curing for. Must be either O-1a or O-1b.</p>
+        <td><p>The fuel type to set the grass curing for.</p>
 </td>
       </tr>
       <tr>
@@ -2657,7 +3090,9 @@ An exception will be thrown if the file does not exist.</p>
   
   <a id="PSaaS_API_NET_Interface_PSaaS_SetGrassFuelLoad_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassFuelLoad*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetGrassFuelLoad_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetGrassFuelLoad(System.String,System.Double)">SetGrassFuelLoad(String, Double)</h4>
-  <div class="markdown level1 summary"><p>Set the grass fuel load for either the O-1a or O-1b fuel type.</p>
+  <div class="markdown level1 summary"><p>Set the grass fuel load for either the O-1a, O-1b, NZ-2, NZ-15, NZ-30, NZ-31, NZ-32, NZ-33, NZ-40,
+NZ-41, NZ-43, NZ-46, NZ-50, NZ-53, NZ-62, NZ-63, or NZ-65 fuel type. If unset, this also
+sets the grass curing to 60%.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2677,13 +3112,13 @@ An exception will be thrown if the file does not exist.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">fuel</span></td>
-        <td><p>The fuel type to set the grass fuel load for. Must be either O-1a or O-1b.</p>
+        <td><p>The fuel type to set the grass fuel load for.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">value</span></td>
-        <td><p>The grass fuel load.</p>
+        <td><p>The grass fuel load (kg/m^2).</p>
 </td>
       </tr>
     </tbody>
@@ -2722,7 +3157,7 @@ An exception will be thrown if the file does not exist.</p>
   
   <a id="PSaaS_API_NET_Interface_PSaaS_SetPercentConifer_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentConifer*"></a>
   <h4 id="PSaaS_API_NET_Interface_PSaaS_SetPercentConifer_System_String_System_Double_" data-uid="PSaaS_API.NET.Interface.PSaaS.SetPercentConifer(System.String,System.Double)">SetPercentConifer(String, Double)</h4>
-  <div class="markdown level1 summary"><p>Set the percent conifer for either the M-1 or M-2 fuel type.</p>
+  <div class="markdown level1 summary"><p>Set the percent conifer for the M-1, M-2, NZ-54, or NZ-69 fuel type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2742,7 +3177,7 @@ An exception will be thrown if the file does not exist.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">fuel</span></td>
-        <td><p>The fuel type to set the percent conifer for. Must be either M-1 or M-2.</p>
+        <td><p>The fuel type to set the percent conifer for. Must be M-1, M-2, NZ-54, or NZ-69.</p>
 </td>
       </tr>
       <tr>

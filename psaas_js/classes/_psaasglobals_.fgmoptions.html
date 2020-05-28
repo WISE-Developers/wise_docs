@@ -96,12 +96,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#assetcollisioncount" class="tsd-kind-icon">asset<wbr>Collision<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#breaching" class="tsd-kind-icon">breaching</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#distres" class="tsd-kind-icon">dist<wbr>Res</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#dt" class="tsd-kind-icon">dt</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#dwd" class="tsd-kind-icon">dwd</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#dx" class="tsd-kind-icon">dx</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#dy" class="tsd-kind-icon">dy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#dynamicspatialthreshold" class="tsd-kind-icon">dynamic<wbr>Spatial<wbr>Threshold</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#globalassetoperation" class="tsd-kind-icon">global<wbr>Asset<wbr>Operation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#growthpercentile" class="tsd-kind-icon">growth<wbr>Percentile</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#growthpercentileapplied" class="tsd-kind-icon">growth<wbr>Percentile<wbr>Applied</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.fgmoptions.html#ignitionsize" class="tsd-kind-icon">ignition<wbr>Size</a></li>
@@ -129,6 +132,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_breaching" class="tsd-kind-icon">PARAM_<wbr>BREACHING</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_distres" class="tsd-kind-icon">PARAM_<wbr>DISTRES</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_dt" class="tsd-kind-icon">PARAM_<wbr>DT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_dwd" class="tsd-kind-icon">PARAM_<wbr>DWD</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_dx" class="tsd-kind-icon">PARAM_<wbr>DX</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_dy" class="tsd-kind-icon">PARAM_<wbr>DY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.fgmoptions.html#param_dynamicthreshold" class="tsd-kind-icon">PARAM_<wbr>DYNAMICTHRESHOLD</a></li>
@@ -157,6 +161,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="assetcollisioncount" class="tsd-anchor"></a>
+					<h3>asset<wbr>Collision<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">asset<wbr>Collision<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;-1</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An asset collision count. Will allow the simulation to be stopped after a certain number of assets have been reached.
+							Only valid if globalAssetOperation in AssetOperation::STOP_AFTER_X.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="breaching" class="tsd-anchor"></a>
 					<h3>breaching</h3>
@@ -191,6 +207,22 @@
 							<p>How much to nudge ignitions to perform probabilistic analyses on ignition location and start time.
 								Primarily used when ignition information is not 100% reliable.
 							Has a default value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dwd" class="tsd-anchor"></a>
+					<h3>dwd</h3>
+					<div class="tsd-signature tsd-kind-icon">dwd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How much to nudge wind direction to perform probabilistic analyses on weather.
+								Applied after all patches and grids, and does not recalculate any FWI calculations.
+								Applied before any FBP calculations.
+								Provided in compass degrees, -360 to 360 is acceptable.
+								Applied to both simulations, and to instantaneous calculations as shown on the map trace view query, for consistency.
+							Primarily used when weather information does not have the expected fidelity.</p>
 						</div>
 					</div>
 				</section>
@@ -231,6 +263,17 @@
 						<div class="lead">
 							<p>Whether using the dynamic spatial threshold algorithm is turned on or off (optional).
 							Has a default value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="globalassetoperation" class="tsd-anchor"></a>
+					<h3>global<wbr>Asset<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>Asset<wbr>Operation<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.assetoperation.html" class="tsd-signature-type">AssetOperation</a><span class="tsd-signature-symbol"> =&nbsp;AssetOperation.UNDEFINED</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A global asset operation that can be used to force an asset behaviour for all attached assets.</p>
 						</div>
 					</div>
 				</section>
@@ -452,6 +495,12 @@
 					<a name="param_dt" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> PARAM_<wbr>DT</h3>
 					<div class="tsd-signature tsd-kind-icon">PARAM_<wbr>DT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"fgm_dt"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;fgm_dt&quot;</span></div>
+					
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="param_dwd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> PARAM_<wbr>DWD</h3>
+					<div class="tsd-signature tsd-kind-icon">PARAM_<wbr>DWD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"fgm_dwd"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;fgm_dwd&quot;</span></div>
 					
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
@@ -698,6 +747,12 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_psaasglobals_.assetoperation.html" class="tsd-kind-icon">Asset<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-kind-icon">Global<wbr>Statistics</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
 						<a href="../enums/_psaasglobals_.psaasloglevel.html" class="tsd-kind-icon">PSaaSLog<wbr>Level</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
@@ -718,6 +773,9 @@
 						<a href="_psaasglobals_.fgmoptions.html" class="tsd-kind-icon">FGMOptions</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.fgmoptions.html#assetcollisioncount" class="tsd-kind-icon">asset<wbr>Collision<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.fgmoptions.html#breaching" class="tsd-kind-icon">breaching</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -727,6 +785,9 @@
 								<a href="_psaasglobals_.fgmoptions.html#dt" class="tsd-kind-icon">dt</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.fgmoptions.html#dwd" class="tsd-kind-icon">dwd</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.fgmoptions.html#dx" class="tsd-kind-icon">dx</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -734,6 +795,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.fgmoptions.html#dynamicspatialthreshold" class="tsd-kind-icon">dynamic<wbr>Spatial<wbr>Threshold</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.fgmoptions.html#globalassetoperation" class="tsd-kind-icon">global<wbr>Asset<wbr>Operation</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.fgmoptions.html#growthpercentile" class="tsd-kind-icon">growth<wbr>Percentile</a>
@@ -815,6 +879,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasglobals_.fgmoptions.html#param_dt" class="tsd-kind-icon">PARAM_<wbr>DT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_psaasglobals_.fgmoptions.html#param_dwd" class="tsd-kind-icon">PARAM_<wbr>DWD</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasglobals_.fgmoptions.html#param_dx" class="tsd-kind-icon">PARAM_<wbr>DX</a>

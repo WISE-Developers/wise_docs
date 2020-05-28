@@ -97,16 +97,24 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#areaunit" class="tsd-kind-icon">area<wbr>Unit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#assetarrivalcount" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#assetarrivaltime" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#err" class="tsd-kind-icon">err</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#firesize" class="tsd-kind-icon">fire<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#fwivalues" class="tsd-kind-icon">fwi<wbr>Values</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#identifyfinalperimeter" class="tsd-kind-icon">identify<wbr>Final<wbr>Perimeter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#igname" class="tsd-kind-icon">ig<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#ignitionattributes" class="tsd-kind-icon">ignition<wbr>Attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#ignitionlocation" class="tsd-kind-icon">ignition<wbr>Location</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#jobname" class="tsd-kind-icon">job<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#maxburndistance" class="tsd-kind-icon">max<wbr>Burn<wbr>Distance</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#perimactive" class="tsd-kind-icon">perim<wbr>Active</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#perimtotal" class="tsd-kind-icon">perim<wbr>Total</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#perimunit" class="tsd-kind-icon">perim<wbr>Unit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#scenname" class="tsd-kind-icon">scen<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#simdate" class="tsd-kind-icon">sim<wbr>Date</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#version" class="tsd-kind-icon">version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#wxvalues" class="tsd-kind-icon">wx<wbr>Values</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.vectormetadata.html#default_areaunit" class="tsd-kind-icon">DEFAULT_<wbr>AREAUNIT</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.vectormetadata.html#default_firesize" class="tsd-kind-icon">DEFAULT_<wbr>FIRESIZE</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_psaasglobals_.vectormetadata.html#default_igname" class="tsd-kind-icon">DEFAULT_<wbr>IGNAME</a></li>
@@ -141,6 +149,33 @@
 							<p>Units of measure for area outputs (required). Must be one of the area values defined in the UNITS class.
 							Has a default value.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use the global unit settings instead. Will be removed in the future.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="assetarrivalcount" class="tsd-anchor"></a>
+					<h3>asset<wbr>Arrival<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of assets that were reached when the simulation stopped, if any (optional).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="assetarrivaltime" class="tsd-anchor"></a>
+					<h3>asset<wbr>Arrival<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The time that the fire front reached an asset and the simulation stopped (optional).</p>
+						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -162,6 +197,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fwivalues" class="tsd-anchor"></a>
+					<h3>fwi<wbr>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">fwi<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Include the FWI values in the output vector file (optional).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="identifyfinalperimeter" class="tsd-anchor"></a>
+					<h3>identify<wbr>Final<wbr>Perimeter</h3>
+					<div class="tsd-signature tsd-kind-icon">identify<wbr>Final<wbr>Perimeter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Add a column of 0s and 1s to indicate if a perimeter is the final perimeter of a simulation
+							or an intermediate step.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="igname" class="tsd-anchor"></a>
 					<h3>ig<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">ig<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
@@ -174,6 +232,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ignitionattributes" class="tsd-anchor"></a>
+					<h3>ignition<wbr>Attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Pass ignition attributes from the input ignition file to the output perimeter (optional).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ignitionlocation" class="tsd-anchor"></a>
+					<h3>ignition<wbr>Location</h3>
+					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Include the location of the ignition that created the perimeter in the vector file (optional).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="jobname" class="tsd-anchor"></a>
 					<h3>job<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">job<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
@@ -182,6 +262,17 @@
 						<div class="lead">
 							<p>Job name (required).
 							Has a default value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="maxburndistance" class="tsd-anchor"></a>
+					<h3>max<wbr>Burn<wbr>Distance</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Burn<wbr>Distance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Add the max burn distance for each perimeter to the vector file (optional).</p>
 						</div>
 					</div>
 				</section>
@@ -219,6 +310,11 @@
 							<p>Units of measure for perimeter outputs (required). Must be one of the distance values defined in the UNITS class.
 							Has a default value.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use the global unit settings instead. Will be removed in the future.</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -254,6 +350,17 @@
 						<div class="lead">
 							<p>PSaaS version and build date (required).
 							Has a default value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="wxvalues" class="tsd-anchor"></a>
+					<h3>wx<wbr>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">wx<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Include the weather information in the output vector file (optional).</p>
 						</div>
 					</div>
 				</section>
@@ -430,6 +537,12 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_psaasglobals_.assetoperation.html" class="tsd-kind-icon">Asset<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-kind-icon">Global<wbr>Statistics</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
 						<a href="../enums/_psaasglobals_.psaasloglevel.html" class="tsd-kind-icon">PSaaSLog<wbr>Level</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
@@ -489,16 +602,37 @@
 								<a href="_psaasglobals_.vectormetadata.html#areaunit" class="tsd-kind-icon">area<wbr>Unit</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#assetarrivalcount" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#assetarrivaltime" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#err" class="tsd-kind-icon">err</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#firesize" class="tsd-kind-icon">fire<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#fwivalues" class="tsd-kind-icon">fwi<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#identifyfinalperimeter" class="tsd-kind-icon">identify<wbr>Final<wbr>Perimeter</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#igname" class="tsd-kind-icon">ig<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#ignitionattributes" class="tsd-kind-icon">ignition<wbr>Attributes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#ignitionlocation" class="tsd-kind-icon">ignition<wbr>Location</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#jobname" class="tsd-kind-icon">job<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#maxburndistance" class="tsd-kind-icon">max<wbr>Burn<wbr>Distance</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#perimactive" class="tsd-kind-icon">perim<wbr>Active</a>
@@ -517,6 +651,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#version" class="tsd-kind-icon">version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#wxvalues" class="tsd-kind-icon">wx<wbr>Values</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_psaasglobals_.vectormetadata.html#default_areaunit" class="tsd-kind-icon">DEFAULT_<wbr>AREAUNIT</a>

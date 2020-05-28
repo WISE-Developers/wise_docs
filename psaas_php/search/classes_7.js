@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jobdefaults',['JobDefaults',['../class_job_defaults.html',1,'']]]
+  ['ignition',['Ignition',['../class_ignition.html',1,'']]],
+  ['ignitionreference',['IgnitionReference',['../class_ignition_reference.html',1,'']]]
 ];

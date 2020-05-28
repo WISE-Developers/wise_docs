@@ -121,6 +121,33 @@
   </h3>
   
   
+  <a id="PSaaS_API_NET_Globals_FGMOptions_AssetCollisionCount_" data-uid="PSaaS_API.NET.Globals.FGMOptions.AssetCollisionCount*"></a>
+  <h4 id="PSaaS_API_NET_Globals_FGMOptions_AssetCollisionCount" data-uid="PSaaS_API.NET.Globals.FGMOptions.AssetCollisionCount">AssetCollisionCount</h4>
+  <div class="markdown level1 summary"><p>An asset collision count. Will allow the simulation to be stopped after a certain number of assets have been reached.
+Only valid if globalAssetOperation in <a class="xref" href="PSaaS_API.NET.Globals.AssetOperation.html#PSaaS_API_NET_Globals_AssetOperation_STOP_AFTER_X">STOP_AFTER_X</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AssetCollisionCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Globals_FGMOptions_Breaching_" data-uid="PSaaS_API.NET.Globals.FGMOptions.Breaching*"></a>
   <h4 id="PSaaS_API_NET_Globals_FGMOptions_Breaching" data-uid="PSaaS_API.NET.Globals.FGMOptions.Breaching">Breaching</h4>
   <div class="markdown level1 summary"><p>Whether breaching is turned on or off (required).
@@ -197,6 +224,37 @@ Has a default value.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="PSaaS_API.NET.Globals.Duration.html">Duration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Globals_FGMOptions_DWD_" data-uid="PSaaS_API.NET.Globals.FGMOptions.DWD*"></a>
+  <h4 id="PSaaS_API_NET_Globals_FGMOptions_DWD" data-uid="PSaaS_API.NET.Globals.FGMOptions.DWD">DWD</h4>
+  <div class="markdown level1 summary"><p>How much to nudge wind direction to perform probabilistic analyses on weather.
+Applied after all patches and grids, and does not recalculate any FWI calculations.
+Applied before any FBP calculations.
+Provided in compass degrees, -360 to 360 is acceptable.
+Applied to both simulations, and to instantaneous calculations as shown on the map trace view query, for consistency.
+Primarily used when weather information does not have the expected fidelity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? DWD { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -288,6 +346,32 @@ Has a default value.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Globals_FGMOptions_GlobalAssetOperation_" data-uid="PSaaS_API.NET.Globals.FGMOptions.GlobalAssetOperation*"></a>
+  <h4 id="PSaaS_API_NET_Globals_FGMOptions_GlobalAssetOperation" data-uid="PSaaS_API.NET.Globals.FGMOptions.GlobalAssetOperation">GlobalAssetOperation</h4>
+  <div class="markdown level1 summary"><p>A global asset operation that can be used to force an asset behaviour for all attached assets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetOperation GlobalAssetOperation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.AssetOperation.html">AssetOperation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Globals_FGMOptions_GrowthPercentile_" data-uid="PSaaS_API.NET.Globals.FGMOptions.GrowthPercentile*"></a>
   <h4 id="PSaaS_API_NET_Globals_FGMOptions_GrowthPercentile" data-uid="PSaaS_API.NET.Globals.FGMOptions.GrowthPercentile">GrowthPercentile</h4>
   <div class="markdown level1 summary"><p>Growth percentile, to apply to specific fuel types (optional).
@@ -349,7 +433,7 @@ Has a default value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? IgnitionSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public double IgnitionSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,7 +445,7 @@ Has a default value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Double</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -375,7 +459,7 @@ Has a default value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? InitialVertexCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int InitialVertexCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,7 +471,7 @@ Has a default value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>

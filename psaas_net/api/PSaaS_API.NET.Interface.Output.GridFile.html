@@ -120,6 +120,33 @@
   </h3>
   
   
+  <a id="PSaaS_API_NET_Interface_Output_GridFile_Compression_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Compression*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_GridFile_Compression" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Compression">Compression</h4>
+  <div class="markdown level1 summary"><p>If the output file is a TIF file the contents will be compressed
+using this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridFileCompression Compression { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFileCompression.html">GridFileCompression</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Output_GridFile_Filename_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Filename*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_GridFile_Filename" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Filename">Filename</h4>
   <div class="markdown level1 summary"><p>The name of the output file (required).
@@ -227,6 +254,33 @@ the file outside of this directory will be removed.</p>
   </table>
   
   
+  <a id="PSaaS_API_NET_Interface_Output_GridFile_ShouldMinimize_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.ShouldMinimize*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_GridFile_ShouldMinimize" data-uid="PSaaS_API.NET.Interface.Output.GridFile.ShouldMinimize">ShouldMinimize</h4>
+  <div class="markdown level1 summary"><p>Should the output file be minimized to just its bounding box (true) or should it cover the entire
+grid area (false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldMinimize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="PSaaS_API_NET_Interface_Output_GridFile_ShouldStream_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.ShouldStream*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_GridFile_ShouldStream" data-uid="PSaaS_API.NET.Interface.Output.GridFile.ShouldStream">ShouldStream</h4>
   <div class="markdown level1 summary"><p>Should the file be streamed/uploaded to an external service after
@@ -258,12 +312,13 @@ it has been created? The streaming services are defined by
   
   <a id="PSaaS_API_NET_Interface_Output_GridFile_Statistic_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Statistic*"></a>
   <h4 id="PSaaS_API_NET_Interface_Output_GridFile_Statistic" data-uid="PSaaS_API.NET.Interface.Output.GridFile.Statistic">Statistic</h4>
-  <div class="markdown level1 summary"><p>The statistic that should be output (required).</p>
+  <div class="markdown level1 summary"><p>The statistic that should be output (required). Valid values are:
+<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridFileType Statistic { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalStatistics Statistic { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,13 +330,82 @@ it has been created? The streaming services are defined by
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFileType.html">GridFileType</a></td>
+        <td><a class="xref" href="PSaaS_API.NET.Globals.GlobalStatistics.html">GlobalStatistics</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If an invalid statistic is passed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_GridFile_SubScenarioName_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.SubScenarioName*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_GridFile_SubScenarioName" data-uid="PSaaS_API.NET.Interface.Output.GridFile.SubScenarioName">SubScenarioName</h4>
+  <div class="markdown level1 summary"><p>The name of a specific sub-scenario that the output is for (if it should be for a subscenario).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubScenarioName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_GridFile_AddSubScenarioOverrideTimes_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.AddSubScenarioOverrideTimes*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_GridFile_AddSubScenarioOverrideTimes_PSaaS_API_NET_Interface_Output_GridFile_ExportTimeOverride_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.AddSubScenarioOverrideTimes(PSaaS_API.NET.Interface.Output.GridFile.ExportTimeOverride)">AddSubScenarioOverrideTimes(GridFile.ExportTimeOverride)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSubScenarioOverrideTimes(GridFile.ExportTimeOverride add)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.ExportTimeOverride.html">GridFile.ExportTimeOverride</a></td>
+        <td><span class="parametername">add</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="PSaaS_API_NET_Interface_Output_GridFile_IsValid_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.IsValid*"></a>
@@ -304,6 +428,33 @@ it has been created? The streaming services are defined by
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PSaaS_API_NET_Interface_Output_GridFile_RemoveSubScenarioOverrideTimes_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.RemoveSubScenarioOverrideTimes*"></a>
+  <h4 id="PSaaS_API_NET_Interface_Output_GridFile_RemoveSubScenarioOverrideTimes_PSaaS_API_NET_Interface_Output_GridFile_ExportTimeOverride_" data-uid="PSaaS_API.NET.Interface.Output.GridFile.RemoveSubScenarioOverrideTimes(PSaaS_API.NET.Interface.Output.GridFile.ExportTimeOverride)">RemoveSubScenarioOverrideTimes(GridFile.ExportTimeOverride)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveSubScenarioOverrideTimes(GridFile.ExportTimeOverride remove)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PSaaS_API.NET.Interface.Output.GridFile.ExportTimeOverride.html">GridFile.ExportTimeOverride</a></td>
+        <td><span class="parametername">remove</span></td>
         <td></td>
       </tr>
     </tbody>

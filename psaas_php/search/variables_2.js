@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['chain',['CHAIN',['../class_u_n_i_t_s.html#aa5a69c367faa979a3e1f3686ec59f919',1,'UNITS']]]
+  ['chain',['CHAIN',['../class_u_n_i_t_s.html#aa5a69c367faa979a3e1f3686ec59f919',1,'UNITS']]],
+  ['compression_5fccittfax3',['COMPRESSION_CCITTFAX3',['../class_output___grid_file.html#a36bc8744a7104f17e7db3733566570b0',1,'Output_GridFile']]],
+  ['compression_5fccittfax4',['COMPRESSION_CCITTFAX4',['../class_output___grid_file.html#a96a58e6908816beae306e120178b4376',1,'Output_GridFile']]],
+  ['compression_5fccittrle',['COMPRESSION_CCITTRLE',['../class_output___grid_file.html#ac86283c7a05e26a300ab82b0e97c9ce1',1,'Output_GridFile']]],
+  ['compression_5fdeflate',['COMPRESSION_DEFLATE',['../class_output___grid_file.html#ace1aa38580f97d58a101e36248de877f',1,'Output_GridFile']]],
+  ['compression_5fjpeg',['COMPRESSION_JPEG',['../class_output___grid_file.html#a3973798aec7b0c4545184df009658f72',1,'Output_GridFile']]],
+  ['compression_5flerc',['COMPRESSION_LERC',['../class_output___grid_file.html#a6d07700d28a4da09ada9af347232cb41',1,'Output_GridFile']]],
+  ['compression_5flerc_5fdeflate',['COMPRESSION_LERC_DEFLATE',['../class_output___grid_file.html#a0c6ffef259c3e2171c79ff460ccf23f7',1,'Output_GridFile']]],
+  ['compression_5flerc_5fzstd',['COMPRESSION_LERC_ZSTD',['../class_output___grid_file.html#a2e969d39179f47e61c942873de671703',1,'Output_GridFile']]],
+  ['compression_5flzma',['COMPRESSION_LZMA',['../class_output___grid_file.html#a540c58b2c09fc517e162290a2465d155',1,'Output_GridFile']]],
+  ['compression_5flzw',['COMPRESSION_LZW',['../class_output___grid_file.html#a5a12991d02b7a8d01841041ae9dcfe03',1,'Output_GridFile']]],
+  ['compression_5fnone',['COMPRESSION_NONE',['../class_output___grid_file.html#ae87fce3a08015e47fbf0c06aa3395fe6',1,'Output_GridFile']]],
+  ['compression_5fpackbits',['COMPRESSION_PACKBITS',['../class_output___grid_file.html#a4527110f39a966689651992d51f51a37',1,'Output_GridFile']]],
+  ['compression_5fwebp',['COMPRESSION_WEBP',['../class_output___grid_file.html#a63b77c56c4d3b5884a473737ca701af7',1,'Output_GridFile']]],
+  ['compression_5fzstd',['COMPRESSION_ZSTD',['../class_output___grid_file.html#ac5f97029a58c1fefe29c82accd50203e',1,'Output_GridFile']]],
+  ['cumulative_5factive_5fvertices',['CUMULATIVE_ACTIVE_VERTICES',['../class_global_statistics.html#a0f8701319ad258784e3479434df57411',1,'GlobalStatistics']]],
+  ['cumulative_5fvertices',['CUMULATIVE_VERTICES',['../class_global_statistics.html#a6ab8a8537fca8f88a7e30f41c24374b2',1,'GlobalStatistics']]],
+  ['current_5ftime',['CURRENT_TIME',['../class_global_statistics.html#ad1782ed7569181415a046f65fa64eeea',1,'GlobalStatistics']]]
 ];

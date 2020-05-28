@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.5.4</span>
+   &#160;<span id="projectnumber">6.2.5.6</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -122,6 +122,13 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a1af3f6264ab53380d95d9b695252d9ea">removeOutputSummaryFile</a> ($stat)</td></tr>
 <tr class="memdesc:a1af3f6264ab53380d95d9b695252d9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the output summary file from a scenario. <br /></td></tr>
 <tr class="separator:a1af3f6264ab53380d95d9b695252d9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2512663d5abacc337a4e0ad1917a9e73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a2512663d5abacc337a4e0ad1917a9e73">NewStatsFile</a> ($scen)</td></tr>
+<tr class="memdesc:a2512663d5abacc337a4e0ad1917a9e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new stats file to the list of output files.  <a href="#a2512663d5abacc337a4e0ad1917a9e73">More...</a><br /></td></tr>
+<tr class="separator:a2512663d5abacc337a4e0ad1917a9e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a9472b8d0307d0f8b64e3ba1f8e45b"><td class="memItemLeft" align="right" valign="top"><a id="a31a9472b8d0307d0f8b64e3ba1f8e45b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a31a9472b8d0307d0f8b64e3ba1f8e45b">removeOutputStatsFile</a> ($stat)</td></tr>
+<tr class="memdesc:a31a9472b8d0307d0f8b64e3ba1f8e45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the output stats file from a scenario. <br /></td></tr>
+<tr class="separator:a31a9472b8d0307d0f8b64e3ba1f8e45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b37efab7473a1effc29f8be2421f6e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a7b37efab7473a1effc29f8be2421f6e3">isValid</a> ()</td></tr>
 <tr class="memdesc:a7b37efab7473a1effc29f8be2421f6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if all of the required values have been set.  <a href="#a7b37efab7473a1effc29f8be2421f6e3">More...</a><br /></td></tr>
 <tr class="separator:a7b37efab7473a1effc29f8be2421f6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +150,10 @@ Data Fields</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a762ddee0985e9ce7c0f9788a19754f67">$summaryFiles</a> = array()</td></tr>
 <tr class="memdesc:a762ddee0985e9ce7c0f9788a19754f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The summary files that should be output (optional). <br /></td></tr>
 <tr class="separator:a762ddee0985e9ce7c0f9788a19754f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fe9e03780a75ea8f4cbbfd740a7fe3"><td class="memItemLeft" align="right" valign="top"><a id="a52fe9e03780a75ea8f4cbbfd740a7fe3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a52fe9e03780a75ea8f4cbbfd740a7fe3">$statsFiles</a> = array()</td></tr>
+<tr class="memdesc:a52fe9e03780a75ea8f4cbbfd740a7fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a stats file with information from each scenario timestep (optional). <br /></td></tr>
+<tr class="separator:a52fe9e03780a75ea8f4cbbfd740a7fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a889e25fde65239fb288fa5c90d41e350"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_saa_s_outputs.html#a889e25fde65239fb288fa5c90d41e350">$streamAll</a> = false</td></tr>
 <tr class="memdesc:a889e25fde65239fb288fa5c90d41e350"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default stream status for all newly created output files.  <a href="#a889e25fde65239fb288fa5c90d41e350">More...</a><br /></td></tr>
 <tr class="separator:a889e25fde65239fb288fa5c90d41e350"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,6 +199,32 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add a new grid file to the list of output files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_scenario.html" title="A simulation scenario. ">Scenario</a></td><td class="paramname">$scen</td><td>The scenario to add the output file to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2512663d5abacc337a4e0ad1917a9e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2512663d5abacc337a4e0ad1917a9e73">&#9670;&nbsp;</a></span>NewStatsFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewStatsFile </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$scen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new stats file to the list of output files. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype"><a class="el" href="class_scenario.html" title="A simulation scenario. ">Scenario</a></td><td class="paramname">$scen</td><td>The scenario to add the output file to. </td></tr>

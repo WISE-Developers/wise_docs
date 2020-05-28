@@ -14,5 +14,7 @@ var searchData=
   ['gettimezonelist',['getTimezoneList',['../class_timezone.html#a07c798f6afea0fad2397432e94170277',1,'Timezone']]],
   ['gettimezonenamelist',['getTimezoneNameList',['../class_timezone.html#aa83833a2d102e11edd7db6ca5e9d64dd',1,'Timezone']]],
   ['getvalue',['getValue',['../class_fwi_calculations.html#a5d3f2de575380230158b902c2c04fe69',1,'FwiCalculations']]],
-  ['gridfile',['GridFile',['../class_grid_file.html',1,'']]]
+  ['globalstatistics',['GlobalStatistics',['../class_global_statistics.html',1,'']]],
+  ['gridfile',['GridFile',['../class_grid_file.html',1,'']]],
+  ['growth_5ftime',['GROWTH_TIME',['../class_global_statistics.html#a93c70d13f2a599d29ae95196d7f1c038',1,'GlobalStatistics']]]
 ];

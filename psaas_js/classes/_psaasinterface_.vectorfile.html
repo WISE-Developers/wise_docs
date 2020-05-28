@@ -101,6 +101,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#removeislands" class="tsd-kind-icon">remove<wbr>Islands</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#scenarioname" class="tsd-kind-icon">scenario<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.vectorfile.html#subscenariooverrides" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Overrides</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.vectorfile.html#param_vectorfile" class="tsd-kind-icon">PARAM_<wbr>VECTORFILE</a></li>
 							</ul>
@@ -108,8 +110,12 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#add_subscenariooverrides" class="tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Overrides</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#remove_subscenariooverrides" class="tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Overrides</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.vectorfile.html#stream" class="tsd-kind-icon">stream</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.vectorfile.html#streamnullableboolean" class="tsd-kind-icon">stream<wbr>Nullable<wbr>Boolean</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.vectorfile.html#streamnullablestring" class="tsd-kind-icon">stream<wbr>Nullable<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
@@ -255,6 +261,30 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="subscenarioname" class="tsd-anchor"></a>
+					<h3>sub<wbr>Scenario<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of a sub-scenario to export instead of all sub-scenarios
+							being combined into a single output. Ignored if not using sub-scenarios.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="subscenariooverrides" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> sub<wbr>Scenario<wbr>Overrides</h3>
+					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Overrides<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasinterface_.perimetertimeoverride.html" class="tsd-signature-type">PerimeterTimeOverride</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Array&lt;PerimeterTimeOverride&gt;()</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of times to override for specific sub-scenarios, if sub-scenarios
+							are being created for the referenced scenario.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.vectorfiletype.html" class="tsd-signature-type">VectorFileType</a><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
@@ -275,6 +305,25 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="add_subscenariooverrides" class="tsd-anchor"></a>
+					<h3>add_<wbr>sub<wbr>Scenario<wbr>Overrides</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Overrides<span class="tsd-signature-symbol">(</span>add<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.perimetertimeoverride.html" class="tsd-signature-type">PerimeterTimeOverride</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>add: <a href="_psaasinterface_.perimetertimeoverride.html" class="tsd-signature-type">PerimeterTimeOverride</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -289,6 +338,25 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="remove_subscenariooverrides" class="tsd-anchor"></a>
+					<h3>remove_<wbr>sub<wbr>Scenario<wbr>Overrides</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Overrides<span class="tsd-signature-symbol">(</span>remove<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.perimetertimeoverride.html" class="tsd-signature-type">PerimeterTimeOverride</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>remove: <a href="_psaasinterface_.perimetertimeoverride.html" class="tsd-signature-type">PerimeterTimeOverride</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -315,6 +383,44 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="streamnullableboolean" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> stream<wbr>Nullable<wbr>Boolean</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">stream<wbr>Nullable<wbr>Boolean<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="streamnullablestring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> stream<wbr>Nullable<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">stream<wbr>Nullable<wbr>String<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">String</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">String</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -429,16 +535,34 @@
 								<a href="_psaasinterface_.vectorfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.vectorfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_psaasinterface_.vectorfile.html#subscenariooverrides" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Overrides</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.vectorfile.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="_psaasinterface_.vectorfile.html#param_vectorfile" class="tsd-kind-icon">PARAM_<wbr>VECTORFILE</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.vectorfile.html#add_subscenariooverrides" class="tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Overrides</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.vectorfile.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.vectorfile.html#remove_subscenariooverrides" class="tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Overrides</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.vectorfile.html#stream" class="tsd-kind-icon">stream</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="_psaasinterface_.vectorfile.html#streamnullableboolean" class="tsd-kind-icon">stream<wbr>Nullable<wbr>Boolean</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="_psaasinterface_.vectorfile.html#streamnullablestring" class="tsd-kind-icon">stream<wbr>Nullable<wbr>String</a>
 							</li>
 						</ul>
 					</li>

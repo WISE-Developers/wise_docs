@@ -84,19 +84,25 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#compression" class="tsd-kind-icon">compression</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#filename" class="tsd-kind-icon">filename</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#interpmethod" class="tsd-kind-icon">interp<wbr>Method</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#outputtime" class="tsd-kind-icon">output<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#scenarioname" class="tsd-kind-icon">scenario<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#shouldminimize" class="tsd-kind-icon">should<wbr>Minimize</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#subscenariooverridetimes" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Override<wbr>Times</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.output_gridfile.html#param_gridfile" class="tsd-kind-icon">PARAM_<wbr>GRIDFILE</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#add_subscenariooverridetimes" class="tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#remove_subscenariooverridetimes" class="tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
 						</section>
@@ -105,6 +111,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="compression" class="tsd-anchor"></a>
+					<h3>compression</h3>
+					<div class="tsd-signature tsd-kind-icon">compression<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.output_gridfilecompression.html" class="tsd-signature-type">Output_GridFileCompression</a><span class="tsd-signature-symbol"> =&nbsp;Output_GridFileCompression.NONE</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If the output file is a TIF file the contents will be compressed
+							using this method.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="filename" class="tsd-anchor"></a>
 					<h3>filename</h3>
@@ -153,6 +171,18 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="shouldminimize" class="tsd-anchor"></a>
+					<h3>should<wbr>Minimize</h3>
+					<div class="tsd-signature tsd-kind-icon">should<wbr>Minimize<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Should the output file be minimized to just its bounding box (true) or should it cover the entire
+							grid area (false).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="shouldstream" class="tsd-anchor"></a>
 					<h3>should<wbr>Stream</h3>
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Stream<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
@@ -169,11 +199,34 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="statistic" class="tsd-anchor"></a>
 					<h3>statistic</h3>
-					<div class="tsd-signature tsd-kind-icon">statistic<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.output_gridfiletype.html" class="tsd-signature-type">Output_GridFileType</a></div>
+					<div class="tsd-signature tsd-kind-icon">statistic<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></div>
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The statistic that should be output (required).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="subscenarioname" class="tsd-anchor"></a>
+					<h3>sub<wbr>Scenario<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of a specific sub-scenario that the output is for (if it should be for a subscenario).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="subscenariooverridetimes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> sub<wbr>Scenario<wbr>Override<wbr>Times</h3>
+					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Override<wbr>Times<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Array&lt;ExportTimeOverride&gt;()</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of export time overrides for different sub-scenarios that may be created
+							for the specified scenario.</p>
 						</div>
 					</div>
 				</section>
@@ -186,6 +239,25 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="add_subscenariooverridetimes" class="tsd-anchor"></a>
+					<h3>add_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times<span class="tsd-signature-symbol">(</span>add<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>add: <a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
@@ -201,6 +273,25 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="remove_subscenariooverridetimes" class="tsd-anchor"></a>
+					<h3>remove_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times<span class="tsd-signature-symbol">(</span>remove<span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>remove: <a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -305,6 +396,9 @@
 						<a href="_psaasinterface_.output_gridfile.html" class="tsd-kind-icon">Output_<wbr><wbr>Grid<wbr>File</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#compression" class="tsd-kind-icon">compression</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#filename" class="tsd-kind-icon">filename</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -317,16 +411,31 @@
 								<a href="_psaasinterface_.output_gridfile.html#scenarioname" class="tsd-kind-icon">scenario<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#shouldminimize" class="tsd-kind-icon">should<wbr>Minimize</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_psaasinterface_.output_gridfile.html#subscenariooverridetimes" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Override<wbr>Times</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 								<a href="_psaasinterface_.output_gridfile.html#param_gridfile" class="tsd-kind-icon">PARAM_<wbr>GRIDFILE</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#add_subscenariooverridetimes" class="tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#remove_subscenariooverridetimes" class="tsd-kind-icon">remove_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#stream" class="tsd-kind-icon">stream</a>

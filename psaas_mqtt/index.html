@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PSaaS MQTT Client API 6.2.5.3 documentation</title>
+  <title>PSaaS MQTT Client API 6.2.5.6 documentation</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" />
 </head>
@@ -11,7 +11,7 @@
     <div class="navigation__logo">
       <img class="navigation__logo__image" src="http://firegrowthmodel.ca/prometheus/images/logo_prometheus.png" alt="PSaaS MQTT Client API logo">
       <h1 class="navigation__logo__name">PSaaS MQTT Client API</h1>
-      <div class="navigation__logo__version">1.0.0</div>
+      <div class="navigation__logo__version">6.2.5.6</div>
     </div>
     <h2 class="navigation__header">Introduction</h2>
     <ul class="navigation__list">
@@ -26,11 +26,27 @@
     <h2 class="navigation__header">Topics</h2>
     <ul class="navigation__list">
       <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{client type}/reportin">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{client type}/reportin
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/checkin">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{target}/checkin
+        </a>
+      </li>
+      <li class="navigation__list__item">
         <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{job_id}/status">
           
           
           <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
-          psaas/{originator}/{job id}/status
+          psaas/{originator}/{job_id}/status
         </a>
       </li>
       <li class="navigation__list__item">
@@ -38,7 +54,7 @@
           
           <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
           
-          psaas/{originator}/{job id}/shutdown
+          psaas/{originator}/{job_id}/shutdown
         </a>
       </li>
       <li class="navigation__list__item">
@@ -97,6 +113,22 @@
           psaas/{originator}/{target}/filechunk
         </a>
       </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/delegator/balance">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/delegator/balance
+        </a>
+      </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/balance">
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--publish" title="Publish"></span>
+          
+          psaas/{originator}/{target}/balance
+        </a>
+      </li>
     </ul>
 
     <h2 class="navigation__header">Messages</h2>
@@ -111,7 +143,7 @@
     </ul>
   </div>
   <div class="documentation"><a name="info"></a>
-<h1>PSaaS MQTT Client API 1.0.0</h1>
+<h1>PSaaS MQTT Client API 6.2.5.6</h1>
 
 <p><p>This document will define the API used by the various components of PSaaS to communicate via MQTT.</p>
 <h2>Client Ids</h2>
@@ -140,6 +172,10 @@ but there is no requirement to use this format as long as the ID used is unique.
 <tr>
 <td>manager</td>
 <td>The PSaaS job manager.</td>
+</tr>
+<tr>
+<td>delegator</td>
+<td>A job delegator for load balancing.</td>
 </tr>
 </tbody>
 </table>
@@ -231,13 +267,434 @@ configured in the defaults.xml file. PSaaS builder requires you to start it with
 <h2 class="section-header">Topics</h2>
 
 <div class="topic">
+  <a name="topic-psaas/{originator}/{client type}/reportin"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{client type}/reportin
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+<p>Asks clients to report that they are alive</p>
+
+<p>All clients that match the client type will send a message to <code>psaas/{client id}/{originator}/checkin</code> when they receive this message. The message
+from some clients may also include some diagnostic or status information. The payload is optional for this message.</p>
+<p><code>client type</code> can be one of the following:</p>
+<ul>
+<li><code>broadcast</code> - All client applications will respond</li>
+<li><code>psaas</code>     - Only PSaaS will respond</li>
+<li><code>manager</code>   - Only PSaaS Manager instances will respond</li>
+<li><code>builder</code>   - Only PSaaS Builder instances will respond</li>
+</ul>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">verbosity </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">How verbose the return data should be. This has limited usage currently as most responses already contain little information.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{
+  &quot;verbosity&quot;: 1
+}</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Status</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/checkin"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{target}/checkin
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+<p>A client was requested to checkin or PSaaS Manager is changing state</p>
+
+<p>Can either be a response to a <code>psaas/{target}/{client type}/reportin</code> request or from PSaaS Manager changing state. When PSaaS Manager is either starting or stopping it
+reports that happening with this message so appropriate action can be taken.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">node_id </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The ID the client uses when connecting to MQTT.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">version </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The application version.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">status </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The applications status.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">node_type </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The type of application that is responding.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">topic_string </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">An optional value that repeats the base MQTT topic string that the application is listening to.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">manager_details </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            object
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Diagnostic and status information specific to PSaaS Manager.</td>
+        </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>running_jobs </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              array
+              
+              
+              (string)
+            </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">A list of job IDs that are currently running in this PSaaS Manager instance. Will not be returned with a requested verbosity of 0.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>memory_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int64</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">An optional value approximating the memory usage of the application in bytes.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>cpu_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">The percent of the total available CPU (logical processors) used in a 1 second time period starting when the request was received.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>is_paused </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              boolean
+              
+              
+              
+            </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">Is the job queue paused so that no new jobs will be started.</td>
+          </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">builder_details </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            object
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Diagnostic and status information specific to PSaaS Builder.</td>
+        </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>memory_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int64</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">An optional value approximating the memory usage of the application in bytes.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>cpu_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">The percent of the total available CPU (logical processors) used in a 1 second time period starting when the request was received.</td>
+          </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">psaas_details </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            object
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Diagnostic and status information specific to PSaaS.</td>
+        </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>memory_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              integer
+              
+              
+              
+            </td>
+            <td class="table__body__cell">int64</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">An optional value approximating the memory usage of the application in bytes.</td>
+          </tr>
+          <tr class="table__body__row">
+            <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>cpu_usage </td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">
+              number
+              
+              
+              
+            </td>
+            <td class="table__body__cell">double</td>
+            <td class="table__body__cell"></td>
+            <td class="table__body__cell">The percent of the total available CPU (logical processors) used in a 1 second time period starting when the request was received.</td>
+          </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{
+  &quot;node_id&quot;: &quot;manager_286588-COMPUTER&quot;,
+  &quot;version&quot;: &quot;7.2.5.5&quot;,
+  &quot;status&quot;: 0,
+  &quot;node_type&quot;: 1,
+  &quot;topic_string&quot;: &quot;psaas&quot;,
+  &quot;manager_details&quot;: {
+    &quot;running_jobs&quot;: [
+      &quot;job_20180221215557233&quot;
+    ],
+    &quot;memory_usage&quot;: 1189171200,
+    &quot;cpu_usage&quot;: 0
+  }
+}</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Status</div>
+</div>
+</div>
+</div>
+<div class="topic">
   <a name="topic-psaas/{originator}/{job_id}/status"></a>
   <h3 class="topic__header">
 
 
     <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
 
-    psaas/{originator}/{job id}/status
+    psaas/{originator}/{job_id}/status
   </h3>
 
 
@@ -777,7 +1234,7 @@ The status may include any statistics outputs that were requested as part of the
     <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
 
 
-    psaas/{originator}/{job id}/shutdown
+    psaas/{originator}/{job_id}/shutdown
   </h3>
 
 
@@ -917,6 +1374,7 @@ The status may include any statistics outputs that were requested as part of the
 <li><code>all</code> - Return all jobs,</li>
 <li><code>run</code> - Only return running jobs,</li>
 <li><code>queue</code> - Only return jobs that are queued to be run,</li>
+<li><code>queuerun</code> - Both running and queued jobs will be returned,</li>
 <li><code>complete</code> - Only return jobs that have ended, either successfully or in error.</li>
 </ul>
 <p>If no payload is attached to the message or the filter is not one of the above values no filter will be applied to the response.</p>
@@ -988,6 +1446,32 @@ The status may include any statistics outputs that were requested as part of the
           <td class="table__body__cell"></td>
           <td class="table__body__cell">all</td>
           <td class="table__body__cell">Filter the returned job list.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">offset </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Skip some job histories in the return values. This value is optional and if not present the entire job list will be returned.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">count </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Only return a specific number of job histories. This value is optional and if not present the entire job list will be returned.</td>
         </tr>
     </tbody>
   </table>
@@ -1080,7 +1564,72 @@ The status may include any statistics outputs that were requested as part of the
     </thead>
     <tbody class="table__body">
         <tr class="table__body__row">
-          <td class="table__body__cell">job_name </td>
+          <td class="table__body__cell">total_count </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The total number of jobs that could be returned for the current filter.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">offset </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The offset into the possible return values that was requested. If no offset was requested this will be absent.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">count </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The maximum number of jobs to return. If no count was requested this will be absent.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">filter </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The filter on the job list that was requested.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">jobs </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            array
+            
+            
+            (object)
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+        </tr>
+            <tr class="table__body__row">
+              <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>job_name </td>
           <td class="table__body__cell"></td>
           <td class="table__body__cell">
             string
@@ -1093,7 +1642,7 @@ The status may include any statistics outputs that were requested as part of the
           <td class="table__body__cell">The name of the job.</td>
         </tr>
         <tr class="table__body__row">
-          <td class="table__body__cell">status </td>
+              <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>status </td>
           <td class="table__body__cell"></td>
           <td class="table__body__cell">
             string
@@ -1105,6 +1654,45 @@ The status may include any statistics outputs that were requested as part of the
           <td class="table__body__cell"></td>
           <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
         </tr>
+            <tr class="table__body__row">
+              <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>submit_time </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">
+                string
+                
+                
+                
+              </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">The time that the job was submitted at formatted as ISO-8601. May be absent for older jobs.</td>
+            </tr>
+            <tr class="table__body__row">
+              <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>start_time </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">
+                string
+                
+                
+                
+              </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">The time that the job was started running at formatted in ISO-8601. Only present if the job has been started.</td>
+            </tr>
+            <tr class="table__body__row">
+              <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>complete_time </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">
+                string
+                
+                
+                
+              </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">The time that the job completed at formatted in ISO-8601. Only present if the job completed.</td>
+            </tr>
     </tbody>
   </table>
 
@@ -1112,12 +1700,16 @@ The status may include any statistics outputs that were requested as part of the
 
 <h4>Example</h4>
 
-<pre class="hljs"><code class="json">[
+<pre class="hljs"><code class="json">{
+  &quot;total_count&quot;: 1,
+  &quot;jobs&quot;: [
   {
     &quot;job_name&quot;: &quot;job_20180221215557233&quot;,
-    &quot;status&quot;: &quot;queue&quot;
+      &quot;status&quot;: &quot;queue&quot;,
+      &quot;submit_time&quot;: &quot;2020-01-08T12:00:00-06:00&quot;
   }
-]</code></pre>
+  ]
+}</code></pre>
 
 <h4>Tags</h4>
 
@@ -1147,6 +1739,13 @@ The status may include any statistics outputs that were requested as part of the
 <ul>
 <li><code>shutdown</code> - Shutdown the specified client or group of clients.</li>
 <li><code>reboot</code> - Restart the specified client or group of clients. PSaaS Builder will not respect this request.</li>
+<li><code>pause</code> - Pause the job queue so that no new jobs will be started.</li>
+<li><code>unpause</code> - Unpause the job queue so that jobs can be started.</li>
+<li><code>offline</code> - Pauses the job queue and stops PSaaS Manager from responding to requests for new jobs. Can only be undone by restarting PSaas Manager.</li>
+<li><code>zip</code> - Package all files from a job into a zip archive.</li>
+<li><code>tar</code> - Package all files from a job into a tar archive.</li>
+<li><code>delete</code> - Delete all files from a job.</li>
+<li><code>rerun</code> - Rerun a completed job. Use a manager ID in the topic to only start it for a single instance, otherwise use <code>manager</code> for all manager instances that have the job to rerun it.</li>
 </ul>
 
 
@@ -1216,6 +1815,32 @@ The status may include any statistics outputs that were requested as part of the
           <td class="table__body__cell"></td>
           <td class="table__body__cell">The type of management being requested.</td>
         </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">target </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The name of the job to act on, if needed for the operation. Only zip, tar, delete, and rerun require this value.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">delete_old </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            boolean
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">true</td>
+          <td class="table__body__cell">Should old job outputs be deleted before rerunning a job. Only rerun will use this value. If absent true is assumed.</td>
+        </tr>
     </tbody>
   </table>
 
@@ -1224,7 +1849,8 @@ The status may include any statistics outputs that were requested as part of the
 <h4>Example</h4>
 
 <pre class="hljs"><code class="json">{
-  &quot;request&quot;: &quot;shutdown&quot;
+  &quot;request&quot;: &quot;delete&quot;,
+  &quot;target&quot;: &quot;job_201812021421895&quot;
 }</code></pre>
 
 <h4>Tags</h4>
@@ -1786,6 +2412,229 @@ requested file starting at the requested offset and with a maximum length set by
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Files</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/delegator/balance"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/delegator/balance
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>When load balancing is enabled at a PSaaS level (splitting the scenarios between multiple instances of PSaaS) this call will request a
+new scenario index to run. The PSaaS instances will continue to request scenario indices until the returned value is greater than
+the number of scenarios that are available to be run.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The unique ID/name of the job that the next scenario index to run is being requested for.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{
+  &quot;job&quot;: &quot;job_20180221215557233&quot;
+}</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Load Balancing</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/balance"></a>
+  <h3 class="topic__header">
+
+    <span class="operation-badge operation-badge--publish topic__header__operation-badge">Publish</span>
+
+
+    psaas/{originator}/{target}/balance
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>A response to a request for a scenario index to run for load balancing. The calling process will either run the scenario
+with the returned index or exit if the returned value is greater than the number of scenarios to run or negative.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">job </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The unique ID/name of the job that the scenario index is for.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">index </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">The index of the next scenario that should be run.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{
+  &quot;job&quot;: &quot;job_20180221215557233&quot;,
+  &quot;index&quot;: 1
+}</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Load Balancing</div>
 </div>
 </div>
 </div>

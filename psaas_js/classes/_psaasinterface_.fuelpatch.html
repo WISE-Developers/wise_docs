@@ -106,9 +106,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#feature" class="tsd-kind-icon">feature</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#filename" class="tsd-kind-icon">filename</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#fromfuel" class="tsd-kind-icon">from<wbr>Fuel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#fromfuelindex" class="tsd-kind-icon">from<wbr>Fuel<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#fromfuelrule" class="tsd-kind-icon">from<wbr>Fuel<wbr>Rule</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#tofuel" class="tsd-kind-icon">to<wbr>Fuel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#tofuelindex" class="tsd-kind-icon">to<wbr>Fuel<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fuelpatch.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.fuelpatch.html#param_fuelpatch" class="tsd-kind-icon">PARAM_<wbr>FUELPATCH</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static"><a href="_psaasinterface_.fuelpatch.html#counter" class="tsd-kind-icon">counter</a></li>
@@ -184,7 +186,18 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The fuel that the patch changes from (one of this or {@link #fromFuelRule} is required).</p>
+							<p>The fuel that the patch changes from (one of this, {@link #fromFuelIndex}, or {@link #fromFuelRule} is required).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fromfuelindex" class="tsd-anchor"></a>
+					<h3>from<wbr>Fuel<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">from<wbr>Fuel<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Instead of using the name of a fuel, reference it by index.</p>
 						</div>
 					</div>
 				</section>
@@ -195,7 +208,7 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The rule about which fuels to apply the patch to (one of this or {@link #fromFuel} is required).
+							<p>The rule about which fuels to apply the patch to (one of this, {@link #fromFuelIndex}, or {@link #fromFuel} is required).
 							If $fromFuel is not specified this must be set.</p>
 						</div>
 					</div>
@@ -218,7 +231,18 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The fuel the patch changes to (required).</p>
+							<p>The fuel the patch changes to.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tofuelindex" class="tsd-anchor"></a>
+					<h3>to<wbr>Fuel<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">to<wbr>Fuel<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Instead of using the name of a fuel, reference it by index.</p>
 						</div>
 					</div>
 				</section>
@@ -421,6 +445,9 @@
 								<a href="_psaasinterface_.fuelpatch.html#fromfuel" class="tsd-kind-icon">from<wbr>Fuel</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.fuelpatch.html#fromfuelindex" class="tsd-kind-icon">from<wbr>Fuel<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.fuelpatch.html#fromfuelrule" class="tsd-kind-icon">from<wbr>Fuel<wbr>Rule</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -428,6 +455,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.fuelpatch.html#tofuel" class="tsd-kind-icon">to<wbr>Fuel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.fuelpatch.html#tofuelindex" class="tsd-kind-icon">to<wbr>Fuel<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.fuelpatch.html#type" class="tsd-kind-icon">type</a>

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Prometheus-Logo reduced 90 percent.bmp"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PSaaS Builder PHP
-   &#160;<span id="projectnumber">6.2.5.4</span>
+   &#160;<span id="projectnumber">6.2.5.6</span>
    </div>
    <div id="projectbrief">PHP classes for interfacing with PSaaS</div>
   </td>
@@ -152,12 +152,18 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_DY</b> = &quot
 <tr class="memitem:a8fecd5fba881bccc7fa1b5cade1ac12f"><td class="memItemLeft" align="right" valign="top"><a id="a8fecd5fba881bccc7fa1b5cade1ac12f"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_DT</b> = &quot;fgm_dt&quot;</td></tr>
 <tr class="separator:a8fecd5fba881bccc7fa1b5cade1ac12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350f4eabb62abc78cd0b3c40919f67e4"><td class="memItemLeft" align="right" valign="top"><a id="a350f4eabb62abc78cd0b3c40919f67e4"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_DWD</b> = &quot;fgm_dwd&quot;</td></tr>
+<tr class="separator:a350f4eabb62abc78cd0b3c40919f67e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832be77018c922ca5df12239cf9657a3"><td class="memItemLeft" align="right" valign="top"><a id="a832be77018c922ca5df12239cf9657a3"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_GROWTHAPPLIED</b> = &quot;fgm_growthPercApplied&quot;</td></tr>
 <tr class="separator:a832be77018c922ca5df12239cf9657a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103350b524f80d79f3f99eef36a72f01"><td class="memItemLeft" align="right" valign="top"><a id="a103350b524f80d79f3f99eef36a72f01"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_GROWTHPERC</b> = &quot;fgm_growthPercentile&quot;</td></tr>
 <tr class="separator:a103350b524f80d79f3f99eef36a72f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b4ebce0acbf78bcac2c8c7c61497c7"><td class="memItemLeft" align="right" valign="top"><a id="af7b4ebce0acbf78bcac2c8c7c61497c7"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>PARAM_SIM_PROPS</b> = &quot;simulation_properties&quot;</td></tr>
+<tr class="separator:af7b4ebce0acbf78bcac2c8c7c61497c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39b8143018c8ed63abd1f167ed8c6ef1"><td class="memItemLeft" align="right" valign="top"><a id="a39b8143018c8ed63abd1f167ed8c6ef1"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_MAXACCTS</b> = &quot;MAXACCTS&quot;</td></tr>
 <tr class="separator:a39b8143018c8ed63abd1f167ed8c6ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +206,19 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHAPPLIE
 <tr class="memitem:ae8be35914d344df0793a2ef1703e3c9a"><td class="memItemLeft" align="right" valign="top"><a id="ae8be35914d344df0793a2ef1703e3c9a"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</b> = &quot;fgmd_growthPercentile&quot;</td></tr>
 <tr class="separator:ae8be35914d344df0793a2ef1703e3c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6e97c5a07bc7eda660cf943e6069f6"><td class="memItemLeft" align="right" valign="top"><a id="a6f6e97c5a07bc7eda660cf943e6069f6"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>ASSET_OPERATION_UNDEFINED</b> = -1</td></tr>
+<tr class="separator:a6f6e97c5a07bc7eda660cf943e6069f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453b3cf79b0addb04e80aeeb121ed7c9"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a453b3cf79b0addb04e80aeeb121ed7c9">ASSET_OPERATION_NO_EFFECT</a> = 0</td></tr>
+<tr class="memdesc:a453b3cf79b0addb04e80aeeb121ed7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The asset will have no effect on the simulation.  <a href="#a453b3cf79b0addb04e80aeeb121ed7c9">More...</a><br /></td></tr>
+<tr class="separator:a453b3cf79b0addb04e80aeeb121ed7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1d955184a1158e6e3fcb254780ad58"><td class="memItemLeft" align="right" valign="top"><a id="adc1d955184a1158e6e3fcb254780ad58"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#adc1d955184a1158e6e3fcb254780ad58">ASSET_OPERATION_STOP_IMMEDIATELY</a> = 1</td></tr>
+<tr class="memdesc:adc1d955184a1158e6e3fcb254780ad58"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simulation will stop as soon as the first asset has been reached. <br /></td></tr>
+<tr class="separator:adc1d955184a1158e6e3fcb254780ad58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dfa8aa5ad9831b033be5c4f9f60c92d"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a6dfa8aa5ad9831b033be5c4f9f60c92d">ASSET_OPERATION_STOP_AFTER_X</a> = 2</td></tr>
+<tr class="memdesc:a6dfa8aa5ad9831b033be5c4f9f60c92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simulation will stop after a certain number of assets have been reached.  <a href="#a6dfa8aa5ad9831b033be5c4f9f60c92d">More...</a><br /></td></tr>
+<tr class="separator:a6dfa8aa5ad9831b033be5c4f9f60c92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cb80327f5e8ff5c86bb658614e26259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a1cb80327f5e8ff5c86bb658614e26259">$maxAccTS</a> = null</td></tr>
 <tr class="memdesc:a1cb80327f5e8ff5c86bb658614e26259"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum time step during acceleration (optional).  <a href="#a1cb80327f5e8ff5c86bb658614e26259">More...</a><br /></td></tr>
 <tr class="separator:a1cb80327f5e8ff5c86bb658614e26259"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,12 +255,29 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</
 <tr class="memitem:a35b3373c00fa1ccb9d0851e5495224f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a35b3373c00fa1ccb9d0851e5495224f0">$dt</a> = null</td></tr>
 <tr class="memdesc:a35b3373c00fa1ccb9d0851e5495224f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much to nudge ignitions to perform probabilistic analyses on ignition location and start time.  <a href="#a35b3373c00fa1ccb9d0851e5495224f0">More...</a><br /></td></tr>
 <tr class="separator:a35b3373c00fa1ccb9d0851e5495224f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30712c105fd552b53d1fd716fe894665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a30712c105fd552b53d1fd716fe894665">$dwd</a> = null</td></tr>
+<tr class="memdesc:a30712c105fd552b53d1fd716fe894665"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much to nudge wind direction to perform probabilistic analyses on weather.  <a href="#a30712c105fd552b53d1fd716fe894665">More...</a><br /></td></tr>
+<tr class="separator:a30712c105fd552b53d1fd716fe894665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4962ad9c1a81ba4d4e6053d009bf5d7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a4962ad9c1a81ba4d4e6053d009bf5d7a">$growthPercentileApplied</a> = -1</td></tr>
 <tr class="memdesc:a4962ad9c1a81ba4d4e6053d009bf5d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the growth percentile value is applied (optional).  <a href="#a4962ad9c1a81ba4d4e6053d009bf5d7a">More...</a><br /></td></tr>
 <tr class="separator:a4962ad9c1a81ba4d4e6053d009bf5d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eae135a3af26d9ec476604a0db4a625"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a6eae135a3af26d9ec476604a0db4a625">$growthPercentile</a> = -1</td></tr>
 <tr class="memdesc:a6eae135a3af26d9ec476604a0db4a625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Growth percentile, to apply to specific fuel types (optional).  <a href="#a6eae135a3af26d9ec476604a0db4a625">More...</a><br /></td></tr>
 <tr class="separator:a6eae135a3af26d9ec476604a0db4a625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac101595290bc94ed18f552238d04bf94"><td class="memItemLeft" align="right" valign="top"><a id="ac101595290bc94ed18f552238d04bf94"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#ac101595290bc94ed18f552238d04bf94">$initialVertexCount</a> = 16</td></tr>
+<tr class="memdesc:ac101595290bc94ed18f552238d04bf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial number of vertices used to create a polygon aroung point ignitions. <br /></td></tr>
+<tr class="separator:ac101595290bc94ed18f552238d04bf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532f63a7e3be822a75a77136e3195246"><td class="memItemLeft" align="right" valign="top"><a id="a532f63a7e3be822a75a77136e3195246"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a532f63a7e3be822a75a77136e3195246">$ignitionSize</a> = 0.5</td></tr>
+<tr class="memdesc:a532f63a7e3be822a75a77136e3195246"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial size of the polygon around point ignitions, in metres. <br /></td></tr>
+<tr class="separator:a532f63a7e3be822a75a77136e3195246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd6ed0af0cb1bcf732131bb6951d92e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a1cd6ed0af0cb1bcf732131bb6951d92e">$globalAssetOperation</a> = self::ASSET_OPERATION_UNDEFINED</td></tr>
+<tr class="memdesc:a1cd6ed0af0cb1bcf732131bb6951d92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A global asset operation that can be used to force an asset behaviour for all attached assets.  <a href="#a1cd6ed0af0cb1bcf732131bb6951d92e">More...</a><br /></td></tr>
+<tr class="separator:a1cd6ed0af0cb1bcf732131bb6951d92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a826f0254ffed1dced76da86c9d69fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_f_g_m_options.html#a1a826f0254ffed1dced76da86c9d69fa">$assetCollisionCount</a> = -1</td></tr>
+<tr class="memdesc:a1a826f0254ffed1dced76da86c9d69fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">An asset collision count.  <a href="#a1a826f0254ffed1dced76da86c9d69fa">More...</a><br /></td></tr>
+<tr class="separator:a1a826f0254ffed1dced76da86c9d69fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The fire growth model options. </p>
@@ -359,6 +395,23 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a1a826f0254ffed1dced76da86c9d69fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a826f0254ffed1dced76da86c9d69fa">&#9670;&nbsp;</a></span>$assetCollisionCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int $assetCollisionCount = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An asset collision count. </p>
+<p>Will allow the simulation to be stopped after a certain number of assets have been reached. Only valid if globalAssetOperation in <a class="el" href="class_f_g_m_options.html#a6dfa8aa5ad9831b033be5c4f9f60c92d" title="The simulation will stop after a certain number of assets have been reached. ">FGMOptions::ASSET_OPERATION_STOP_AFTER_X</a>. </p>
+
+</div>
+</div>
 <a id="a44cdd027c1114800a7d5546aa9ce5a4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44cdd027c1114800a7d5546aa9ce5a4a">&#9670;&nbsp;</a></span>$breaching</h2>
 
@@ -410,6 +463,23 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</
 
 </div>
 </div>
+<a id="a30712c105fd552b53d1fd716fe894665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30712c105fd552b53d1fd716fe894665">&#9670;&nbsp;</a></span>$dwd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float $dwd = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How much to nudge wind direction to perform probabilistic analyses on weather. </p>
+<p>Applied after all patches and grids, and does not recalculate any FWI calculations. Applied before any FBP calculations. Provided in compass degrees, -360 to 360 is acceptable. Applied to both simulations, and to instantaneous calculations as shown on the map trace view query, for consistency. Primarily used when weather information does not have the expected fidelity. </p>
+
+</div>
+</div>
 <a id="af8a882e8e4cb76920aef2a26cab80ea4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8a882e8e4cb76920aef2a26cab80ea4">&#9670;&nbsp;</a></span>$dx</h2>
 
@@ -458,6 +528,23 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</
 
 <p>Whether using the dynamic spatial threshold algorithm is turned on or off (optional). </p>
 <p>Has a default value. </p>
+
+</div>
+</div>
+<a id="a1cd6ed0af0cb1bcf732131bb6951d92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd6ed0af0cb1bcf732131bb6951d92e">&#9670;&nbsp;</a></span>$globalAssetOperation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int $globalAssetOperation = self::ASSET_OPERATION_UNDEFINED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A global asset operation that can be used to force an asset behaviour for all attached assets. </p>
+<p>Should be one of the ASSET_OPERATION_* values. </p>
 
 </div>
 </div>
@@ -578,6 +665,40 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GROWTHPERC</
 
 <p>Whether to stop the fire spread when the simulated fire reaches the boundary of the grid data (required). </p>
 <p>Has a default value. </p>
+
+</div>
+</div>
+<a id="a453b3cf79b0addb04e80aeeb121ed7c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a453b3cf79b0addb04e80aeeb121ed7c9">&#9670;&nbsp;</a></span>ASSET_OPERATION_NO_EFFECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ASSET_OPERATION_NO_EFFECT = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The asset will have no effect on the simulation. </p>
+<p>The arrival time will be noted then the simulation will continue. </p>
+
+</div>
+</div>
+<a id="a6dfa8aa5ad9831b033be5c4f9f60c92d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfa8aa5ad9831b033be5c4f9f60c92d">&#9670;&nbsp;</a></span>ASSET_OPERATION_STOP_AFTER_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ASSET_OPERATION_STOP_AFTER_X = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The simulation will stop after a certain number of assets have been reached. </p>
+<p>The default is all assets. </p>
 
 </div>
 </div>
