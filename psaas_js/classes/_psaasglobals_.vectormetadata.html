@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VectorMetadata | PSaaS Node.JS API</title>
-	<meta name="description" content="">
+	<title>VectorMetadata | PSaaS Node.JS API (psaas-js-api)</title>
+	<meta name="description" content="Documentation for PSaaS Node.JS API (psaas-js-api)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">PSaaS Node.JS API</a>
+					<a href="../index.html" class="title">PSaaS Node.JS API (psaas-js-api)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -99,7 +99,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#areaunit" class="tsd-kind-icon">area<wbr>Unit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#assetarrivalcount" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#assetarrivaltime" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#err" class="tsd-kind-icon">err</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#firesize" class="tsd-kind-icon">fire<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#fwivalues" class="tsd-kind-icon">fwi<wbr>Values</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#identifyfinalperimeter" class="tsd-kind-icon">identify<wbr>Final<wbr>Perimeter</a></li>
@@ -130,6 +129,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasglobals_.vectormetadata.html#tryparse" class="tsd-kind-icon">try<wbr>Parse</a></li>
 							</ul>
@@ -142,8 +142,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="areaunit" class="tsd-anchor"></a>
 					<h3>area<wbr>Unit</h3>
-					<div class="tsd-signature tsd-kind-icon">area<wbr>Unit<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.units.html" class="tsd-signature-type">Units</a><span class="tsd-signature-symbol"> =&nbsp;Units.UNKNOWN</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">area<wbr>Unit<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.units.html" class="tsd-signature-type">Units</a><span class="tsd-signature-symbol"> = Units.UNKNOWN</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Units of measure for area outputs (required). Must be one of the area values defined in the UNITS class.
@@ -159,8 +160,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="assetarrivalcount" class="tsd-anchor"></a>
 					<h3>asset<wbr>Arrival<wbr>Count</h3>
-					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of assets that were reached when the simulation stopped, if any (optional).</p>
@@ -170,8 +172,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="assetarrivaltime" class="tsd-anchor"></a>
 					<h3>asset<wbr>Arrival<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">asset<wbr>Arrival<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time that the fire front reached an asset and the simulation stopped (optional).</p>
@@ -179,16 +182,11 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="err" class="tsd-anchor"></a>
-					<h3>err</h3>
-					<div class="tsd-signature tsd-kind-icon">err<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="firesize" class="tsd-anchor"></a>
 					<h3>fire<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">fire<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">fire<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Fire size (area) (required).
@@ -199,8 +197,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="fwivalues" class="tsd-anchor"></a>
 					<h3>fwi<wbr>Values</h3>
-					<div class="tsd-signature tsd-kind-icon">fwi<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">fwi<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Include the FWI values in the output vector file (optional).</p>
@@ -210,8 +209,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="identifyfinalperimeter" class="tsd-anchor"></a>
 					<h3>identify<wbr>Final<wbr>Perimeter</h3>
-					<div class="tsd-signature tsd-kind-icon">identify<wbr>Final<wbr>Perimeter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">identify<wbr>Final<wbr>Perimeter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Add a column of 0s and 1s to indicate if a perimeter is the final perimeter of a simulation
@@ -222,8 +222,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="igname" class="tsd-anchor"></a>
 					<h3>ig<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">ig<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">ig<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Ignition name(s) (required).
@@ -234,8 +235,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ignitionattributes" class="tsd-anchor"></a>
 					<h3>ignition<wbr>Attributes</h3>
-					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Pass ignition attributes from the input ignition file to the output perimeter (optional).</p>
@@ -245,8 +247,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ignitionlocation" class="tsd-anchor"></a>
 					<h3>ignition<wbr>Location</h3>
-					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">ignition<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Include the location of the ignition that created the perimeter in the vector file (optional).</p>
@@ -256,8 +259,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="jobname" class="tsd-anchor"></a>
 					<h3>job<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">job<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">job<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Job name (required).
@@ -268,8 +272,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="maxburndistance" class="tsd-anchor"></a>
 					<h3>max<wbr>Burn<wbr>Distance</h3>
-					<div class="tsd-signature tsd-kind-icon">max<wbr>Burn<wbr>Distance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Burn<wbr>Distance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Add the max burn distance for each perimeter to the vector file (optional).</p>
@@ -279,8 +284,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="perimactive" class="tsd-anchor"></a>
 					<h3>perim<wbr>Active</h3>
-					<div class="tsd-signature tsd-kind-icon">perim<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">perim<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Active perimeter (required).
@@ -291,8 +297,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="perimtotal" class="tsd-anchor"></a>
 					<h3>perim<wbr>Total</h3>
-					<div class="tsd-signature tsd-kind-icon">perim<wbr>Total<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">perim<wbr>Total<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Total perimeter (required).
@@ -303,8 +310,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="perimunit" class="tsd-anchor"></a>
 					<h3>perim<wbr>Unit</h3>
-					<div class="tsd-signature tsd-kind-icon">perim<wbr>Unit<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.units.html" class="tsd-signature-type">Units</a><span class="tsd-signature-symbol"> =&nbsp;Units.UNKNOWN</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">perim<wbr>Unit<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.units.html" class="tsd-signature-type">Units</a><span class="tsd-signature-symbol"> = Units.UNKNOWN</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Units of measure for perimeter outputs (required). Must be one of the distance values defined in the UNITS class.
@@ -320,8 +328,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="scenname" class="tsd-anchor"></a>
 					<h3>scen<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">scen<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">scen<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Scenario name (required).
@@ -332,8 +341,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="simdate" class="tsd-anchor"></a>
 					<h3>sim<wbr>Date</h3>
-					<div class="tsd-signature tsd-kind-icon">sim<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">sim<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Simulated date/time (required).
@@ -344,8 +354,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="version" class="tsd-anchor"></a>
 					<h3>version</h3>
-					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>PSaaS version and build date (required).
@@ -356,8 +367,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="wxvalues" class="tsd-anchor"></a>
 					<h3>wx<wbr>Values</h3>
-					<div class="tsd-signature tsd-kind-icon">wx<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					
+					<div class="tsd-signature tsd-kind-icon">wx<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Include the weather information in the output vector file (optional).</p>
@@ -366,67 +378,91 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_areaunit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>AREAUNIT</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>AREAUNIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"AREAUNIT"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;AREAUNIT&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>AREAUNIT</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>AREAUNIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"AREAUNIT"</span><span class="tsd-signature-symbol"> = &quot;AREAUNIT&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_firesize" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>FIRESIZE</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>FIRESIZE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FIRESIZE"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;FIRESIZE&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>FIRESIZE</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>FIRESIZE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"FIRESIZE"</span><span class="tsd-signature-symbol"> = &quot;FIRESIZE&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_igname" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>IGNAME</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>IGNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"IGNAME"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;IGNAME&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>IGNAME</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>IGNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"IGNAME"</span><span class="tsd-signature-symbol"> = &quot;IGNAME&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_jobname" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>JOBNAME</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>JOBNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"JOBNAME"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;JOBNAME&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>JOBNAME</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>JOBNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"JOBNAME"</span><span class="tsd-signature-symbol"> = &quot;JOBNAME&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_perimactive" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>PERIMACTIVE</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMACTIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMACTIVE"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;PERIMACTIVE&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>PERIMACTIVE</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMACTIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMACTIVE"</span><span class="tsd-signature-symbol"> = &quot;PERIMACTIVE&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_perimtotal" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>PERIMTOTAL</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMTOTAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMTOTAL"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;PERIMTOTAL&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>PERIMTOTAL</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMTOTAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMTOTAL"</span><span class="tsd-signature-symbol"> = &quot;PERIMTOTAL&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_perimunit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>PERIMUNIT</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMUNIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMUNIT"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;PERIMUNIT&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>PERIMUNIT</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PERIMUNIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"PERIMUNIT"</span><span class="tsd-signature-symbol"> = &quot;PERIMUNIT&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_scenname" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>SCENNAME</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SCENNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SCENNAME"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;SCENNAME&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>SCENNAME</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SCENNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SCENNAME"</span><span class="tsd-signature-symbol"> = &quot;SCENNAME&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_simdate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>SIMDATE</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SIMDATE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SIMDATE"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;SIMDATE&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>SIMDATE</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SIMDATE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SIMDATE"</span><span class="tsd-signature-symbol"> = &quot;SIMDATE&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="default_version" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>VERSION</h3>
-					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>VERSION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"VERSION"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;VERSION&quot;</span></div>
-					
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> DEFAULT_<wbr>VERSION</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>VERSION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"VERSION"</span><span class="tsd-signature-symbol"> = &quot;VERSION&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="checkvalid" class="tsd-anchor"></a>
+					<h3>check<wbr>Valid</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Valid<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
@@ -435,7 +471,8 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Checks to see if all required values have been set.</p>
@@ -453,7 +490,8 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -475,127 +513,130 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_client_.html">"client"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_client_.html">&quot;client&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_configure_.html">"configure"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_defaults_.html">&quot;defaults&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_defaults_.html">"defaults"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_cities_.html">&quot;example_<wbr>cities&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_cities_.html">"example_<wbr>cities"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fbp_.html">&quot;example_<wbr>fbp&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fbp_.html">"example_<wbr>fbp"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fuels_.html">&quot;example_<wbr>fuels&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fuels_.html">"example_<wbr>fuels"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fwi_.html">&quot;example_<wbr>fwi&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fwi_.html">"example_<wbr>fwi"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_job_.html">&quot;example_<wbr>job&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_job_.html">"example_<wbr>job"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_solar_.html">&quot;example_<wbr>solar&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_solar_.html">"example_<wbr>solar"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_timezone_.html">&quot;example_<wbr>timezone&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_timezone_.html">"example_<wbr>timezone"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_weather_.html">&quot;example_<wbr>weather&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_weather_.html">"example_<wbr>weather"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fbp_.html">&quot;fbp&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_fbp_.html">"fbp"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_forecast_.html">&quot;forecast&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_forecast_.html">"forecast"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fwi_.html">&quot;fwi&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_fwi_.html">"fwi"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_psaasglobals_.html">&quot;psaas<wbr>Globals&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_psaasglobals_.html">"psaas<wbr>Globals"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_psaasinterface_.html">&quot;psaas<wbr>Interface&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_psaasinterface_.html">"psaas<wbr>Interface"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_solar_.html">&quot;solar&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_solar_.html">"solar"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_weather_.html">"weather"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_weather_.html">&quot;weather&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_psaasglobals_.assetoperation.html" class="tsd-kind-icon">Asset<wbr>Operation</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-kind-icon">Global<wbr>Statistics</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_psaasglobals_.psaasloglevel.html" class="tsd-kind-icon">PSaaSLog<wbr>Level</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_psaasglobals_.province.html" class="tsd-kind-icon">Province</a>
 					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_psaasglobals_.units.html" class="tsd-kind-icon">Units</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.duration.html" class="tsd-kind-icon">Duration</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_psaasglobals_.durationerror.html" class="tsd-kind-icon">Duration<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.fbpoptions.html" class="tsd-kind-icon">FBPOptions</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.fgmoptions.html" class="tsd-kind-icon">FGMOptions</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.fmcoptions.html" class="tsd-kind-icon">FMCOptions</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.fwioptions.html" class="tsd-kind-icon">FWIOptions</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.ipsaasserializable.html" class="tsd-kind-icon">IPSaaSSerializable</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.latlon.html" class="tsd-kind-icon">Lat<wbr>Lon</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.psaaslogger.html" class="tsd-kind-icon">PSaaSLogger</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.sockethelper.html" class="tsd-kind-icon">Socket<wbr>Helper</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.socketmsg.html" class="tsd-kind-icon">Socket<wbr>Msg</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.summaryoutputs.html" class="tsd-kind-icon">Summary<wbr>Outputs</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.timezone.html" class="tsd-kind-icon">Timezone</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
 						<a href="_psaasglobals_.timezonegetter.html" class="tsd-kind-icon">Timezone<wbr>Getter</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.timezonename.html" class="tsd-kind-icon">Timezone<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_psaasglobals_.validationerror.html" class="tsd-kind-icon">Validation<wbr>Error</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_psaasglobals_.vectormetadata.html" class="tsd-kind-icon">Vector<wbr>Metadata</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -606,9 +647,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#assetarrivaltime" class="tsd-kind-icon">asset<wbr>Arrival<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasglobals_.vectormetadata.html#err" class="tsd-kind-icon">err</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#firesize" class="tsd-kind-icon">fire<wbr>Size</a>
@@ -686,6 +724,9 @@
 								<a href="_psaasglobals_.vectormetadata.html#default_version" class="tsd-kind-icon">DEFAULT_<wbr>VERSION</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_psaasglobals_.vectormetadata.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasglobals_.vectormetadata.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -705,62 +746,27 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

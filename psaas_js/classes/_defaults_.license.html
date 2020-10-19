@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>License | PSaaS Node.JS API</title>
-	<meta name="description" content="">
+	<title>License | PSaaS Node.JS API (psaas-js-api)</title>
+	<meta name="description" content="Documentation for PSaaS Node.JS API (psaas-js-api)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">PSaaS Node.JS API</a>
+					<a href="../index.html" class="title">PSaaS Node.JS API (psaas-js-api)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -125,7 +125,8 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_defaults_.license.html" class="tsd-signature-type">License</a></h4>
 						</li>
 					</ul>
@@ -137,7 +138,8 @@
 					<a name="components" class="tsd-anchor"></a>
 					<h3>components</h3>
 					<div class="tsd-signature tsd-kind-icon">components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_defaults_.componenttype.html" class="tsd-signature-type">ComponentType</a><span class="tsd-signature-symbol">&gt;</span></div>
-					
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The PSaaS components that the license is used in.</p>
@@ -148,7 +150,8 @@
 					<a name="libraryname" class="tsd-anchor"></a>
 					<h3>library<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">library<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the third party library.</p>
@@ -159,7 +162,8 @@
 					<a name="libraryurl" class="tsd-anchor"></a>
 					<h3>library<wbr>Url</h3>
 					<div class="tsd-signature tsd-kind-icon">library<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A URL to the libraries homepage.</p>
@@ -170,7 +174,8 @@
 					<a name="licensename" class="tsd-anchor"></a>
 					<h3>license<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">license<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the license used by the library.</p>
@@ -181,7 +186,8 @@
 					<a name="licenseurl" class="tsd-anchor"></a>
 					<h3>license<wbr>Url</h3>
 					<div class="tsd-signature tsd-kind-icon">license<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					
+					<aside class="tsd-sources">
+					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A URL to the location where the license details can be viewed.</p>
@@ -195,11 +201,12 @@
 					<a name="getlicenses" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Licenses</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Licenses<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Licenses<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>licenses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_defaults_.license.html" class="tsd-signature-type">License</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Get the list of licenses used by the various PSaaS components.</p>
@@ -208,13 +215,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-type">function</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <span class="tsd-signature-symbol">(</span>licenses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_defaults_.license.html" class="tsd-signature-type">License</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A method that will be called with the results of the license lookup.</p>
 									</div>
 									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>licenses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_defaults_.license.html" class="tsd-signature-type">License</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -232,13 +239,13 @@
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">function</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A method that will be called if the license lookup failed.</p>
 									</div>
 									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -268,7 +275,8 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Asynchronously get the list of licenses used by the various PSaaS components.</p>
@@ -286,7 +294,8 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							
+							<aside class="tsd-sources">
+							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -305,76 +314,73 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_client_.html">"client"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_client_.html">&quot;client&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_configure_.html">"configure"</a>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_defaults_.html">&quot;defaults&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_defaults_.html">"defaults"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_cities_.html">&quot;example_<wbr>cities&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_cities_.html">"example_<wbr>cities"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fbp_.html">&quot;example_<wbr>fbp&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fbp_.html">"example_<wbr>fbp"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fuels_.html">&quot;example_<wbr>fuels&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fuels_.html">"example_<wbr>fuels"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_fwi_.html">&quot;example_<wbr>fwi&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_fwi_.html">"example_<wbr>fwi"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_job_.html">&quot;example_<wbr>job&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_job_.html">"example_<wbr>job"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_solar_.html">&quot;example_<wbr>solar&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_solar_.html">"example_<wbr>solar"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_timezone_.html">&quot;example_<wbr>timezone&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_timezone_.html">"example_<wbr>timezone"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_example_weather_.html">&quot;example_<wbr>weather&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_example_weather_.html">"example_<wbr>weather"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fbp_.html">&quot;fbp&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_fbp_.html">"fbp"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_forecast_.html">&quot;forecast&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_forecast_.html">"forecast"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fwi_.html">&quot;fwi&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_fwi_.html">"fwi"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_psaasglobals_.html">&quot;psaas<wbr>Globals&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_psaasglobals_.html">"psaas<wbr>Globals"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_psaasinterface_.html">&quot;psaas<wbr>Interface&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_psaasinterface_.html">"psaas<wbr>Interface"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_solar_.html">&quot;solar&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_solar_.html">"solar"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_weather_.html">"weather"</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_weather_.html">&quot;weather&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_defaults_.componenttype.html" class="tsd-kind-icon">Component<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_defaults_.jobdefaults.html" class="tsd-kind-icon">Job<wbr>Defaults</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_defaults_.license.html" class="tsd-kind-icon">License</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-private">
@@ -408,8 +414,11 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_defaults_.serverconfiguration.html" class="tsd-kind-icon">Server<wbr>Configuration</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_defaults_.html#npmconf" class="tsd-kind-icon">npm<wbr>Conf</a>
 					</li>
 				</ul>
 			</nav>
@@ -421,62 +430,26 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
