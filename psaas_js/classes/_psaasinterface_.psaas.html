@@ -540,7 +540,7 @@
 					<a name="addfilefuelpatch" class="tsd-anchor"></a>
 					<h3>add<wbr>File<wbr>Fuel<wbr>Patch</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>File<wbr>Fuel<wbr>Patch<span class="tsd-signature-symbol">(</span>fromFuel<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, toFuel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, comment<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelpatch.html" class="tsd-signature-type">FuelPatch</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>File<wbr>Fuel<wbr>Patch<span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fromFuel<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, toFuel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, comment<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelpatch.html" class="tsd-signature-type">FuelPatch</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -559,6 +559,12 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>file: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The location of the shape file. Can either be the actual file path or the attachment URL returned from <a href="_psaasinterface_.psaas.html#addattachment">addAttachment</a></p>
+									</div>
+								</li>
+								<li>
 									<h5>fromFuel: <a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The fuel to change from. Can either be one of the rules defined in FuelPatch (FROM_FUEL_*) or the name of a fuel.</p>
@@ -568,12 +574,6 @@
 									<h5>toFuel: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The name of the fuel to change to.</p>
-									</div>
-								</li>
-								<li>
-									<h5>file: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The location of the shape file. Can either be the actual file path or the attachment URL returned from <a href="_psaasinterface_.psaas.html#addattachment">addAttachment</a></p>
 									</div>
 								</li>
 								<li>
@@ -591,7 +591,7 @@
 					<a name="addfileignition" class="tsd-anchor"></a>
 					<h3>add<wbr>File<wbr>Ignition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>File<wbr>Ignition<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>File<wbr>Ignition<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -610,16 +610,16 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The ignitions start time.</p>
-									</div>
-								</li>
-								<li>
 									<h5>filename: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the ignitions file. Can either be the actual file path
 										or the attachment URL returned from <a href="_psaasinterface_.psaas.html#addattachment">addAttachment</a></p>
+									</div>
+								</li>
+								<li>
+									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ignitions start time.</p>
 									</div>
 								</li>
 								<li>
@@ -704,7 +704,7 @@
 					<a name="addgridfile" class="tsd-anchor"></a>
 					<h3>add<wbr>Grid<wbr>File</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Grid<wbr>File<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a>, file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, proj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.gridfile.html" class="tsd-signature-type">GridFile</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Grid<wbr>File<span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, proj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.gridfile.html" class="tsd-signature-type">GridFile</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -723,12 +723,6 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Must be one of the GridFile::TYPE_* values.</p>
-									</div>
-								</li>
-								<li>
 									<h5>file: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the grid file. Can either
@@ -740,6 +734,12 @@
 									<h5>proj: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the grid files projection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Must be one of the GridFile::TYPE_* values.</p>
 									</div>
 								</li>
 							</ul>
@@ -751,7 +751,7 @@
 					<a name="addgridfilewithcomment" class="tsd-anchor"></a>
 					<h3>add<wbr>Grid<wbr>File<wbr>With<wbr>Comment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Grid<wbr>File<wbr>With<wbr>Comment<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a>, file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, proj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, comment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.gridfile.html" class="tsd-signature-type">GridFile</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Grid<wbr>File<wbr>With<wbr>Comment<span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, proj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a>, comment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.gridfile.html" class="tsd-signature-type">GridFile</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -770,12 +770,6 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Must be one of the GridFile::TYPE_* values.</p>
-									</div>
-								</li>
-								<li>
 									<h5>file: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the grid file. Can either
@@ -787,6 +781,12 @@
 									<h5>proj: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the grid files projection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_psaasinterface_.gridfiletype.html" class="tsd-signature-type">GridFileType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Must be one of the GridFile::TYPE_* values.</p>
 									</div>
 								</li>
 								<li>
@@ -897,7 +897,7 @@
 					<a name="addmultipointignition" class="tsd-anchor"></a>
 					<h3>add<wbr>Multi<wbr>Point<wbr>Ignition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Multi<wbr>Point<wbr>Ignition<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, points<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Multi<wbr>Point<wbr>Ignition<span class="tsd-signature-symbol">(</span>points<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -911,15 +911,15 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The ignitions start time.</p>
-									</div>
-								</li>
-								<li>
 									<h5>points: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>An array of LatLons that are all point ignitions.</p>
+									</div>
+								</li>
+								<li>
+									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ignitions start time.</p>
 									</div>
 								</li>
 								<li>
@@ -1154,7 +1154,7 @@
 					<a name="addpointignition" class="tsd-anchor"></a>
 					<h3>add<wbr>Point<wbr>Ignition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Point<wbr>Ignition<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, point<span class="tsd-signature-symbol">: </span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Point<wbr>Ignition<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1169,15 +1169,15 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The ignitions start time.</p>
-									</div>
-								</li>
-								<li>
 									<h5>point: <a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The location of the ignition.</p>
+									</div>
+								</li>
+								<li>
+									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ignitions start time.</p>
 									</div>
 								</li>
 								<li>
@@ -1264,7 +1264,7 @@
 					<a name="addpolygonfuelpatch" class="tsd-anchor"></a>
 					<h3>add<wbr>Polygon<wbr>Fuel<wbr>Patch</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Polygon<wbr>Fuel<wbr>Patch<span class="tsd-signature-symbol">(</span>fromFuel<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, $toFuel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelpatch.html" class="tsd-signature-type">FuelPatch</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Polygon<wbr>Fuel<wbr>Patch<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, fromFuel<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, toFuel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelpatch.html" class="tsd-signature-type">FuelPatch</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1278,18 +1278,21 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>vertices: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The vertices of the polygon. Must be an array of LatLon values. The LatLon values will be copied by reference.</p>
+									</div>
+								</li>
+								<li>
 									<h5>fromFuel: <a href="../enums/_psaasinterface_.fromfuel.html" class="tsd-signature-type">FromFuel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The fuel to change from. Can either be one of the rules defined in FuelPatch (FROM_FUEL_*) or the name of a fuel.</p>
 									</div>
 								</li>
 								<li>
-									<h5>$toFuel: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>vertices: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>toFuel: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The vertices of the polygon. Must be an array of LatLon values. The LatLon values will be copied by reference.</p>
+										<p>The name of the fuel to change to.</p>
 									</div>
 								</li>
 								<li>
@@ -1307,7 +1310,7 @@
 					<a name="addpolygonignition" class="tsd-anchor"></a>
 					<h3>add<wbr>Polygon<wbr>Ignition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Polygon<wbr>Ignition<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Polygon<wbr>Ignition<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1321,15 +1324,15 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The ignitions start time.</p>
-									</div>
-								</li>
-								<li>
 									<h5>vertices: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>An array of LatLons that describe the polygon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ignitions start time.</p>
 									</div>
 								</li>
 								<li>
@@ -1442,7 +1445,7 @@
 					<a name="addpolylinefuelbreak" class="tsd-anchor"></a>
 					<h3>add<wbr>Polyline<wbr>Fuel<wbr>Break</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Polyline<wbr>Fuel<wbr>Break<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelbreak.html" class="tsd-signature-type">FuelBreak</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Polyline<wbr>Fuel<wbr>Break<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.fuelbreak.html" class="tsd-signature-type">FuelBreak</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1456,15 +1459,15 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>width: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The width of the fuel break.</p>
-									</div>
-								</li>
-								<li>
 									<h5>vertices: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The vertices of the polyline. Must be an array of LatLon values. The LatLon values will be copied by reference.</p>
+									</div>
+								</li>
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The width of the fuel break.</p>
 									</div>
 								</li>
 								<li>
@@ -1482,7 +1485,7 @@
 					<a name="addpolylineignition" class="tsd-anchor"></a>
 					<h3>add<wbr>Polyline<wbr>Ignition</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Polyline<wbr>Ignition<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Polyline<wbr>Ignition<span class="tsd-signature-symbol">(</span>vertices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span>, startTime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span>, comments<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.ignition.html" class="tsd-signature-type">Ignition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1496,15 +1499,15 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The ignitions start time.</p>
-									</div>
-								</li>
-								<li>
 									<h5>vertices: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.latlon.html" class="tsd-signature-type">LatLon</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>An array of LatLons that descrive the polyline.</p>
+									</div>
+								</li>
+								<li>
+									<h5>startTime: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DateTime</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The ignitions start time.</p>
 									</div>
 								</li>
 								<li>
