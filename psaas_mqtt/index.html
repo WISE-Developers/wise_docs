@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PSaaS MQTT Client API 6.2.5.6 documentation</title>
+  <title>PSaaS MQTT Client API 7.2.6 documentation</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" />
 </head>
@@ -11,7 +11,7 @@
     <div class="navigation__logo">
       <img class="navigation__logo__image" src="http://firegrowthmodel.ca/prometheus/images/logo_prometheus.png" alt="PSaaS MQTT Client API logo">
       <h1 class="navigation__logo__name">PSaaS MQTT Client API</h1>
-      <div class="navigation__logo__version">6.2.5.6</div>
+      <div class="navigation__logo__version">7.2.6</div>
     </div>
     <h2 class="navigation__header">Introduction</h2>
     <ul class="navigation__list">
@@ -129,6 +129,14 @@
           psaas/{originator}/{target}/balance
         </a>
       </li>
+      <li class="navigation__list__item">
+        <a class="navigation__list__item-text navigation__list__item-text--link" href="#topic-psaas/{originator}/{target}/validate">
+          
+          
+          <span class="navigation__list__item__topic-indicator navigation__list__item__topic-indicator--subscribe" title="Subscribe"></span>
+          psaas/{originator}/{target}/validate
+        </a>
+      </li>
     </ul>
 
     <h2 class="navigation__header">Messages</h2>
@@ -143,7 +151,7 @@
     </ul>
   </div>
   <div class="documentation"><a name="info"></a>
-<h1>PSaaS MQTT Client API 6.2.5.6</h1>
+<h1>PSaaS MQTT Client API 7.2.6</h1>
 
 <p><p>This document will define the API used by the various components of PSaaS to communicate via MQTT.</p>
 <h2>Client Ids</h2>
@@ -667,7 +675,7 @@ reports that happening with this message so appropriate action can be taken.</p>
 
 <pre class="hljs"><code class="json">{
   &quot;node_id&quot;: &quot;manager_286588-COMPUTER&quot;,
-  &quot;version&quot;: &quot;7.2.5.5&quot;,
+  &quot;version&quot;: &quot;7.2.6.1&quot;,
   &quot;status&quot;: 0,
   &quot;node_type&quot;: 1,
   &quot;topic_string&quot;: &quot;psaas&quot;,
@@ -707,16 +715,16 @@ reports that happening with this message so appropriate action can be taken.</p>
 The status may include any statistics outputs that were requested as part of the timestep settings when creating the job.</p>
 <p>The status code may be one of the following values:</p>
 <ul>
-<li><code>0</code> - The job has been submitted for execution.</li>
-<li><code>1</code> - PSaaS has started running the job.</li>
-<li><code>2</code> - A scenario in the job has been started.</li>
-<li><code>3</code> - A scenario in the job has completed.</li>
-<li><code>4</code> - A scenario in the job has failed.</li>
-<li><code>5</code> - The job has completed.</li>
-<li><code>6</code> - The job has failed.</li>
-<li><code>7</code> - An unexpected error has occurred.</li>
-<li><code>8</code> - Generic execution information.</li>
-<li><code>9</code> - A request has been received to stop the job.</li>
+<li><code>0</code>  - The job has been submitted for execution.</li>
+<li><code>1</code>  - PSaaS has started running the job.</li>
+<li><code>2</code>  - A scenario in the job has been started.</li>
+<li><code>3</code>  - A scenario in the job has completed.</li>
+<li><code>4</code>  - A scenario in the job has failed.</li>
+<li><code>5</code>  - The job has completed.</li>
+<li><code>6</code>  - The job has failed.</li>
+<li><code>7</code>  - An unexpected error has occurred.</li>
+<li><code>8</code>  - Generic execution information.</li>
+<li><code>9</code>  - A request has been received to stop the job.</li>
 <li><code>10</code> - A file stream/upload request has completed.</li>
 </ul>
 
@@ -1630,30 +1638,30 @@ The status may include any statistics outputs that were requested as part of the
         </tr>
             <tr class="table__body__row">
               <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>job_name </td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell">
-            string
-            
-            
-            
-          </td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell">The name of the job.</td>
-        </tr>
-        <tr class="table__body__row">
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">
+                string
+                
+                
+                
+              </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">The name of the job.</td>
+            </tr>
+            <tr class="table__body__row">
               <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>status </td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell">
-            string
-            
-            
-            
-          </td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell"></td>
-          <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
-        </tr>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">
+                string
+                
+                
+                
+              </td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell"></td>
+              <td class="table__body__cell">The current status of the job. Will be one of the filter values from the request message.</td>
+            </tr>
             <tr class="table__body__row">
               <td class="table__body__cell"><span class="tree-space"></span><span class="tree-leaf"></span>submit_time </td>
               <td class="table__body__cell"></td>
@@ -1703,11 +1711,11 @@ The status may include any statistics outputs that were requested as part of the
 <pre class="hljs"><code class="json">{
   &quot;total_count&quot;: 1,
   &quot;jobs&quot;: [
-  {
-    &quot;job_name&quot;: &quot;job_20180221215557233&quot;,
+    {
+      &quot;job_name&quot;: &quot;job_20180221215557233&quot;,
       &quot;status&quot;: &quot;queue&quot;,
       &quot;submit_time&quot;: &quot;2020-01-08T12:00:00-06:00&quot;
-  }
+    }
   ]
 }</code></pre>
 
@@ -2635,6 +2643,151 @@ with the returned index or exit if the returned value is greater than the number
 <div class="tags">
   <div class="tags__tag">Job</div>
   <div class="tags__tag">Load Balancing</div>
+</div>
+</div>
+</div>
+<div class="topic">
+  <a name="topic-psaas/{originator}/{target}/validate"></a>
+  <h3 class="topic__header">
+
+
+    <span class="operation-badge operation-badge--subscribe topic__header__operation-badge">Subscribe</span>
+
+    psaas/{originator}/{target}/validate
+  </h3>
+
+
+  <h4>Message</h4>
+
+<div class="operation ">
+
+<p>If an FGM has been generated and requested to be validated by PSaaS instead of immediately run this message
+will contain the results.</p>
+
+
+<h4>Headers</h4>
+
+<a name="schema-Message Headers"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">qos </td>
+          <td class="table__body__cell">qos</td>
+          <td class="table__body__cell">
+            integer
+            
+            
+            
+          </td>
+          <td class="table__body__cell">int32</td>
+          <td class="table__body__cell">1</td>
+          <td class="table__body__cell">Quality of Service</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<h4>Payload</h4>
+
+<a name="schema-Message Payload"></a>
+<div class="schema">
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Title</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Format</th>
+        <th class="table__head__cell">Default</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+        <tr class="table__body__row">
+          <td class="table__body__cell">success </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            boolean
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Was the validation able to successfully run. This may be false if an older version of PSaaS is used that doesn&#x27;t support validation.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">valid </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            boolean
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">Is the FGM valid.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">load_warnings </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            string
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">User readable warnings generated when loading the FGM. Will be absent if there were no warnings. Warnings don&#x27;t necessarily mean the FGM is not valid.</td>
+        </tr>
+        <tr class="table__body__row">
+          <td class="table__body__cell">error_list </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">
+            object
+            
+            
+            
+          </td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell"></td>
+          <td class="table__body__cell">A list of errors generated when loading the FGM. Will be absent if valid is true.</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{
+  &quot;success&quot;: true,
+  &quot;valid&quot;: true,
+  &quot;load_warnings&quot;: &quot;No load warnings have been generated.&quot;
+}</code></pre>
+
+<h4>Tags</h4>
+
+<div class="tags">
+  <div class="tags__tag">Job</div>
+  <div class="tags__tag">Validation</div>
 </div>
 </div>
 </div>
