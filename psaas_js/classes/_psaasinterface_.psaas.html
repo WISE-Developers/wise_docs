@@ -363,7 +363,7 @@
 					<a name="addattachment" class="tsd-anchor"></a>
 					<h3>add<wbr>Attachment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Attachment<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, contents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Attachment<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, contents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -375,11 +375,19 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><p>fs.readFile(&quot;/mnt/location/file.txt&quot;, &quot;utf8&quot;, function(err, data) {
-											let psaas = new PSaaS();
-											let att = psaas.addAttachment(&quot;file.txt&quot;, data);
-											psaas.addFileIgnition(&quot;2019-02-20T12:00:00&quot;, att, &quot;No comment&quot;);
-										});</p>
+									<dd><pre><code class="language-javascript">fs.readFile(<span class="hljs-string">&quot;/mnt/location/file.txt&quot;</span>, <span class="hljs-string">&quot;utf8&quot;</span>, <span class="hljs-function">(<span class="hljs-params">err, data</span>) =&gt;</span> {
+    <span class="hljs-comment">//on successful read data will be a string containing the contents of the file</span>
+    <span class="hljs-keyword">let</span> psaas = <span class="hljs-keyword">new</span> PSaaS();
+    <span class="hljs-keyword">let</span> att = psaas.addAttachment(<span class="hljs-string">&quot;file.txt&quot;</span>, data);
+    psaas.addFileIgnition(<span class="hljs-string">&quot;2019-02-20T12:00:00&quot;</span>, att, <span class="hljs-string">&quot;No comment&quot;</span>);
+});
+
+fs.readFile(<span class="hljs-string">&quot;/mnt/location/file.kmz&quot;</span>, <span class="hljs-function">(<span class="hljs-params">err, data</span>) =&gt;</span> {
+    <span class="hljs-comment">//on successful read data will be a Buffer containing the contents of the file</span>
+    <span class="hljs-keyword">let</span> psaas = <span class="hljs-keyword">new</span> PSaaS();
+    <span class="hljs-keyword">let</span> att = psaas.addAttachment(<span class="hljs-string">&quot;file.kmz&quot;</span>, data);
+    psaas.addFileIgnition(<span class="hljs-string">&quot;2019-02-20T12:00:00&quot;</span>, att, <span class="hljs-string">&quot;No comment&quot;</span>);
+});</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -392,7 +400,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>contents: <span class="tsd-signature-type">string</span></h5>
+									<h5>contents: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The file contents. Must still be valid if streamed to a file with UTF-8 encoding.</p>
 									</div>
