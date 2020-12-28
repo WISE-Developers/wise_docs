@@ -1,0 +1,306 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "log": {
+            "properties": {
+                "filename": {
+                    "type": "string",
+                    "description": "The name of the file to log to"
+                },
+                "verbosity": {
+                    "enum": [
+                        "NONE",
+                        0,
+                        "SEVERE",
+                        1,
+                        "WARN",
+                        2,
+                        "INFO",
+                        3,
+                        "MAX",
+                        4
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
+                    "description": "The level of information to write to the log"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Log output from PSaaS to a file"
+        },
+        "signals": {
+            "properties": {
+                "start": {
+                    "type": "string",
+                    "description": "The name of a file to write when the job starts"
+                },
+                "complete": {
+                    "type": "string",
+                    "description": "The name of a file to write when the job finishes"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Files to signal job start and finish"
+        },
+        "hardware": {
+            "properties": {
+                "processes": {
+                    "type": "integer",
+                    "description": "The maximum number of processes that PSaaS can start to run a job"
+                },
+                "cores": {
+                    "type": "integer",
+                    "description": "The maximum number of cores that PSaaS should run on if processor affinity is enabled"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Hardware execution limits"
+        },
+        "socket": {
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "The IP address or domain name used by the machine running PSaaS Manager"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "The port number used to connect to PSaaS Manager"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Communication between Builder and Manager will take place over a dedicated socket"
+        },
+        "mqtt": {
+            "properties": {
+                "hostname": {
+                    "type": "string",
+                    "description": "The IP address or hostname of the MQTT broker"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "The port that MQTT is running on"
+                },
+                "topic": {
+                    "type": "string",
+                    "description": "The base text to be used as a topic for communicating over MQTT.\nAllows other services or multiple, independent PSaaS instances to be\nrun on the same broker without collisions. Must not include '/'."
+                },
+                "verbosity": {
+                    "enum": [
+                        "NONE",
+                        0,
+                        "SEVERE",
+                        1,
+                        "WARN",
+                        2,
+                        "INFO",
+                        3,
+                        "MAX",
+                        4
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
+                    "description": "The verbosity of log messages to output"
+                },
+                "qos": {
+                    "type": "integer",
+                    "description": "The quality of service to send message at. Should be 0-2"
+                },
+                "username": {
+                    "type": "string",
+                    "description": "An optional username required to authenticate with the MQTT broker"
+                },
+                "password": {
+                    "type": "string",
+                    "description": "An optional password required to authenticate with the MQTT broker"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Communication between all applications will take place over MQTT"
+        },
+        "builder": {
+            "properties": {
+                "hostname": {
+                    "type": "string",
+                    "description": "The hostname of the machine the Builder is running on"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "The port that Builder is listening on"
+                },
+                "format": {
+                    "enum": [
+                        "JSON",
+                        0,
+                        "JSON_MINIMAL",
+                        1,
+                        "BINARY",
+                        2,
+                        "XML",
+                        3
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
+                    "description": "The outoutp file format that will be generated by Builder"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Settings the API will use to connect to Builder"
+        },
+        "exampleDirectory": {
+            "type": "string",
+            "description": "The directory where sample data is stored for testing purposes"
+        },
+        "manager_settings": {
+            "properties": {
+                "max_concurrent": {
+                    "type": "integer",
+                    "description": "The maximum number of concurrent jobs"
+                },
+                "restart_old": {
+                    "type": "boolean",
+                    "description": "Restart old processes when Manager starts"
+                },
+                "psaas_location": {
+                    "type": "string",
+                    "description": "The path to the PSaaS executable"
+                },
+                "lock_cpu": {
+                    "type": "boolean",
+                    "description": "Lock manager to core 0 and PSaaS to other cores"
+                },
+                "start_paused": {
+                    "type": "boolean",
+                    "description": "Pause the job queue when Manager starts"
+                },
+                "internal_builder": {
+                    "properties": {
+                        "builder_location": {
+                            "type": "string",
+                            "description": "The path to the Builder jar file"
+                        },
+                        "log_level": {
+                            "type": "string",
+                            "description": "The log level for Builder to output at"
+                        },
+                        "start_with_manager": {
+                            "type": "boolean",
+                            "description": "Start Builder when Manager starts"
+                        },
+                        "output_single_file": {
+                            "type": "boolean",
+                            "description": "Should Builder write all input files to a single job file"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object",
+                    "description": "PSaaS Builder specific settings"
+                },
+                "mqtt_settings": {
+                    "properties": {
+                        "max_buffer_size": {
+                            "type": "integer",
+                            "description": "The maximum buffer size to use for a single MQTT payload"
+                        },
+                        "mqtt_id": {
+                            "additionalProperties": true,
+                            "type": "string",
+                            "description": "An optional MQTT ID if you don't want one to be automatically generated"
+                        },
+                        "use_internal_broker": {
+                            "additionalProperties": true,
+                            "type": "boolean",
+                            "description": "Use the internal MQTT broker instead of connecting to an external one"
+                        },
+                        "use_internal_authentication": {
+                            "additionalProperties": true,
+                            "type": "boolean",
+                            "description": "When using the internal broker require username/password authentication"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object",
+                    "description": "MQTT settings that are specific to PSaaS Manager"
+                },
+                "numa_lock": {
+                    "additionalProperties": true,
+                    "type": "boolean",
+                    "description": "Should PSaaS instances be locked to single NUMA nodes"
+                },
+                "skip_cores": {
+                    "additionalProperties": true,
+                    "type": "integer",
+                    "description": "A number of cores to leave idle when running PSaaS instances. Defaults to 0."
+                },
+                "rpc_settings": {
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Is the RPC server enabled"
+                        },
+                        "externalAddress": {
+                            "type": "string",
+                            "description": "The address that Builder will use to connect to the RPC server that Manager is running"
+                        },
+                        "port": {
+                            "type": "integer",
+                            "description": "The port that the RPC server will be running on"
+                        },
+                        "internal_address": {
+                            "additionalProperties": true,
+                            "type": "string",
+                            "description": "An optional internal address to use to connect to the RPC server that Manager is running"
+                        },
+                        "external_port": {
+                            "additionalProperties": true,
+                            "type": "integer",
+                            "description": "A different port for the external connection to advertise, so the external connection can be port\nforwarded to a different port"
+                        },
+                        "internal_port": {
+                            "additionalProperties": true,
+                            "type": "integer",
+                            "description": "A different port for the internal connection to advertise, so the internal connection can be port\nforwarded to a different port"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object",
+                    "description": "Settings for RPC connections, used to instantiate the connection"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Settings that are only used by PSaaS Manager"
+        },
+        "already_v2": {
+            "additionalProperties": true,
+            "type": "boolean",
+            "description": "Are the PSaaS Manager settings already setup for v2"
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "description": "*\n General server configuration details."
+}
