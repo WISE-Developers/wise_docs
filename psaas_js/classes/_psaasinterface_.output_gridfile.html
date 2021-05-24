@@ -85,13 +85,14 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#_outputtime" class="tsd-kind-icon">_output<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#_statistic" class="tsd-kind-icon">_statistic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#compression" class="tsd-kind-icon">compression</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#discretize" class="tsd-kind-icon">discretize</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#filename" class="tsd-kind-icon">filename</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#interpmethod" class="tsd-kind-icon">interp<wbr>Method</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#scenarioname" class="tsd-kind-icon">scenario<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#shouldminimize" class="tsd-kind-icon">should<wbr>Minimize</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#subscenariooverridetimes" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Override<wbr>Times</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.output_gridfile.html#param_gridfile" class="tsd-kind-icon">PARAM_<wbr>GRIDFILE</a></li>
@@ -102,6 +103,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#loutputtime" class="tsd-kind-icon">l<wbr>Output<wbr>Time</a></li>
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#outputtime" class="tsd-kind-icon">output<wbr>Time</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -124,20 +126,24 @@
 					<a name="_outputtime" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _output<wbr>Time</h3>
 					<div class="tsd-signature tsd-kind-icon">_output<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DateTime</span><span class="tsd-signature-symbol"> = null</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Output time (required).</p>
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_statistic" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _statistic</h3>
+					<div class="tsd-signature tsd-kind-icon">_statistic<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></div>
+					
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="compression" class="tsd-anchor"></a>
 					<h3>compression</h3>
 					<div class="tsd-signature tsd-kind-icon">compression<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.output_gridfilecompression.html" class="tsd-signature-type">Output_GridFileCompression</a><span class="tsd-signature-symbol"> = Output_GridFileCompression.NONE</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If the output file is a TIF file the contents will be compressed
@@ -146,11 +152,23 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="discretize" class="tsd-anchor"></a>
+					<h3>discretize</h3>
+					<div class="tsd-signature tsd-kind-icon">discretize<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount to discritize the existing grid to (optional).
+								Only applicable if the interpolation mode is set to <a href="../enums/_psaasinterface_.output_gridfileinterpolation.html#discretized">Output_GridFileInterpolation.DISCRETIZED</a>.
+							Must be in [1, 1000].</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="filename" class="tsd-anchor"></a>
 					<h3>filename</h3>
 					<div class="tsd-signature tsd-kind-icon">filename<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the output file (required).
@@ -164,8 +182,7 @@
 					<a name="interpmethod" class="tsd-anchor"></a>
 					<h3>interp<wbr>Method</h3>
 					<div class="tsd-signature tsd-kind-icon">interp<wbr>Method<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.output_gridfileinterpolation.html" class="tsd-signature-type">Output_GridFileInterpolation</a></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The interpolation method (required).</p>
@@ -176,8 +193,7 @@
 					<a name="scenarioname" class="tsd-anchor"></a>
 					<h3>scenario<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">scenario<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the scenario that this output is for (required).</p>
@@ -188,8 +204,7 @@
 					<a name="shouldminimize" class="tsd-anchor"></a>
 					<h3>should<wbr>Minimize</h3>
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Minimize<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Should the output file be minimized to just its bounding box (true) or should it cover the entire
@@ -201,8 +216,7 @@
 					<a name="shouldstream" class="tsd-anchor"></a>
 					<h3>should<wbr>Stream</h3>
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Stream<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Should the file be streamed/uploaded to an external service after
@@ -213,23 +227,10 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="statistic" class="tsd-anchor"></a>
-					<h3>statistic</h3>
-					<div class="tsd-signature tsd-kind-icon">statistic<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The statistic that should be output (required).</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="subscenarioname" class="tsd-anchor"></a>
 					<h3>sub<wbr>Scenario<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = null</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of a specific sub-scenario that the output is for (if it should be for a subscenario).</p>
@@ -240,8 +241,7 @@
 					<a name="subscenariooverridetimes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> sub<wbr>Scenario<wbr>Override<wbr>Times</h3>
 					<div class="tsd-signature tsd-kind-icon">sub<wbr>Scenario<wbr>Override<wbr>Times<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasinterface_.exporttimeoverride.html" class="tsd-signature-type">ExportTimeOverride</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Array&lt;ExportTimeOverride&gt;()</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of export time overrides for different sub-scenarios that may be created
@@ -253,8 +253,7 @@
 					<a name="param_gridfile" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> PARAM_<wbr>GRIDFILE</h3>
 					<div class="tsd-signature tsd-kind-icon">PARAM_<wbr>GRIDFILE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"gridfile"</span><span class="tsd-signature-symbol"> = &quot;gridfile&quot;</span></div>
-					<aside class="tsd-sources">
-					</aside>
+					
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -268,8 +267,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Get the export time as a Luxon DateTime.</p>
@@ -283,8 +281,7 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DateTime</span></h4>
 						</li>
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Set the export time using a Luxon DateTime. Cannot be null.</p>
@@ -314,8 +311,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Get the export time as an ISO8601 string.</p>
@@ -328,8 +324,7 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Set the export time using a string. Cannot be null or empty. Must be formatted in ISO8601.</p>
@@ -352,6 +347,166 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="statistic" class="tsd-anchor"></a>
+					<h3>statistic</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> statistic<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> statistic<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The statistic that should be output (required). If the statistic is TOTAL_FUEL_CONSUMED, SURFACE_FUEL_CONSUMED,
+										CROWN_FUEL_CONSUMED, or RADIATIVE_POWER the <a href="../enums/_psaasinterface_.output_gridfileinterpolation.html">interpolation method</a> must be DISCRETIZED.
+									Setting the output statistic to any of those values will automatically set the interpolation method.</p>
+								</div>
+								<p>Valid values:</p>
+								<ul>
+									<li>TEMPERATURE</li>
+									<li>DEW_POINT</li>
+									<li>RELATIVE_HUMIDITY</li>
+									<li>WIND_DIRECTION</li>
+									<li>WIND_SPEED</li>
+									<li>PRECIPITATION</li>
+									<li>FFMC</li>
+									<li>ISI</li>
+									<li>FWI</li>
+									<li>BUI</li>
+									<li>MAX_FI</li>
+									<li>MAX_FL</li>
+									<li>MAX_ROS</li>
+									<li>MAX_SFC</li>
+									<li>MAX_CFC</li>
+									<li>MAX_TFC</li>
+									<li>MAX_CFB</li>
+									<li>RAZ</li>
+									<li>BURN_GRID</li>
+									<li>FIRE_ARRIVAL_TIME</li>
+									<li>HROS</li>
+									<li>FROS</li>
+									<li>BROS</li>
+									<li>RSS</li>
+									<li>ACTIVE_PERIMETER</li>
+									<li>BURN</li>
+									<li>BURN_PERCENTAGE</li>
+									<li>FIRE_ARRIVAL_TIME_MIN</li>
+									<li>FIRE_ARRIVAL_TIME_MAX</li>
+									<li>TOTAL_FUEL_CONSUMED</li>
+									<li>SURFACE_FUEL_CONSUMED</li>
+									<li>CROWN_FUEL_CONSUMED</li>
+									<li>RADIATIVE_POWER</li>
+									<li>HFI</li>
+									<li>HCFB</li>
+									<li>HROS_MAP</li>
+									<li>FROS_MAP</li>
+									<li>BROS_MAP</li>
+									<li>RSS_MAP</li>
+									<li>RAZ_MAP</li>
+									<li>FMC_MAP</li>
+									<li>CFB_MAP</li>
+									<li>CFC_MAP</li>
+									<li>SFC_MAP</li>
+									<li>TFC_MAP</li>
+									<li>FI_MAP</li>
+									<li>FL_MAP</li>
+									<li>CURINGDEGREE_MAP</li>
+									<li>GREENUP_MAP</li>
+									<li>PC_MAP</li>
+									<li>PDF_MAP</li>
+									<li>CBH_MAP</li>
+									<li>TREE_HEIGHT_MAP</li>
+									<li>FUEL_LOAD_MAP</li>
+									<li>CFL_MAP</li>
+									<li>GRASSPHENOLOGY_MAP</li>
+									<li>ROSVECTOR_MAP</li>
+									<li>DIRVECTOR_MAP</li>
+								</ul>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></h4>
+						</li>
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The statistic that should be output (required). If the statistic is TOTAL_FUEL_CONSUMED, SURFACE_FUEL_CONSUMED,
+										CROWN_FUEL_CONSUMED, or RADIATIVE_POWER the <a href="../enums/_psaasinterface_.output_gridfileinterpolation.html">interpolation method</a> must be DISCRETIZED.
+									Setting the output statistic to any of those values will automatically set the interpolation method.</p>
+								</div>
+								<p>Valid values:</p>
+								<ul>
+									<li>TEMPERATURE</li>
+									<li>DEW_POINT</li>
+									<li>RELATIVE_HUMIDITY</li>
+									<li>WIND_DIRECTION</li>
+									<li>WIND_SPEED</li>
+									<li>PRECIPITATION</li>
+									<li>FFMC</li>
+									<li>ISI</li>
+									<li>FWI</li>
+									<li>BUI</li>
+									<li>MAX_FI</li>
+									<li>MAX_FL</li>
+									<li>MAX_ROS</li>
+									<li>MAX_SFC</li>
+									<li>MAX_CFC</li>
+									<li>MAX_TFC</li>
+									<li>MAX_CFB</li>
+									<li>RAZ</li>
+									<li>BURN_GRID</li>
+									<li>FIRE_ARRIVAL_TIME</li>
+									<li>HROS</li>
+									<li>FROS</li>
+									<li>BROS</li>
+									<li>RSS</li>
+									<li>ACTIVE_PERIMETER</li>
+									<li>BURN</li>
+									<li>BURN_PERCENTAGE</li>
+									<li>FIRE_ARRIVAL_TIME_MIN</li>
+									<li>FIRE_ARRIVAL_TIME_MAX</li>
+									<li>TOTAL_FUEL_CONSUMED</li>
+									<li>SURFACE_FUEL_CONSUMED</li>
+									<li>CROWN_FUEL_CONSUMED</li>
+									<li>RADIATIVE_POWER</li>
+									<li>HFI</li>
+									<li>HCFB</li>
+									<li>HROS_MAP</li>
+									<li>FROS_MAP</li>
+									<li>BROS_MAP</li>
+									<li>RSS_MAP</li>
+									<li>RAZ_MAP</li>
+									<li>FMC_MAP</li>
+									<li>CFB_MAP</li>
+									<li>CFC_MAP</li>
+									<li>SFC_MAP</li>
+									<li>TFC_MAP</li>
+									<li>FI_MAP</li>
+									<li>FL_MAP</li>
+									<li>CURINGDEGREE_MAP</li>
+									<li>GREENUP_MAP</li>
+									<li>PC_MAP</li>
+									<li>PDF_MAP</li>
+									<li>CBH_MAP</li>
+									<li>TREE_HEIGHT_MAP</li>
+									<li>FUEL_LOAD_MAP</li>
+									<li>CFL_MAP</li>
+									<li>GRASSPHENOLOGY_MAP</li>
+									<li>ROSVECTOR_MAP</li>
+									<li>DIRVECTOR_MAP</li>
+								</ul>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../enums/_psaasglobals_.globalstatistics.html" class="tsd-signature-type">GlobalStatistics</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
@@ -363,8 +518,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -383,8 +537,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -397,8 +550,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Checks to see if all required values have been set.</p>
@@ -416,8 +568,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -436,8 +587,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Streams the grid file to a socket.</p>
@@ -463,8 +613,7 @@
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
+							
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -546,8 +695,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_psaasinterface_.output_gridfile.html#_outputtime" class="tsd-kind-icon">_output<wbr>Time</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_psaasinterface_.output_gridfile.html#_statistic" class="tsd-kind-icon">_statistic</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#compression" class="tsd-kind-icon">compression</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#discretize" class="tsd-kind-icon">discretize</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#filename" class="tsd-kind-icon">filename</a>
@@ -565,9 +720,6 @@
 								<a href="_psaasinterface_.output_gridfile.html#shouldstream" class="tsd-kind-icon">should<wbr>Stream</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#subscenarioname" class="tsd-kind-icon">sub<wbr>Scenario<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
@@ -581,6 +733,9 @@
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#outputtime" class="tsd-kind-icon">output<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#add_subscenariooverridetimes" class="tsd-kind-icon">add_<wbr>sub<wbr>Scenario<wbr>Override<wbr>Times</a>

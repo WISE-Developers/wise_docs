@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FuelOption | PSaaS Node.JS API (psaas-js-api)</title>
+	<title>TargetReference | PSaaS Node.JS API (psaas-js-api)</title>
 	<meta name="description" content="Documentation for PSaaS Node.JS API (psaas-js-api)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,10 +59,10 @@
 					<a href="../modules/_psaasinterface_.html">&quot;psaasInterface&quot;</a>
 				</li>
 				<li>
-					<a href="_psaasinterface_.fueloption.html">FuelOption</a>
+					<a href="_psaasinterface_.targetreference.html">TargetReference</a>
 				</li>
 			</ul>
-			<h1>Class FuelOption</h1>
+			<h1>Class TargetReference</h1>
 		</div>
 	</div>
 </header>
@@ -72,21 +72,16 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Stores options for various fuel types including default grass fuel load,
-						grass curing, percent conifer, and percent dead fir.</p>
+						<p>A reference to a target that has been added to a scenario. Contains options
+						for how to handle the target.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>author</dt>
-						<dd><p>Travis Redpath</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FuelOption</span>
+						<span class="target">TargetReference</span>
 					</li>
 				</ul>
 			</section>
@@ -95,64 +90,85 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_psaasinterface_.targetreference.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fueloption.html#fueltype" class="tsd-kind-icon">fuel<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fueloption.html#optiontype" class="tsd-kind-icon">option<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.fueloption.html#value" class="tsd-kind-icon">value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_psaasinterface_.fueloption.html#param_fuel_option" class="tsd-kind-icon">PARAM_<wbr>FUEL_<wbr>OPTION</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.targetreference.html#geometryindex" class="tsd-kind-icon">geometry<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_psaasinterface_.targetreference.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.targetreference.html#pointindex" class="tsd-kind-icon">point<wbr>Index</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.fueloption.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.fueloption.html#stream" class="tsd-kind-icon">stream</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.targetreference.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_psaasinterface_.targetreference.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Target<wbr>Reference<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_psaasinterface_.targetreference.html" class="tsd-signature-type">TargetReference</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_psaasinterface_.targetreference.html" class="tsd-signature-type">TargetReference</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fueltype" class="tsd-anchor"></a>
-					<h3>fuel<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">fuel<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="geometryindex" class="tsd-anchor"></a>
+					<h3>geometry<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">geometry<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The type of fuel to apply the option to.</p>
+							<p>An index of a geometry within the shape to use as the target.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the target that was added.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="optiontype" class="tsd-anchor"></a>
-					<h3>option<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">option<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_psaasinterface_.fueloptiontype.html" class="tsd-signature-type">FuelOptionType</a></div>
+					<a name="pointindex" class="tsd-anchor"></a>
+					<h3>point<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">point<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The option that is to be applied.</p>
+							<p>An index of a point within the shape to use as the target.</p>
 						</div>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="value" class="tsd-anchor"></a>
-					<h3>value</h3>
-					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The value of the applied option.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="param_fuel_option" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> PARAM_<wbr>FUEL_<wbr>OPTION</h3>
-					<div class="tsd-signature tsd-kind-icon">PARAM_<wbr>FUEL_<wbr>OPTION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"fuel_option_setting"</span><span class="tsd-signature-symbol"> = &quot;fuel_option_setting&quot;</span></div>
-					
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -166,39 +182,20 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Find all errors that may exist in the fuel option.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_psaasglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A list of all errors that were found.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="stream" class="tsd-anchor"></a>
-					<h3>stream</h3>
+					<a name="getname" class="tsd-anchor"></a>
+					<h3>get<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">stream<span class="tsd-signature-symbol">(</span>builder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Socket</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Streams the fuel option to a socket.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>builder: <span class="tsd-signature-type">Socket</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -268,25 +265,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_psaasinterface_.fueloption.html" class="tsd-kind-icon">Fuel<wbr>Option</a>
+						<a href="_psaasinterface_.targetreference.html" class="tsd-kind-icon">Target<wbr>Reference</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasinterface_.fueloption.html#fueltype" class="tsd-kind-icon">fuel<wbr>Type</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_psaasinterface_.targetreference.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasinterface_.fueloption.html#optiontype" class="tsd-kind-icon">option<wbr>Type</a>
+								<a href="_psaasinterface_.targetreference.html#geometryindex" class="tsd-kind-icon">geometry<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_psaasinterface_.targetreference.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_psaasinterface_.fueloption.html#value" class="tsd-kind-icon">value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_psaasinterface_.fueloption.html#param_fuel_option" class="tsd-kind-icon">PARAM_<wbr>FUEL_<wbr>OPTION</a>
+								<a href="_psaasinterface_.targetreference.html#pointindex" class="tsd-kind-icon">point<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_psaasinterface_.fueloption.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a>
+								<a href="_psaasinterface_.targetreference.html#checkvalid" class="tsd-kind-icon">check<wbr>Valid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_psaasinterface_.fueloption.html#stream" class="tsd-kind-icon">stream</a>
+								<a href="_psaasinterface_.targetreference.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
 							</li>
 						</ul>
 					</li>
@@ -303,6 +300,7 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
@@ -315,6 +313,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
 			</ul>
 		</div>
 	</div>
