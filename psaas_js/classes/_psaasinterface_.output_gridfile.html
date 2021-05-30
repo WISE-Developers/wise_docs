@@ -85,6 +85,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#_outputtime" class="tsd-kind-icon">_output<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#_startoutputtime" class="tsd-kind-icon">_start<wbr>Output<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_psaasinterface_.output_gridfile.html#_statistic" class="tsd-kind-icon">_statistic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#compression" class="tsd-kind-icon">compression</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#discretize" class="tsd-kind-icon">discretize</a></li>
@@ -102,7 +103,9 @@
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#loutputtime" class="tsd-kind-icon">l<wbr>Output<wbr>Time</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#lstartoutputtime" class="tsd-kind-icon">l<wbr>Start<wbr>Output<wbr>Time</a></li>
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#outputtime" class="tsd-kind-icon">output<wbr>Time</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#startoutputtime" class="tsd-kind-icon">start<wbr>Output<wbr>Time</a></li>
 								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a></li>
 							</ul>
 						</section>
@@ -129,7 +132,20 @@
 					
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Output time (required).</p>
+							<p>The end of the output time range (required). Will also be
+								used as the start of the output time range if the start
+							output time has not been specified.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_startoutputtime" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _start<wbr>Output<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">_start<wbr>Output<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DateTime</span><span class="tsd-signature-symbol"> = null</span></div>
+					
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The start of the output time range (optional).</p>
 						</div>
 					</div>
 				</section>
@@ -270,7 +286,7 @@
 							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get the export time as a Luxon DateTime.</p>
+									<p>Get the end export time as a Luxon DateTime.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
@@ -284,13 +300,49 @@
 							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set the export time using a Luxon DateTime. Cannot be null.</p>
+									<p>Set the end export time using a Luxon DateTime. Cannot be null. If
+										the start export time is not set this value will also be used for
+									the start time.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
 									<dd><p>If <a href="_psaasglobals_.socketmsg.html#inlinethrowonerror">SocketMsg.inlineThrowOnError</a> is set a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError" class="external">RangeError</a> will be thrown if value is not valid.</p>
 									</dd>
 								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">DateTime</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="lstartoutputtime" class="tsd-anchor"></a>
+					<h3>l<wbr>Start<wbr>Output<wbr>Time</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> lStartOutputTime<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DateTime</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> lStartOutputTime<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DateTime</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the start export time as a Luxon DateTime.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DateTime</span></h4>
+						</li>
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the start export time using a Luxon DateTime. Use null to clear the value.</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -314,11 +366,12 @@
 							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get the export time as an ISO8601 string.</p>
+									<p>Get the end export time as an ISO8601 string.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>deprecated</dt>
-									<dd></dd>
+									<dd><p>Use lOutputTime instead.</p>
+									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -327,14 +380,61 @@
 							
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set the export time using a string. Cannot be null or empty. Must be formatted in ISO8601.</p>
+									<p>Set the export time using a string. Cannot be null or empty. Must be formatted in ISO8601.
+										If the start export time is not set this value will also be used for
+									the start time.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
 									<dd><p>If <a href="_psaasglobals_.socketmsg.html#inlinethrowonerror">SocketMsg.inlineThrowOnError</a> is set a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError" class="external">RangeError</a> will be thrown if value is not valid.</p>
 									</dd>
 									<dt>deprecated</dt>
-									<dd></dd>
+									<dd><p>Use lOutputTime instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="startoutputtime" class="tsd-anchor"></a>
+					<h3>start<wbr>Output<wbr>Time</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> startOutputTime<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> startOutputTime<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the start export time as an ISO8601 string.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use lStartOutputTime instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the start export time using a string. Use null to clear the value.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use lOutputTime instead.</p>
+									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -696,6 +796,9 @@
 								<a href="_psaasinterface_.output_gridfile.html#_outputtime" class="tsd-kind-icon">_output<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_psaasinterface_.output_gridfile.html#_startoutputtime" class="tsd-kind-icon">_start<wbr>Output<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_psaasinterface_.output_gridfile.html#_statistic" class="tsd-kind-icon">_statistic</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -732,7 +835,13 @@
 								<a href="_psaasinterface_.output_gridfile.html#loutputtime" class="tsd-kind-icon">l<wbr>Output<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#lstartoutputtime" class="tsd-kind-icon">l<wbr>Start<wbr>Output<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#outputtime" class="tsd-kind-icon">output<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="_psaasinterface_.output_gridfile.html#startoutputtime" class="tsd-kind-icon">start<wbr>Output<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
 								<a href="_psaasinterface_.output_gridfile.html#statistic" class="tsd-kind-icon">statistic</a>
