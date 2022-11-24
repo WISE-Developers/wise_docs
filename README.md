@@ -1,8 +1,4 @@
-# README #
+# API Documentation WISE
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
- API Documentation for projects hosted by SPYDMOBILE.
+Migrated from Bitbucket - Nov 24 2022 
 
