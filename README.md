@@ -1,3 +1,4 @@
+[![Production - Server/Client Build/Deploy](https://github.com/PSaaS-Developers/wise_docs/actions/workflows/build-main.yaml/badge.svg)](https://github.com/PSaaS-Developers/wise_docs/actions/workflows/build-main.yaml)
 # API Documentation WISE
 
 Migrated from Bitbucket - Nov 24 2022 
