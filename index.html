@@ -1,26 +1,208 @@
-<head>
-  <link rel="stylesheet" href="./styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"
-  />
+<!DOCTYPE html>
+<html>
+<title>WISE Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script>
-    $(function() {
-      $(document).tooltip();
-    });
-  </script>
-</head>
-<h1>
-  <a href="https://spyd.com" title="Go to SpyD's Home page">Spymobile's</a> API
-  Docs
-</h1>
-<h2>
-  PSaaS - Promethues Software as a Service - Canadian Wildfire Modelling
-  Framework
-</h2>
-<h3><a href="psaas">PSaaS API Docs</a></h3>
-<h2>IntelliFire DSS - Next-Level Wildfire Decision Support System</h2>
-<h3><a href="intellifire">IntelliFire DSS APIs</a></h3>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://kit.fontawesome.com/40434d91ac.js" crossorigin="anonymous"></script>
+<style>
+    body {
+        font-family: "Roboto", sans-serif
+    }
+
+    .w3-bar-block .w3-bar-item {
+        padding: 16px;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="theme.css">
+
+<body>
+
+    <nav class="feature box-shadow w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card"
+        style="z-index:3;width:250px;" id="mySidebar">
+        <div class="w3-bar-item  w3-border-bottom w3-large">
+            <img src="images/wise_logo.png" style="width:80%;">
+            <span class="w3-center">WISE DOCS</span>
+        </div>
+        <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i
+                class="fa fa-remove"></i></a>
+        <a class="w3-bar-item w3-button w3-hover-brown  fgm-bg-light" onclick="go_home()" href="#myTop">
+            <img src="images/wise_logo.png" style="width:30px;"> Home</a>
+        <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_jsapi()" href="#">
+            <img src="images/wise_logo.png" style="width:30px;"> JS API</a>
+        <a class="w3-bar-item w3-button w3-hover-brown " href="#" onclick="go_mqtt()"><img src="images/wise_logo.png"
+                style="width:30px;"> MQTT</a>
+        <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_config()" href="#"><img src="images/wise_logo.png"
+                style="width:30px;">
+            Manager Config</a>
+
+        <div>
+            <a class="w3-bar-item w3-button " onclick="myAccordion('demo')" href="javascript:void(0)"><i
+                    class="fa-solid fa-up-right-from-square"></i> External <i class="fa fa-caret-down"></i></a>
+            <div id="demo" class="w3-hide">
+                <a class="w3-bar-item w3-button" target="_blank" href="https://nodejs.org/en/docs/"><i
+                        class="fa-brands fa-node"></i> NodeJS</a>
+                <a class="w3-bar-item w3-button" target="_blank"
+                    href="https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt/"> <i
+                        class="fa-solid fa-bolt"></i> MQTT</a>
+                <a class="w3-bar-item w3-button" target="_blank" href="#">Link</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
+    </div>
+
+    <div class="w3-main" style="margin-left:250px;">
+
+        <div id="myTop" class="w3-container w3-top fgm-bg w3-large">
+            <p><i class="fa fa-bars w3-button w3-hover-brown feature w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="myIntro" class="feature w3-hide w3-margin-left">WISE: Documentation</span>
+            </p>
+        </div>
+        <header class="header box-shadow w3-container w3-padding-small w3-margin">
+            <h1 class="w3-xxlarge">Wildfire Intelligence and Simulation Engine (WISE)</h1>
+            <h2 class="w3-large">Documentation</h1>
+        </header>
+
+
+        <div class="notice box-shadow w3-container w3-padding-small w3-margin">
+            NOTE: The Current documentation is a bit outdated and should be considered LEGACY, new documentation will be
+            available with the release of 1.0
+        </div>
+
+        <div id="mainDocs" class="w3-container">
+            <div class="feature box-shadow w3-container w3-padding-small w3-margin">
+                <a id="js-api">
+                    <h2>WISE JavaScript API</h2>
+                </a>
+                <p>The WISE JS API is a NodeJS Module that integrates the WISE API into your NodeJS Project.</p>
+                New Documentation Coming Soon: <a href="psaas_js/index.html">View LEGACY JS API</a>
+            </div>
+
+            <div class="feature box-shadow w3-container w3-padding-small w3-margin">
+                <a id="mqtt-api">
+                    <h2>W.I.S.E. MQTT Client API 1.0.0 Docs</h2>
+                </a>
+                <p>MQTT Is used for internal communication and communication with the API.</p>
+            </div>
+
+            <div class="feature box-shadow w3-container w3-padding-small w3-margin">
+                <a id="manager-config">
+                    <h2>W.I.S.E. Manager config.json</h2>
+                </a>
+                <p>The WISE JS API is a NodeJS Module that integrates the WISE API into your NodeJS Project.</p>
+            </div>
+        </div>
+        <iframe id="jsapi-iframe" class="w3-hide" src="./psaas_js/index.html" title="jsapi"></iframe>
+        <iframe id="mqtt-iframe" class="w3-hide" src="./psaas_mqtt/index.html" title="mqtt"></iframe>
+        <iframe id="config-iframe" class="w3-hide" src="./psaas_config/index.html" title="config"></iframe>
+
+        <footer class="w3-container w3-theme" style="padding:32px">
+            <p>
+                <script>
+                    document.write("This page last modified on" + " " + document.lastModified);
+                </script>
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script>
+        // Open and close the sidebar on medium and small screens
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        function go_home() {
+            // hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            // then scroll to the top
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            // then show the main docs
+            document.getElementById("mainDocs").classList.remove("w3-hide");
+
+        }
+
+        function go_jsapi() {
+            //hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            //hide main docs
+            document.getElementById("mainDocs").classList.add("w3-hide");
+            // then show the jsapi iframe
+            document.getElementById("jsapi-iframe").classList.remove("w3-hide");
+
+
+        }
+
+        function go_mqtt() {
+            //hide main docs
+            document.getElementById("mainDocs").classList.add("w3-hide");
+            //hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            // then show the mqtt iframe
+            document.getElementById("mqtt-iframe").classList.remove("w3-hide");
+        }
+
+        function go_config() {
+            //hide main docs
+            document.getElementById("mainDocs").classList.add("w3-hide");
+            //hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            // then show the mqtt iframe
+            document.getElementById("config-iframe").classList.remove("w3-hide");
+        }
+
+
+        // Change style of top container on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+                document.getElementById("myIntro").classList.add("w3-show-inline-block");
+            } else {
+                document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+                document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+            }
+        }
+
+        // Accordions
+        function myAccordion(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
