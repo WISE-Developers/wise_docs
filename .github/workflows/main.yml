@@ -14,14 +14,12 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: dockertest02
+        host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_NAME }}
         password: ${{ secrets.SERVER_PASS }}
-        port: 22
-        proxy_host: sparcsonline.com
+        proxy_host: ${{ secrets.PROXY_HOST }}
         proxy_username: ${{ secrets.SERVER_NAME }}
         proxy_password: ${{ secrets.SERVER_PASS }}
-        proxy_port: 22
         script: |
           cd wise_docs
           git pull
