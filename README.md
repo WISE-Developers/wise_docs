@@ -11,5 +11,5 @@ Migrated from Bitbucket - Nov 24 2022
 4. commit the change
 5. publish the branch
 6. pull request to merge your branch into main
-7. when the merge is complete teh site will auto build and deploy
+7. when the merge is complete the site will auto build and deploy (See the status badge above)
 
