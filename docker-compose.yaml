@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: wisedocs.Dockerfile
-    container_name: wisedocs-${EDITION}
+    container_name: wisedocs
     restart: "unless-stopped"
     ports:
       - ${PORT}:80
