@@ -1,4 +1,4 @@
-[![Production - Deploy to FMD v2](https://github.com/PSaaS-Developers/wise_docs/actions/workflows/main.yml/badge.svg)](https://github.com/PSaaS-Developers/wise_docs/actions/workflows/main.yml)
+[![Production - Deploy to FMD v2](https://github.com/WISE-Developers/wise_docs/actions/workflows/main.yml/badge.svg)](https://github.com/WISE-Developers/wise_docs/actions/workflows/main.yml)
 # API Documentation WISE
 
 Migrated from Bitbucket - Nov 24 2022 
