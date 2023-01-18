@@ -22,6 +22,7 @@ jobs:
         proxy_password: ${{ secrets.SERVER_PASS }}
         script: |
           cd wise_docs
+          git checkout main
           git pull
           docker-compose up -d --build
           
