@@ -33,6 +33,8 @@
             <img src="images/wise_logo.png" style="width:30px;"> Home</a>
         <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_jsapi()" href="#">
             <img src="images/wise_logo.png" style="width:30px;"> JS API</a>
+        <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_javaapi()" href="#">
+            <img src="images/wise_logo.png" style="width:30px;"> Java API</a>
         <a class="w3-bar-item w3-button w3-hover-brown " href="#" onclick="go_mqtt()"><img src="images/wise_logo.png"
                 style="width:30px;"> MQTT</a>
         <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_config()" href="#"><img src="images/wise_logo.png"
@@ -84,6 +86,14 @@
             </div>
 
             <div class="feature box-shadow w3-container w3-padding-small w3-margin">
+                <a id="java-api">
+                    <h2>WISE Java API</h2>
+                </a>
+                <p>The WISE Java API is a Java library that integrates the WISE API into your Java Project.</p>
+                New Documentation Coming Soon: <a href="wise_java/index.html">View LEGACY Java API</a>
+            </div>
+
+            <div class="feature box-shadow w3-container w3-padding-small w3-margin">
                 <a id="mqtt-api">
                     <h2>W.I.S.E. MQTT Client API 1.0.0 Docs</h2>
                 </a>
@@ -98,6 +108,7 @@
             </div>
         </div>
         <iframe id="jsapi-iframe" class="w3-hide" src="./wise_js/index.html" title="jsapi"></iframe>
+        <iframe id="javaapi-iframe" class="w3-hide" src="./wise_java/index.html" title="javaapi"></iframe>
         <iframe id="mqtt-iframe" class="w3-hide" src="./psaas_mqtt/index.html" title="mqtt"></iframe>
         <iframe id="config-iframe" class="w3-hide" src="./psaas_config/index.html" title="config"></iframe>
 
@@ -148,6 +159,20 @@
             document.getElementById("mainDocs").classList.add("w3-hide");
             // then show the jsapi iframe
             document.getElementById("jsapi-iframe").classList.remove("w3-hide");
+
+
+        }
+
+        function go_javaapi() {
+            //hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            //hide main docs
+            document.getElementById("mainDocs").classList.add("w3-hide");
+            // then show the javaapi iframe
+            document.getElementById("javaapi-iframe").classList.remove("w3-hide");
 
 
         }
