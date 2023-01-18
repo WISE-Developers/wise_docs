@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;client&quot; | PSaaS Node.JS API (psaas-js-api)</title>
-	<meta name="description" content="Documentation for PSaaS Node.JS API (psaas-js-api)">
+	<title>&quot;client&quot; | WISE Node.JS API (WISE_JS_API)</title>
+	<meta name="description" content="Documentation for WISE Node.JS API (WISE_JS_API)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">PSaaS Node.JS API (psaas-js-api)</a>
+					<a href="../index.html" class="title">WISE Node.JS API (WISE_JS_API)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -71,20 +71,20 @@
 					<div class="lead">
 						<p>This module contains the MQTT client listener classes.
 							They can be used to listen for events raised by the
-							PSaaS process using MQTT. Event types include scenario
+							W.I.S.E. process using MQTT. Event types include scenario
 						completion, simulation completion, and statistics.</p>
 					</div>
 					<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 						<h2>Example</h2>
 					</a>
-					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> psaas = <span class="hljs-keyword">new</span> PSaaS();
-<span class="hljs-comment">//********** setup your psaas job here **********</span>
+					<pre><code class="language-javascript"><span class="hljs-keyword">let</span> wise = <span class="hljs-keyword">new</span> WISE();
+<span class="hljs-comment">//********** setup your W.I.S.E. job here **********</span>
 <span class="hljs-comment">//add some statistics to listen for. They will be emitted at</span>
 <span class="hljs-comment">//the end of each timestep for all scenariosd</span>
 prom.timestepSettings.addStatistic(TimestepSettings.STATISTIC_SCENARIO_CURRENT_TIME);
 prom.timestepSettings.addStatistic(TimestepSettings.STATISTIC_SCENARIO_NAME);
 <span class="hljs-comment">//start the job</span>
-<span class="hljs-keyword">let</span> job = <span class="hljs-keyword">await</span> psaas.beginJobPromise();
+<span class="hljs-keyword">let</span> job = <span class="hljs-keyword">await</span> wise.beginJobPromise();
 <span class="hljs-comment">//create a new manager to listen for events</span>
 <span class="hljs-keyword">let</span> manager = <span class="hljs-keyword">new</span> JobManager(job.name.replace(<span class="hljs-regexp">/^\s+|\s+$/g</span>, <span class="hljs-string">&#x27;&#x27;</span>));
 <span class="hljs-comment">//listen for new statistics events</span>
@@ -118,11 +118,11 @@ manager.on(<span class="hljs-string">&#x27;simulationComplete&#x27;</span>, <spa
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.jobmanager.html" class="tsd-kind-icon">Job<wbr>Manager</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/_client_.mqttmessage.html" class="tsd-kind-icon">Mqtt<wbr>Message</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.psaasstatistic.html" class="tsd-kind-icon">PSaaSStatistic</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.scenariocompleteeventargs.html" class="tsd-kind-icon">Scenario<wbr>Complete<wbr>Event<wbr>Args</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.simulationcompleteeventargs.html" class="tsd-kind-icon">Simulation<wbr>Complete<wbr>Event<wbr>Args</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.statisticseventargs.html" class="tsd-kind-icon">Statistics<wbr>Event<wbr>Args</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.validationeventargs.html" class="tsd-kind-icon">Validation<wbr>Event<wbr>Args</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_client_.wisestatistic.html" class="tsd-kind-icon">WISEStatistic</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -187,16 +187,16 @@ manager.on(<span class="hljs-string">&#x27;simulationComplete&#x27;</span>, <spa
 						<a href="_fwi_.html">&quot;fwi&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_psaasglobals_.html">&quot;psaas<wbr>Globals&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_psaasinterface_.html">&quot;psaas<wbr>Interface&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_solar_.html">&quot;solar&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_weather_.html">&quot;weather&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_wiseglobals_.html">&quot;wise<wbr>Globals&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_wiseinterface_.html">&quot;wise<wbr>Interface&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -212,9 +212,6 @@ manager.on(<span class="hljs-string">&#x27;simulationComplete&#x27;</span>, <spa
 						<a href="../classes/_client_.mqttmessage.html" class="tsd-kind-icon">Mqtt<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_client_.psaasstatistic.html" class="tsd-kind-icon">PSaaSStatistic</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_client_.scenariocompleteeventargs.html" class="tsd-kind-icon">Scenario<wbr>Complete<wbr>Event<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
@@ -225,6 +222,9 @@ manager.on(<span class="hljs-string">&#x27;simulationComplete&#x27;</span>, <spa
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_client_.validationeventargs.html" class="tsd-kind-icon">Validation<wbr>Event<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_client_.wisestatistic.html" class="tsd-kind-icon">WISEStatistic</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_client_.ijobmanageroptions.html" class="tsd-kind-icon">IJob<wbr>Manager<wbr>Options</a>

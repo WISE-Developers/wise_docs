@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;example_job&quot; | PSaaS Node.JS API (psaas-js-api)</title>
-	<meta name="description" content="Documentation for PSaaS Node.JS API (psaas-js-api)">
+	<title>&quot;example_job&quot; | WISE Node.JS API (WISE_JS_API)</title>
+	<meta name="description" content="Documentation for WISE Node.JS API (WISE_JS_API)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">PSaaS Node.JS API (psaas-js-api)</a>
+					<a href="../index.html" class="title">WISE Node.JS API (WISE_JS_API)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An example that creates and runs a job through PSaaS Builder.</p>
+						<p>An example that creates and runs a job through W.I.S.E. Builder.</p>
 					</div>
 				</div>
 			</section>
@@ -81,8 +81,8 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_example_job_.html#localdir" class="tsd-kind-icon">local<wbr>Dir</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_example_job_.html#psaasversion" class="tsd-kind-icon">psaas<wbr>Version</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_example_job_.html#serverconfig" class="tsd-kind-icon">server<wbr>Config</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_example_job_.html#wiseversion" class="tsd-kind-icon">wise<wbr>Version</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -106,16 +106,16 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-					<a name="psaasversion" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagLet">Let</span> psaas<wbr>Version</h3>
-					<div class="tsd-signature tsd-kind-icon">psaas<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;6.2.6.0&quot;</span></div>
+					<a name="serverconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> server<wbr>Config</h3>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="../classes/_defaults_.serverconfiguration.html" class="tsd-signature-type">ServerConfiguration</a><span class="tsd-signature-symbol"> = new defaults.ServerConfiguration()</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-					<a name="serverconfig" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagLet">Let</span> server<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">server<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ServerConfiguration</span><span class="tsd-signature-symbol"> = new defaults.ServerConfiguration()</span></div>
+					<a name="wiseversion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> wise<wbr>Version</h3>
+					<div class="tsd-signature tsd-kind-icon">wise<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;6.2.6.0&quot;</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -126,13 +126,13 @@
 					<a name="builddogriblut" class="tsd-anchor"></a>
 					<h3>build<wbr>DogribLUT</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">build<wbr>DogribLUT<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">FuelDefinition</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">build<wbr>DogribLUT<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_fuels_.fueldefinition.html" class="tsd-signature-type">FuelDefinition</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">FuelDefinition</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_fuels_.fueldefinition.html" class="tsd-signature-type">FuelDefinition</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -168,7 +168,7 @@
 					<a name="handleerrornode" class="tsd-anchor"></a>
 					<h3>handle<wbr>Error<wbr>Node</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Error<wbr>Node<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValidationError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Error<wbr>Node<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="../classes/_wiseglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -183,7 +183,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>node: <span class="tsd-signature-type">ValidationError</span></h5>
+									<h5>node: <a href="../classes/_wiseglobals_.validationerror.html" class="tsd-signature-type">ValidationError</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The node of the validation tree to handle.</p>
 									</div>
@@ -244,16 +244,16 @@
 						<a href="_fwi_.html">&quot;fwi&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_psaasglobals_.html">&quot;psaas<wbr>Globals&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_psaasinterface_.html">&quot;psaas<wbr>Interface&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_solar_.html">&quot;solar&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_weather_.html">&quot;weather&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_wiseglobals_.html">&quot;wise<wbr>Globals&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_wiseinterface_.html">&quot;wise<wbr>Interface&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -263,10 +263,10 @@
 						<a href="_example_job_.html#localdir" class="tsd-kind-icon">local<wbr>Dir</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_example_job_.html#psaasversion" class="tsd-kind-icon">psaas<wbr>Version</a>
+						<a href="_example_job_.html#serverconfig" class="tsd-kind-icon">server<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_example_job_.html#serverconfig" class="tsd-kind-icon">server<wbr>Config</a>
+						<a href="_example_job_.html#wiseversion" class="tsd-kind-icon">wise<wbr>Version</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
 						<a href="_example_job_.html#builddogriblut" class="tsd-kind-icon">build<wbr>DogribLUT</a>
