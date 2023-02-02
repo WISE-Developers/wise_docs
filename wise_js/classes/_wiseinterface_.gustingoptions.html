@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TimezoneName | WISE Node.JS API (wise-js-api)</title>
+	<title>GustingOptions | WISE Node.JS API (wise-js-api)</title>
 	<meta name="description" content="Documentation for WISE Node.JS API (wise-js-api)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_wiseglobals_.html">&quot;wiseGlobals&quot;</a>
+					<a href="../modules/_wiseinterface_.html">&quot;wiseInterface&quot;</a>
 				</li>
 				<li>
-					<a href="_wiseglobals_.timezonename.html">TimezoneName</a>
+					<a href="_wiseinterface_.gustingoptions.html">GustingOptions</a>
 				</li>
 			</ul>
-			<h1>Class TimezoneName</h1>
+			<h1>Class GustingOptions</h1>
 		</div>
 	</div>
 </header>
@@ -72,21 +72,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A class to hold information about time zone names retrieved from Java.
-						The value is what will be passed back to the job builder.</p>
+						<p>Options that define how and if wind gusting is applied to a scenario.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>author</dt>
-						<dd><p>&quot;Travis Redpath&quot;</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">TimezoneName</span>
+						<span class="target">GustingOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -97,8 +91,17 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseglobals_.timezonename.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseglobals_.timezonename.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseinterface_.gustingoptions.html#gustbias" class="tsd-kind-icon">gust<wbr>Bias</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseinterface_.gustingoptions.html#gusting" class="tsd-kind-icon">gusting</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseinterface_.gustingoptions.html#gustsperhour" class="tsd-kind-icon">gusts<wbr>Per<wbr>Hour</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_wiseinterface_.gustingoptions.html#percentgusting" class="tsd-kind-icon">percent<wbr>Gusting</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_wiseinterface_.gustingoptions.html#param_gusting_options" class="tsd-kind-icon">PARAM_<wbr>GUSTING_<wbr>OPTIONS</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_wiseinterface_.gustingoptions.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,30 +110,87 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					<a name="gustbias" class="tsd-anchor"></a>
+					<h3>gust<wbr>Bias</h3>
+					<div class="tsd-signature tsd-kind-icon">gust<wbr>Bias<span class="tsd-signature-symbol">:</span> <a href="../enums/_wiseinterface_.gustbias.html" class="tsd-signature-type">GustBias</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The name of the time zone to display to the user.</p>
+							<p>Must be present for time and ROS derived gusting. Middle is not valid for ROS derived gusting.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="value" class="tsd-anchor"></a>
-					<h3>value</h3>
-					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
+					<a name="gusting" class="tsd-anchor"></a>
+					<h3>gusting</h3>
+					<div class="tsd-signature tsd-kind-icon">gusting<span class="tsd-signature-symbol">:</span> <a href="../enums/_wiseinterface_.gusting.html" class="tsd-signature-type">Gusting</a><span class="tsd-signature-symbol"> = Gusting.NO_GUSTING</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="gustsperhour" class="tsd-anchor"></a>
+					<h3>gusts<wbr>Per<wbr>Hour</h3>
+					<div class="tsd-signature tsd-kind-icon">gusts<wbr>Per<wbr>Hour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A unique identifier for the time zone that can be
-								passed to the job builder in place of a time zone
-							offset.</p>
+							<p>Must be available for time derived gusting.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="percentgusting" class="tsd-anchor"></a>
+					<h3>percent<wbr>Gusting</h3>
+					<div class="tsd-signature tsd-kind-icon">percent<wbr>Gusting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Must be available for average, time derived, and ROS derived gusting.
+								For average gusting this is a weighted averaging of wind speed and gusting. ws = ((100-percentGusting)<em>ws + percentGusting</em>gust)/100.
+								For time derived gusting gusts will occur for (3600/gustPerHour*(percentGusting<em>100)) seconds per gust.
+							For ROS derived gusting gusts will occur for (3600</em>(percentGusting/100)) seconds per hour.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="param_gusting_options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> PARAM_<wbr>GUSTING_<wbr>OPTIONS</h3>
+					<div class="tsd-signature tsd-kind-icon">PARAM_<wbr>GUSTING_<wbr>OPTIONS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"gusting_options"</span><span class="tsd-signature-symbol"> = &quot;gusting_options&quot;</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="stream" class="tsd-anchor"></a>
+					<h3>stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">stream<span class="tsd-signature-symbol">(</span>builder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Socket</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Streams the scenario to a socket.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>builder: <span class="tsd-signature-type">Socket</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -191,97 +251,43 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_weather_.html">&quot;weather&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_wiseglobals_.html">&quot;wise<wbr>Globals&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_wiseinterface_.html">&quot;wise<wbr>Interface&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_wiseglobals_.assetoperation.html" class="tsd-kind-icon">Asset<wbr>Operation</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_wiseglobals_.globalstatistics.html" class="tsd-kind-icon">Global<wbr>Statistics</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_wiseglobals_.province.html" class="tsd-kind-icon">Province</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_wiseglobals_.units.html" class="tsd-kind-icon">Units</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_wiseglobals_.wiseloglevel.html" class="tsd-kind-icon">WISELog<wbr>Level</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.duration.html" class="tsd-kind-icon">Duration</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_wiseglobals_.durationerror.html" class="tsd-kind-icon">Duration<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.fbpoptions.html" class="tsd-kind-icon">FBPOptions</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.fgmoptions.html" class="tsd-kind-icon">FGMOptions</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.fmcoptions.html" class="tsd-kind-icon">FMCOptions</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.fwioptions.html" class="tsd-kind-icon">FWIOptions</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.iwiseserializable.html" class="tsd-kind-icon">IWISESerializable</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.latlon.html" class="tsd-kind-icon">Lat<wbr>Lon</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.sockethelper.html" class="tsd-kind-icon">Socket<wbr>Helper</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.socketmsg.html" class="tsd-kind-icon">Socket<wbr>Msg</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.summaryoutputs.html" class="tsd-kind-icon">Summary<wbr>Outputs</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.timerange.html" class="tsd-kind-icon">Time<wbr>Range</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.timezone.html" class="tsd-kind-icon">Timezone</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_wiseglobals_.timezonegetter.html" class="tsd-kind-icon">Timezone<wbr>Getter</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.timezonename.html" class="tsd-kind-icon">Timezone<wbr>Name</a>
+						<a href="_wiseinterface_.gustingoptions.html" class="tsd-kind-icon">Gusting<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wiseglobals_.timezonename.html#name" class="tsd-kind-icon">name</a>
+								<a href="_wiseinterface_.gustingoptions.html#gustbias" class="tsd-kind-icon">gust<wbr>Bias</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_wiseglobals_.timezonename.html#value" class="tsd-kind-icon">value</a>
+								<a href="_wiseinterface_.gustingoptions.html#gusting" class="tsd-kind-icon">gusting</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_wiseinterface_.gustingoptions.html#gustsperhour" class="tsd-kind-icon">gusts<wbr>Per<wbr>Hour</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_wiseinterface_.gustingoptions.html#percentgusting" class="tsd-kind-icon">percent<wbr>Gusting</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="_wiseinterface_.gustingoptions.html#param_gusting_options" class="tsd-kind-icon">PARAM_<wbr>GUSTING_<wbr>OPTIONS</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_wiseinterface_.gustingoptions.html#stream" class="tsd-kind-icon">stream</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.validationerror.html" class="tsd-kind-icon">Validation<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.vectormetadata.html" class="tsd-kind-icon">Vector<wbr>Metadata</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_wiseglobals_.wiselogger.html" class="tsd-kind-icon">WISELogger</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -299,6 +305,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>

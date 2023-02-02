@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>WISE Node.JS API (WISE_JS_API)</title>
-	<meta name="description" content="Documentation for WISE Node.JS API (WISE_JS_API)">
+	<title>WISE Node.JS API (wise-js-api)</title>
+	<meta name="description" content="Documentation for WISE Node.JS API (wise-js-api)">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">WISE Node.JS API (WISE_JS_API)</a>
+					<a href="index.html" class="title">WISE Node.JS API (wise-js-api)</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>WISE Node.JS API (WISE_JS_API)</h1>
+			<h1>WISE Node.JS API (wise-js-api)</h1>
 		</div>
 	</div>
 </header>
@@ -64,7 +64,7 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<p>This is documentation for the Node.JS version of the PSaaS API.</p>
+				<p>This is documentation for the Node.JS version of the W.I.S.E. API.</p>
 				<a href="#main-modules" id="main-modules" style="color: inherit; text-decoration: none;">
 					<h2>Main Modules</h2>
 				</a>
@@ -72,43 +72,43 @@
 				<a href="#clientjs" id="clientjs" style="color: inherit; text-decoration: none;">
 					<h3>client.js</h3>
 				</a>
-				<p>This module contains the client API needed to listen for events raised by running PSaaS jobs using MQTT.</p>
+				<p>This module contains the client API needed to listen for events raised by running W.I.S.E. jobs using MQTT.</p>
 				<a href="#defaultsjs" id="defaultsjs" style="color: inherit; text-decoration: none;">
 					<h3>defaults.js</h3>
 				</a>
-				<p>This module loads default values from PSaaS Builder for the few simulation parameters that have defaults.</p>
+				<p>This module loads default values from W.I.S.E. Builder for the few simulation parameters that have defaults.</p>
 				<a href="#fbpjs" id="fbpjs" style="color: inherit; text-decoration: none;">
 					<h3>fbp.js</h3>
 				</a>
-				<p>A module to run FBP calculations from PSaaS Builder.</p>
+				<p>A module to run FBP calculations from W.I.S.E. Builder.</p>
 				<a href="#forecastjs" id="forecastjs" style="color: inherit; text-decoration: none;">
 					<h3>forecast.js</h3>
 				</a>
-				<p>Request PSaaS Builder to lookup forecast information from Environment Canada. This module also provides methods to fetch the cities that support forecast lookups.</p>
+				<p>Request W.I.S.E. Builder to lookup forecast information from Environment Canada. This module also provides methods to fetch the cities that support forecast lookups.</p>
 				<a href="#fwijs" id="fwijs" style="color: inherit; text-decoration: none;">
 					<h3>fwi.js</h3>
 				</a>
-				<p>A module to run FWI calculations from PSaaS Builder.</p>
+				<p>A module to run FWI calculations from W.I.S.E. Builder.</p>
 				<a href="#indexjs" id="indexjs" style="color: inherit; text-decoration: none;">
 					<h3>index.js</h3>
 				</a>
-				<p>An example web server that uses all other modules. It displays a basic website with a static FWI calculation example, forms for doing FBP and solar calculations, forecast and current condition weather lookups, and a simple start PSaaS job function. The start job function will display statistic results from the running job as they are emitted.</p>
-				<a href="#psaasglobalsjs" id="psaasglobalsjs" style="color: inherit; text-decoration: none;">
-					<h3>psaasGlobals.js</h3>
+				<p>An example web server that uses all other modules. It displays a basic website with a static FWI calculation example, forms for doing FBP and solar calculations, forecast and current condition weather lookups, and a simple start W.I.S.E. job function. The start job function will display statistic results from the running job as they are emitted.</p>
+				<a href="#wiseglobalsjs" id="wiseglobalsjs" style="color: inherit; text-decoration: none;">
+					<h3>wiseGlobals.js</h3>
 				</a>
-				<p>Global classes needed for interacting with various parts of the PSaaS network.</p>
-				<a href="#psaasinterfacejs" id="psaasinterfacejs" style="color: inherit; text-decoration: none;">
-					<h3>psaasInterface.js</h3>
+				<p>Global classes needed for interacting with various parts of the W.I.S.E. network.</p>
+				<a href="#wiseinterfacejs" id="wiseinterfacejs" style="color: inherit; text-decoration: none;">
+					<h3>wiseInterface.js</h3>
 				</a>
-				<p>Classes needed for building and running PSaaS jobs. Simulations are built and PSaaS Builder is triggered to create the job for PSaaS to run.</p>
+				<p>Classes needed for building and running W.I.S.E. jobs. Simulations are built and W.I.S.E. Builder is triggered to create the job for W.I.S.E. to run.</p>
 				<a href="#solarjs" id="solarjs" style="color: inherit; text-decoration: none;">
 					<h3>solar.js</h3>
 				</a>
-				<p>A module to run solar calculations (sunrise, sunset, solar noon) from PSaaS Builder.</p>
+				<p>A module to run solar calculations (sunrise, sunset, solar noon) from W.I.S.E. Builder.</p>
 				<a href="#weatherjs" id="weatherjs" style="color: inherit; text-decoration: none;">
 					<h3>weather.js</h3>
 				</a>
-				<p>A module to lookup current weather conditions with PSaaS Builder. The module also contains methods to lookup the cities that support current weather conditions.</p>
+				<p>A module to lookup current weather conditions with W.I.S.E. Builder. The module also contains methods to lookup the cities that support current weather conditions.</p>
 				<a href="#dependencies" id="dependencies" style="color: inherit; text-decoration: none;">
 					<h2>Dependencies</h2>
 				</a>
@@ -121,10 +121,6 @@
 					<li>protobufjs</li>
 					<li>npm-conf</li>
 				</ul>
-				<a href="#installation-details" id="installation-details" style="color: inherit; text-decoration: none;">
-					<h2>Installation Details</h2>
-				</a>
-				<p>Package installation and usage can be found in the repository on <a href="https://github.com/WISE-Developers/WISE_JS_API">GitHub</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -174,6 +170,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_fwi_.html">&quot;fwi&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_solar_.html">&quot;solar&quot;</a>
