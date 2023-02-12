@@ -13,3 +13,5 @@ Migrated from Bitbucket - Nov 24 2022
 6. pull request to merge your branch into main
 7. when the merge is complete the site will auto build and deploy (See the status badge above)
 
+Visit our documentation site: [https://wisedocs.intellifirenwt.com/](https://wisedocs.intellifirenwt.com/)
+
