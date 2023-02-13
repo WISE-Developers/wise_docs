@@ -40,7 +40,9 @@
         <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_config()" href="#"><img src="images/wise_logo.png"
                 style="width:30px;">
             Manager Config</a>
-
+        <a class="w3-bar-item w3-button w3-hover-brown " onclick="go_user()" href="#"><img src="images/wise_logo.png"
+                style="width:30px;">
+            User Contrib Docs</a>
         <div>
             <a class="w3-bar-item w3-button " onclick="myAccordion('demo')" href="javascript:void(0)"><i
                     class="fa-solid fa-up-right-from-square"></i> External <i class="fa fa-caret-down"></i></a>
@@ -108,7 +110,7 @@
         <iframe id="javaapi-iframe" class="w3-hide" src="./wise_java/index.html" title="javaapi"></iframe>
         <iframe id="mqtt-iframe" class="w3-hide" src="./wise_mqtt/index.html" title="mqtt"></iframe>
         <iframe id="config-iframe" class="w3-hide" src="./wise_config/index.html" title="config"></iframe>
-
+        <iframe id="user-iframe" class="w3-hide" src="./contrib_docs/" title="user"></iframe>
         <footer class="w3-container w3-theme" style="padding:32px">
             <p>
                 <script>
@@ -185,7 +187,17 @@
             // then show the mqtt iframe
             document.getElementById("mqtt-iframe").classList.remove("w3-hide");
         }
-
+        function go_user() {
+            //hide main docs
+            document.getElementById("mainDocs").classList.add("w3-hide");
+            //hide all iframes
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.add("w3-hide");
+            }
+            // then show the mqtt iframe
+            document.getElementById("user-iframe").classList.remove("w3-hide");
+        }
         function go_config() {
             //hide main docs
             document.getElementById("mainDocs").classList.add("w3-hide");

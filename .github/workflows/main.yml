@@ -11,6 +11,15 @@ jobs:
     name: Deploy to FMD
     runs-on: ubuntu-latest
     steps:
+
+
+    - name: Converts Markdown to HTML
+      uses: jaywcjlove/markdown-to-html-cli@main
+      with:
+        source: contrib_docs/building_wise.md
+        output: contrib_docs/building_wise.html
+        github-corners: https://github.com/jaywcjlove/markdown-to-html-cli
+       
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
