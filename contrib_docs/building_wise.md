@@ -1,5 +1,6 @@
 # Building WISE From Source
-AUTHOR: spydmobile
+
+AUTHOR: Spydmobile
 
 ## How we do it on github
 
@@ -424,3 +425,14 @@ This represents the build chain in its entirety.
 ### Next Steps
 
 The flow does not stop there, each 
+
+
+
+### Source Diagrams
+
+1. [contrib_docs/VERSIONS.md](VERSIONS.md)
+2. [contrib_docs/APPLICATION.md](APPLICATION.md)
+3. [contrib_docs/BUILDER.md](BUILDER.md)
+4. [contrib_docs/MANAGER.md](MANAGER.md)
+5. [contrib_docs/JS_API.md](JS_API.md)
+6. [contrib_docs/JAVA_API.md](JAVA_API.md)
