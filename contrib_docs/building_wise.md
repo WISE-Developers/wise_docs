@@ -436,3 +436,9 @@ The flow does not stop there, each
 4. [contrib_docs/MANAGER.md](MANAGER.md)
 5. [contrib_docs/JS_API.md](JS_API.md)
 6. [contrib_docs/JAVA_API.md](JAVA_API.md)
+
+### Files missing from source archives
+
+1. `math.proto is in proto_def.zip` from [https://github.com/HeartlandSoftware/HSS_Math_2/releases/latest](https://github.com/HeartlandSoftware/HSS_Math_2/releases/latest)
+2. `weatherGridFilter.proto` is here [https://github.com/WISE-Developers/WISE_Weather_Module/blob/main/proto/weatherGridFilter.proto](https://github.com/WISE-Developers/WISE_Weather_Module/blob/main/proto/weatherGridFilter.proto)
+3. `cwfgmFilter.proto` is here [https://github.com/WISE-Developers/WISE_Grid_Module/blob/main/proto/cwfgmFilter.proto](https://github.com/WISE-Developers/WISE_Grid_Module/blob/main/proto/cwfgmFilter.proto)
